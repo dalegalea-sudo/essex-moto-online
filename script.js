@@ -7,13 +7,35 @@ menu.addEventListener('click', () => {
 document.querySelectorAll('.nav a').forEach(a => a.addEventListener('click', () => {
   nav.classList.remove('open'); menu.setAttribute('aria-expanded','false');
 }));
-document.querySelectorAll('.filter').forEach(btn => btn.addEventListener('click', () => {
-  document.querySelectorAll('.filter').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  const filter = btn.dataset.filter;
-  document.querySelectorAll('.category-card, .product-card').forEach(card => {
-    card.hidden = filter !== 'all' && card.dataset.category !== filter;
+let activeCategory = 'all';
+let activeSubcategory = 'all';
+function applyFilters() {
+  document.querySelectorAll('.filter').forEach(b => b.classList.toggle('active', b.dataset.filter === activeCategory));
+  document.querySelectorAll('.subfilter').forEach(b => b.classList.toggle('active', b.dataset.subfilter === activeSubcategory));
+  document.querySelectorAll('.category-card').forEach(card => {
+    card.hidden = activeSubcategory !== 'all' || (activeCategory !== 'all' && card.dataset.category !== activeCategory);
   });
+  document.querySelectorAll('.product-card').forEach(card => {
+    const categoryMatch = activeCategory === 'all' || card.dataset.category === activeCategory;
+    const subcategoryMatch = activeSubcategory === 'all' || card.dataset.subcategory === activeSubcategory;
+    card.hidden = !(categoryMatch && subcategoryMatch);
+  });
+}
+document.querySelectorAll('.filter').forEach(btn => btn.addEventListener('click', () => {
+  activeCategory = btn.dataset.filter;
+  activeSubcategory = 'all';
+  applyFilters();
+}));
+document.querySelectorAll('.subfilter').forEach(btn => btn.addEventListener('click', () => {
+  activeSubcategory = btn.dataset.subfilter;
+  activeCategory = 'all';
+  applyFilters();
+  document.getElementById('stock-heading').scrollIntoView({behavior:'smooth',block:'start'});
+}));
+document.querySelectorAll('[data-shop-subcategory]').forEach(link => link.addEventListener('click', () => {
+  activeSubcategory = link.dataset.shopSubcategory;
+  activeCategory = 'all';
+  applyFilters();
 }));
 document.querySelectorAll('[data-enquiry]').forEach(link => link.addEventListener('click', () => {
   const select = document.querySelector('select[name="interest"]');
