@@ -132,3 +132,48 @@
 .rc-buying-guide .small-print{margin:0}
 .rc-buying-guide .text-link{width:max-content}
 @media(max-width:650px){.rc-next-steps{padding:17px}.rc-next-grid{grid-template-columns:1fr}.rc-next-grid article{padding:13px}.rc-buying-guide{grid-template-columns:1fr;padding:18px;gap:14px}.rc-buying-guide .small-print,.rc-buying-guide .text-link{grid-column:auto}}
+
+
+/* Refined holly detail for the Christmas promotion only — no decorations on the logo or clothing */
+.christmas-banner:before {
+  content:"";
+  position:absolute;
+  top:13px;
+  right:18px;
+  width:76px;
+  height:48px;
+  letter-spacing:normal;
+  opacity:1;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at 54px 17px,#c92e40 0 4px,transparent 4.8px),
+    radial-gradient(circle at 64px 24px,#e04a4e 0 4px,transparent 4.8px),
+    radial-gradient(circle at 48px 28px,#a91e32 0 4px,transparent 4.8px),
+    radial-gradient(ellipse 17px 7px at 20px 13px,#286b43 0 70%,transparent 74%),
+    radial-gradient(ellipse 17px 7px at 31px 30px,#347e4b 0 70%,transparent 74%),
+    radial-gradient(ellipse 16px 7px at 45px 8px,#205b3a 0 70%,transparent 74%);
+  transform:rotate(-8deg);
+  filter:drop-shadow(0 2px 2px rgba(0,0,0,.35));
+}
+.christmas-banner:after {
+  content:"";
+  position:absolute;
+  left:18px;
+  bottom:12px;
+  width:65px;
+  height:42px;
+  pointer-events:none;
+  opacity:.9;
+  background:
+    radial-gradient(circle at 16px 22px,#c92e40 0 3.5px,transparent 4.2px),
+    radial-gradient(circle at 26px 28px,#e04a4e 0 3.5px,transparent 4.2px),
+    radial-gradient(ellipse 15px 6px at 40px 12px,#286b43 0 70%,transparent 74%),
+    radial-gradient(ellipse 15px 6px at 28px 7px,#347e4b 0 70%,transparent 74%),
+    radial-gradient(ellipse 15px 6px at 44px 30px,#205b3a 0 70%,transparent 74%);
+  transform:rotate(12deg);
+  filter:drop-shadow(0 2px 2px rgba(0,0,0,.3));
+}
+@media(max-width:600px) {
+  .christmas-banner:before { right:10px; top:8px; transform:scale(.72) rotate(-8deg); transform-origin:top right; }
+  .christmas-banner:after { left:8px; bottom:7px; transform:scale(.72) rotate(12deg); transform-origin:bottom left; }
+}
