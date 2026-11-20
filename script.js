@@ -17,7 +17,7 @@ function applyFilters() {
   });
   document.querySelectorAll('.product-card').forEach(card => {
     const categoryMatch = activeCategory === 'all' || card.dataset.category === activeCategory;
-    const subcategoryMatch = activeSubcategory === 'all' || card.dataset.subcategory === activeSubcategory;
+    const subcategoryMatch = activeSubcategory === 'all' || card.dataset.subcategory === activeSubcategory || (activeSubcategory === 'parts' && card.dataset.category === 'parts');
     card.hidden = !(categoryMatch && subcategoryMatch);
   });
 }
