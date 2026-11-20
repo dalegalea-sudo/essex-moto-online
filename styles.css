@@ -10,3 +10,5 @@
 .product-placeholder span{position:relative;z-index:1;font-size:18px;line-height:1.25;font-weight:900;letter-spacing:1.5px;font-style:italic;text-shadow:0 3px 12px #000}
 .stock-preorder{color:#ffd58a;background:#4a3516;border-color:#846126}
 @media(max-width:650px){.product-placeholder span{font-size:13px}}
+
+.parts-links{list-style:none;margin:14px 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.parts-links li{min-width:0}.parts-links a{display:block;padding:10px 11px;background:#0b1c30;border:1px solid #254665;color:#a9d2ff;font-size:12px;line-height:1.35;text-decoration:none}.parts-links a:hover{border-color:#398ff2;color:#fff}.parts-note{font-size:11px!important;line-height:1.55;color:#ffdc9a!important;min-height:0!important;margin:12px 0}@media(max-width:650px){.parts-links{grid-template-columns:1fr;gap:6px}.parts-links a{font-size:11px;padding:9px}}
