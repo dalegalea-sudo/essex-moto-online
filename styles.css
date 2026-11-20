@@ -63,3 +63,13 @@
 .clothing-category-art span{position:relative;color:#fff;font-size:9px;letter-spacing:2px;font-weight:800}
 @media(max-width:900px){.branded-clothing-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:560px){.branded-clothing-grid{grid-template-columns:1fr}.clothing-art{min-height:220px}}
+
+/* Apply the supplied Essex Moto logo to the blue-and-black garments */
+.clothing-art{background:linear-gradient(135deg,#0878ef 0%,#06418c 48%,#050b14 49%,#101b2b 100%)}
+.clothing-polo{background:linear-gradient(120deg,#0878ef 0 55%,#050b14 55%)}
+.clothing-pullover{background:linear-gradient(135deg,#050b14 0 35%,#0878ef 36% 75%,#050b14 76%)}
+.clothing-zip{background:linear-gradient(90deg,#0878ef 0 42%,#050b14 43% 58%,#0878ef 59%)}
+.clothing-logo{position:relative;z-index:1;display:block;width:min(58%,250px);max-height:125px;object-fit:contain;border-radius:6px;box-shadow:0 5px 20px rgba(0,0,0,.28)}
+.category-logo{width:min(76%,230px);max-height:95px}
+.clothing-art small{display:none}
+.clothing-category-art span{z-index:1}
