@@ -73,3 +73,24 @@
 .category-logo{width:min(76%,230px);max-height:95px}
 .clothing-art small{display:none}
 .clothing-category-art span{z-index:1}
+
+
+/* Essex Moto RC Cars & Hobbies — supplier range pending confirmation */
+.rc-hobbies-section{scroll-margin-top:90px}
+.rc-coming-soon{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0;margin-top:28px;overflow:hidden;border:1px solid rgba(70,150,255,.35);border-radius:16px;background:#0b1728;box-shadow:0 14px 32px rgba(0,0,0,.22)}
+.rc-feature-art{position:relative;min-height:290px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:linear-gradient(135deg,#0878ef 0%,#06418c 43%,#050b14 44%,#101b2b 100%)}
+.rc-feature-art:before,.rc-feature-art:after{content:"";position:absolute;width:76%;height:62%;border:2px solid rgba(255,255,255,.16);transform:skew(-18deg);border-radius:20px}
+.rc-feature-art:after{width:55%;height:42%;transform:skew(18deg);border-color:rgba(0,150,255,.35)}
+.rc-art-label{z-index:1;color:#fff;font-size:clamp(90px,15vw,170px);font-weight:1000;font-style:italic;letter-spacing:-10px;text-shadow:5px 7px 0 #061326}
+.rc-art-line{position:absolute;bottom:24%;left:0;width:100%;height:3px;background:linear-gradient(90deg,transparent,#168cff,transparent);transform:rotate(-12deg)}
+.rc-art-caption{position:absolute;bottom:22px;color:#dceaff;font-size:10px;letter-spacing:3px;font-weight:900}
+.rc-feature-copy{padding:clamp(24px,4vw,42px);align-self:center}
+.rc-feature-copy h3{font-size:clamp(26px,3vw,38px);margin:12px 0}
+.rc-feature-copy p{color:#c5d3e7;line-height:1.7}
+.rc-category-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;margin-top:18px}
+.rc-category-grid article{padding:20px 16px;background:#0b1728;border:1px solid rgba(70,150,255,.25);border-radius:12px}
+.rc-category-grid article>span{display:inline-flex;width:30px;height:30px;align-items:center;justify-content:center;border-radius:50%;background:#0878ef;color:#fff;font-size:12px;font-weight:900}
+.rc-category-grid h3{font-size:16px;margin:14px 0 8px}
+.rc-category-grid p{font-size:13px;color:#bdcce0;line-height:1.6;margin:0}
+@media(max-width:900px){.rc-category-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.rc-coming-soon{grid-template-columns:1fr}}
+@media(max-width:560px){.rc-category-grid{grid-template-columns:1fr}.rc-feature-art{min-height:220px}}
