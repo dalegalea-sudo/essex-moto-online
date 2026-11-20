@@ -177,3 +177,31 @@
   .christmas-banner:before { right:10px; top:8px; transform:scale(.72) rotate(-8deg); transform-origin:top right; }
   .christmas-banner:after { left:8px; bottom:7px; transform:scale(.72) rotate(12deg); transform-origin:bottom left; }
 }
+
+
+/* Festive season upgrade: premium winter motorsport look in Essex Moto colours */
+.topline{position:relative;overflow:hidden;background:linear-gradient(90deg,#071426,#12365a 48%,#071426);border-bottom:1px solid rgba(220,239,255,.22)}
+.topline:after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:linear-gradient(90deg,#58aaff,#e8f5ff,#d9bd79,#58aaff);box-shadow:0 0 12px #79c4ff}
+.header{box-shadow:0 8px 28px rgba(0,0,0,.28)}
+.header:after{content:"";position:absolute;left:5vw;right:5vw;bottom:-1px;height:3px;background:repeating-linear-gradient(90deg,#4ba5ff 0 7px,transparent 7px 22px,#e9d49a 22px 28px,transparent 28px 44px);opacity:.85;pointer-events:none}
+.hero{position:relative;background:radial-gradient(ellipse at 78% 48%,#1a426b 0,#0a1c33 42%,#071426 75%)}
+.hero:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.34;background-image:radial-gradient(circle,#eaf6ff 1px,transparent 1.8px),radial-gradient(circle,#8dcaff 1px,transparent 2px);background-size:74px 74px,113px 113px;background-position:8px 12px,38px 52px;mask-image:linear-gradient(110deg,transparent 8%,#000 100%)}
+.christmas-banner{isolation:isolate;min-height:260px;border:1px solid #8bbde5;background:radial-gradient(ellipse at 88% 12%,rgba(67,151,220,.36),transparent 34%),radial-gradient(ellipse at 5% 100%,rgba(36,104,164,.3),transparent 45%),linear-gradient(112deg,#061326 0%,#12365a 58%,#142d42 100%);box-shadow:0 18px 55px rgba(0,0,0,.34),inset 0 0 55px rgba(118,190,245,.08)}
+.christmas-banner:after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background-image:radial-gradient(circle at 12% 22%,#fff 0 1px,transparent 2px),radial-gradient(circle at 72% 65%,#d5edff 0 1px,transparent 2px),radial-gradient(circle at 43% 82%,#fff 0 1.5px,transparent 2.5px),radial-gradient(circle at 92% 34%,#fff 0 1px,transparent 2px);background-size:120px 100px,160px 130px,190px 150px,110px 90px;opacity:.75}
+.christmas-banner:before{content:"✦  ·  ✧  ·  ✦  ·  ✧  ·  ✦";color:#e8f5ff;text-shadow:0 0 12px #8bcaff}
+.christmas-banner .eyebrow,.package-ribbon{color:#b8ddff}
+.christmas-banner h2 span{color:#d6eaff;text-shadow:0 0 20px rgba(111,184,240,.32)}
+.christmas-banner .button-blue{background:linear-gradient(110deg,#247bd0,#49aaff);box-shadow:0 7px 22px rgba(36,139,230,.28)}
+.christmas-tree{filter:drop-shadow(0 0 18px rgba(116,193,255,.35))}
+.christmas-packages{position:relative;overflow:hidden;background:radial-gradient(ellipse at 50% 0,rgba(42,105,159,.18),transparent 55%),linear-gradient(180deg,#0a1b2f,#071426 70%)}
+.christmas-packages:before{content:"❄     ✦      ❄       ✧       ❄";display:block;text-align:center;color:#9dcfff;font-size:18px;letter-spacing:16px;opacity:.55;margin:-34px 0 26px}
+.package-card{background:linear-gradient(155deg,rgba(24,58,91,.98),rgba(7,20,38,.98));border:1px solid #355b7d;border-top:3px solid #76bfff;box-shadow:0 14px 32px rgba(0,0,0,.2);transition:transform .2s ease,border-color .2s ease}
+.package-card:hover{transform:translateY(-4px);border-color:#83c7ff}
+.package-ribbon{display:inline-block;padding:6px 9px;background:rgba(68,145,207,.14);border:1px solid rgba(139,199,242,.38);border-radius:2px}
+.package-price{color:#c9e6ff;text-shadow:0 0 16px rgba(89,171,235,.22)}
+.package-note{color:#c5dff5!important}
+.christmas-smallprint{padding:14px 16px;border-left:2px solid #6db7f3;background:rgba(30,75,112,.2)}
+/* Gentle snow accents; keep motion subtle and mobile-friendly */
+@media(prefers-reduced-motion:no-preference){.christmas-banner:after{animation:festive-snow 16s linear infinite alternate}.package-card{transition:transform .2s ease,border-color .2s ease}}
+@keyframes festive-snow{from{background-position:0 0,20px 10px,30px 0,0 20px}to{background-position:0 55px,20px 70px,30px 50px,0 65px}}
+@media(max-width:600px){.christmas-banner{min-height:220px}.header:after{left:4vw;right:4vw}.christmas-packages:before{letter-spacing:7px;font-size:14px}}
