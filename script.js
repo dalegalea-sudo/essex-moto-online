@@ -29,7 +29,7 @@ document.getElementById('enquiry-form').addEventListener('submit', e => {
     '\\nInterested in: ' + data.get('interest') + '\\n\\n' + data.get('message')
   );
   // Add the verified Essex Moto business email address here before publishing.
-  const businessEmail = '';
+  const businessEmail = 'Dalegalea@yahoo.com';
   if (!businessEmail) {
     alert('The enquiry form is ready, but Essex Moto needs to add its business email address before enquiries can be sent.');
     return;
