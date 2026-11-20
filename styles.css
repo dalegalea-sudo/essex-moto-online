@@ -34,3 +34,14 @@
 .footer-brand img{width:120px;height:80px}
 .assembly-note{font-size:11px!important;color:#9fd0ff!important;margin:7px 0 10px!important;line-height:1.45}
 @media(max-width:650px){.brand-image img{width:114px;height:76px}.footer-brand img{width:105px;height:70px}}
+
+
+/* Essex Moto blue-and-black photo treatment across all product sections */
+.hero-photo,
+.category-photo,
+.product-image img {
+  filter: grayscale(1) sepia(.28) hue-rotate(174deg) saturate(1.65) brightness(.78) contrast(1.12);
+}
+.art-quad,.art-petrol,.art-adult,.art-electric,.art-pit,.art-balance,.art-gear,.art-parts {
+  background-blend-mode: multiply, luminosity;
+}
