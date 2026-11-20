@@ -134,3 +134,20 @@
 .rc-feature-copy .stock-label{color:#ffd58a;background:#493719;border-color:#86652c}
 @media(max-width:900px){.rc-category-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.rc-supplier-points{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:560px){.rc-category-grid{grid-template-columns:1fr}.rc-category-grid article{min-height:0;padding:17px}.rc-category-grid .rc-category-icon{width:46px;height:46px}.rc-supplier-points{grid-template-columns:1fr 1fr;gap:8px}.rc-supplier-points>div{padding:12px 10px}.rc-supplier-points strong{font-size:11px}.rc-supplier-points span{font-size:10px}}
+
+
+/* RC launch process and buyer enquiry guide */
+.rc-next-steps{margin-top:28px;padding:24px;background:linear-gradient(135deg,#0c2138,#071321);border:1px solid #21486d;border-radius:12px}
+.rc-next-heading h3,.rc-buying-guide h3{font-size:clamp(19px,2.6vw,26px);margin:5px 0 18px}
+.rc-next-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.rc-next-grid article{padding:16px;background:rgba(4,14,26,.7);border:1px solid #1b3b5c;border-radius:8px}
+.rc-next-grid article>span{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:#0878ef;color:#fff;font-size:11px;font-weight:800}
+.rc-next-grid h4{font-size:14px;margin:12px 0 6px}
+.rc-next-grid p{font-size:12px;line-height:1.6;color:#b9c9dc;margin:0}
+.rc-buying-guide{display:grid;grid-template-columns:1fr 1.2fr;gap:10px 28px;margin-top:16px;padding:23px;background:#091727;border:1px solid #1b3b5c;border-radius:12px}
+.rc-buying-guide h3{margin-bottom:0}
+.rc-buying-guide ul{margin:0;padding-left:19px;color:#c2d2e3;font-size:12px;line-height:1.9}
+.rc-buying-guide .small-print,.rc-buying-guide .text-link{grid-column:1/-1}
+.rc-buying-guide .small-print{margin:0}
+.rc-buying-guide .text-link{width:max-content}
+@media(max-width:650px){.rc-next-steps{padding:17px}.rc-next-grid{grid-template-columns:1fr}.rc-next-grid article{padding:13px}.rc-buying-guide{grid-template-columns:1fr;padding:18px;gap:14px}.rc-buying-guide .small-print,.rc-buying-guide .text-link{grid-column:auto}}
