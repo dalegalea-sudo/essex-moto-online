@@ -36,12 +36,8 @@
 @media(max-width:650px){.brand-image img{width:114px;height:76px}.footer-brand img{width:105px;height:70px}}
 
 
-/* Essex Moto blue-and-black photo treatment across all product sections */
-.hero-photo,
-.category-photo,
-.product-image img {
-  filter: grayscale(1) sepia(.28) hue-rotate(174deg) saturate(1.65) brightness(.78) contrast(1.12);
-}
+/* Product photography: preserve the supplier's original, true-to-life colours.
+   Keep the Essex Moto blue-and-black identity in the surrounding layout only. */
 .art-quad,.art-petrol,.art-adult,.art-electric,.art-pit,.art-balance,.art-gear,.art-parts {
   background-blend-mode: multiply, luminosity;
 }
