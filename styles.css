@@ -16,3 +16,5 @@
 .parts-stock-section{margin-top:42px;padding-top:32px;border-top:1px solid #254665}.parts-stock-section .stock-heading{margin-bottom:22px}.parts-product-grid .product-card{height:100%}.parts-product-grid .product-info p:not(.product-price){font-size:12px;line-height:1.55;color:#b7c6d8}.parts-product-grid .product-info h3{min-height:42px}
 
 .parts-product-grid+.parts-product-grid{margin-top:18px}
+
+.stock-low{color:#ffd58a;background:#4a3516;border-color:#846126}
