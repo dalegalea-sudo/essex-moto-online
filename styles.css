@@ -94,3 +94,22 @@
 .rc-category-grid p{font-size:13px;color:#bdcce0;line-height:1.6;margin:0}
 @media(max-width:900px){.rc-category-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.rc-coming-soon{grid-template-columns:1fr}}
 @media(max-width:560px){.rc-category-grid{grid-template-columns:1fr}.rc-feature-art{min-height:220px}}
+
+
+/* Festive Christmas trim: Santa hat and holly, while keeping Essex Moto blue/black */
+.header{position:relative}
+.brand-image{position:relative}
+.brand-image:after{content:"";position:absolute;z-index:5;top:2px;left:91px;width:0;height:0;border-left:17px solid transparent;border-right:17px solid transparent;border-bottom:31px solid #d92735;transform:rotate(24deg);filter:drop-shadow(0 2px 2px rgba(0,0,0,.45));pointer-events:none}
+.brand-image:before{content:"";position:absolute;z-index:6;top:26px;left:89px;width:34px;height:7px;background:#fff;border-radius:7px;transform:rotate(24deg);box-shadow:17px -25px 0 -1px #fff;pointer-events:none}
+.header:after{content:"🌿  🔴";position:absolute;right:22px;top:3px;font-size:19px;letter-spacing:2px;opacity:.9;pointer-events:none}
+.topline{position:relative}
+.topline:before,.topline:after{content:"🌿";position:absolute;top:1px;font-size:15px;opacity:.85}
+.topline:before{left:14px}.topline:after{right:14px}
+.christmas-banner{border-color:#b83c49}
+.christmas-banner:after{content:"🌿 🔴";position:absolute;left:18px;bottom:10px;font-size:18px;opacity:.85;pointer-events:none}
+@media(max-width:650px){
+ .brand-image:after{left:73px;top:0;transform:scale(.82) rotate(24deg);transform-origin:top left}
+ .brand-image:before{left:72px;top:21px;transform:scale(.82) rotate(24deg);transform-origin:top left}
+ .header:after{right:62px;top:8px;font-size:15px}
+ .topline:before{left:5px}.topline:after{right:5px}
+}
