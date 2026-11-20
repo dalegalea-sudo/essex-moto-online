@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://dalegalea-sudo.github.io/essex-moto-online/sitemap.xml
+Sitemap: https://essex-moto.co.uk/sitemap.xml
