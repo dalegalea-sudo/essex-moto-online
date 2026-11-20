@@ -28,7 +28,7 @@ document.getElementById('enquiry-form').addEventListener('submit', e => {
     'Name: ' + data.get('name') + '\nEmail: ' + data.get('email') +
     '\nInterested in: ' + data.get('interest') + '\n\n' + data.get('message')
   );
-  const businessEmail = 'Dalegalea@yahoo.com';
+  const businessEmail = e.currentTarget.dataset.businessEmail || 'Dalegalea@yahoo.com';
   window.location.href = `mailto:${businessEmail}?subject=${subject}&body=${body}`;
 });
 document.getElementById('year').textContent = new Date().getFullYear();
