@@ -350,3 +350,15 @@ body.basket-open{overflow:hidden}
 .basket-form label{font-size:11px}
 .basket-note{font-size:10px;line-height:1.45}
 .basket-empty{font-size:12px}
+
+
+/* Supplier product photography throughout all Essex Moto sections */
+.guide-photo{display:block;width:100%;height:175px;object-fit:cover;object-position:center;background:#071426;border-bottom:1px solid #254665}
+.package-photo{display:block;width:100%;height:165px;object-fit:cover;object-position:center;margin:12px 0 8px;border:1px solid #294765}
+.section-feature-photo{display:block;width:100%;max-height:230px;object-fit:cover;object-position:center;margin:24px 0;border:1px solid #254665}
+.contact-photo{display:block;width:100%;max-width:460px;height:205px;object-fit:cover;object-position:center;margin:0 0 22px;border:1px solid #315274}
+.supplier-band-photo{width:170px;height:125px;object-fit:cover;object-position:center;border:1px solid #315274;flex:0 0 auto}
+.christmas-feature-photo{width:190px;height:145px;object-fit:cover;object-position:center;position:relative;z-index:1;border:1px solid rgba(233,199,125,.65);flex:0 0 auto}
+.trust-strip{grid-template-columns:112px repeat(4,minmax(0,1fr))}
+.trust-strip-photo{width:112px;height:68px;object-fit:cover;object-position:center;align-self:center;border:1px solid #315274}
+@media(max-width:760px){.guide-photo{height:150px}.package-photo{height:145px}.section-feature-photo{max-height:180px}.contact-photo{height:175px;max-width:100%}.supplier-band-photo{width:100%;height:160px}.christmas-feature-photo{width:100%;height:150px;max-width:320px}.trust-strip{grid-template-columns:repeat(2,minmax(0,1fr))}.trust-strip-photo{width:100%;height:75px;grid-column:1/-1}}
