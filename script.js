@@ -167,14 +167,14 @@ document.getElementById('year').textContent = new Date().getFullYear();
       <div id="basket-lines" class="basket-lines"></div>
       <div class="basket-total" id="basket-total"></div>
       <form id="basket-enquiry-form" class="basket-form">
-        <p class="basket-note">Delivery is £102. Your card will be authorised through Stripe, but will not be charged until Essex Moto confirms stock and the advertised price. Optional pre-assembly/PDI must be quoted for your exact model before checkout.</p>
+        <p class="basket-note">Delivery is £102. Your card will be charged securely at checkout. Supplier fulfilment is confirmed after payment; if an item cannot be supplied, we will contact you and arrange a refund. Optional pre-assembly/PDI must be quoted for your exact model before checkout.</p>
         <label class="assembly-choice"><input name="assembly" type="checkbox" value="yes"> I would like pre-assembly/PDI if available for my selected model(s)</label>
         <label>Your name<input name="name" required autocomplete="name" placeholder="Your name"></label>
         <label>Email address<input name="email" type="email" required autocomplete="email" placeholder="you@example.com"></label>
         <label>Delivery postcode<input name="postcode" required autocomplete="postal-code" placeholder="Postcode"></label>
         <button class="button button-blue" type="submit">Continue to secure checkout</button>
       </form>
-      <p class="basket-empty-help">Card payments are captured only after stock and price checks. Pre-assembly/PDI is quoted separately where available.</p>
+      <p class="basket-empty-help">Card payments are collected at checkout. Supplier fulfilment is subject to availability; if an item cannot be supplied, we will contact you and arrange a refund. Pre-assembly/PDI is quoted separately where available.</p>
     </div>`;
   document.body.appendChild(panel);
 
