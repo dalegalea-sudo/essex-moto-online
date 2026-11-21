@@ -78,14 +78,14 @@ app.get("/test-checkout-status", (_req, res) => {
     sandboxKeyConfigured: STRIPE_SECRET_KEY.startsWith("sk_test_"),
     secretKeyPresent: Boolean(STRIPE_SECRET_KEY),
     secretKeyType: STRIPE_SECRET_KEY.startsWith("sk_test_") ? "sandbox_secret" : STRIPE_SECRET_KEY.startsWith("rk_test_") ? "sandbox_restricted" : STRIPE_SECRET_KEY.startsWith("sk_live_") ? "live_secret" : STRIPE_SECRET_KEY ? "unrecognised_prefix" : "missing",
-    testPriceAllowed: ALLOWED_PRICE_IDS.has("price_1UeBKkCZSbVi0P0k2iV6pmjP"),
+    testPriceAllowed: ALLOWED_PRICE_IDS.has("price_1UeDXVCZSbVi0P0klzyJWaN8"),
     testRoute: "available"
   });
 });
 
 // Temporary iPhone-friendly Sandbox test route. Remove after the test.
 app.get("/test-checkout", async (_req, res) => {
-  const testPriceId = "price_1UeBKkCZSbVi0P0k2iV6pmjP";
+  const testPriceId = "price_1UeDXVCZSbVi0P0klzyJWaN8";
   if (!process.env.STRIPE_SECRET_KEY.startsWith("sk_test_") || !ALLOWED_PRICE_IDS.has(testPriceId)) {
     return res.status(404).send("Test checkout is not enabled.");
   }
