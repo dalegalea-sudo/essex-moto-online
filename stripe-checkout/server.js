@@ -47,7 +47,7 @@ app.post("/api/stripe/webhook", express.raw({ type: "application/json" }), async
 
   if (event.type === "checkout.session.completed") {
     const session = event.data.object;
-    console.log("ESSEX_MOTO_ORDER_AUTHORISED", JSON.stringify({
+    console.log("ESSEX_MOTO_ORDER_PAID", JSON.stringify({
       sessionId: session.id,
       paymentIntentId: session.payment_intent,
       amountTotal: session.amount_total,
