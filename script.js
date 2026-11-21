@@ -221,12 +221,20 @@ if (yearElement) yearElement.textContent = new Date().getFullYear();
     const button = document.createElement('button');
     button.type = 'button';
     button.className = link.className;
+    const supplierStockStatus = {"renegade-ranger-1200w-48v-kids-quad-red":"Out of Stock","sniper-pro-120cc-junior-quad-blue":"Not confirmed","sniper-pro-120cc-junior-quad-yellow":"Not confirmed","sniper-pro-120cc-junior-quad-grey":"Not confirmed","sniper-pro-120cc-junior-quad-multiple-colours":"Not confirmed","rfn-thunder-pro-110cc-kids-semi-auto-pit-bike":"Supplier listed: in stock — reconfirm before order","rfn-thunder-140cc-xl-dirt-bike-19-16":"Not confirmed","storm-3000w-48v-electric-dirt-bike-14-12":"Not confirmed","storm-5000w-72v-electric-dirt-bike-17-14":"Not confirmed","blue-wulfsport-kids-helmet-clothing-bundle":"Supplier listed: in stock — reconfirm before order","rfn-thunder-pro-fh-110cc-pit-bike-red-blue":"Supplier listed: in stock — reconfirm before order","apollo-quad-bike-sports-exhaust-system":"Not confirmed","front-brake-disc-thunder-250cc":"Supplier listed: in stock — reconfirm before order","throttle-cable-thunder-250cc":"Supplier listed: in stock — reconfirm before order","right-middle-side-cover-thunder-250cc":"Supplier listed: in stock — reconfirm before order","wulfsport-waterproof-jacket-over-trousers-set":"Supplier listed: in stock — reconfirm before order","revvi-20-800w-36v-kids-electric-bike-green":"Not confirmed","talaria-sting-r-8kw-electric-dirt-bike-black-blue":"Supplier listed: in stock — reconfirm before order"};
     const stockText = card?.querySelector('.stock-label')?.textContent?.trim().toLowerCase() || '';
-    const unavailable = stockText === 'out of stock' || stockText.includes('unavailable');
+    const unavailable = supplierStockStatus[id]?.length > 0 || stockText === 'out of stock' || stockText.includes('unavailable');
     if (unavailable) {
-      button.textContent = 'Out of stock';
+      const status = supplierStockStatus[id] || 'Out of Stock';
+      const label = card?.querySelector('.stock-label');
+      if (label) {
+        label.textContent = status === 'Out of Stock' ? 'Out of stock' :
+          status.startsWith('Supplier listed:') ? 'Supplier stock needs reconfirmation — please enquire' :
+          'Availability not confirmed — please enquire';
+      }
+      button.textContent = status === 'Out of Stock' ? 'Out of stock' : 'Check availability';
       button.disabled = true;
-      button.setAttribute('aria-label', title + ' is out of stock');
+      button.setAttribute('aria-label', title + ' is not currently available to purchase online');
       button.classList.add('button-disabled');
     } else {
       button.textContent = 'Add to basket';
