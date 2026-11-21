@@ -16,7 +16,8 @@ if (!process.env.STRIPE_SECRET_KEY) {
   console.error("Missing STRIPE_SECRET_KEY environment variable.");
   process.exit(1);
 }
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
+const STRIPE_SECRET_KEY = process.env.STRIPE_SECRET_KEY.trim();
+const stripe = new Stripe(STRIPE_SECRET_KEY);
 app.disable("x-powered-by");
 app.use(helmet());
 app.use(cors({
@@ -74,7 +75,9 @@ app.get("/health", (_req, res) => {
 // Safe configuration check: reveals status only, never secret values.
 app.get("/test-checkout-status", (_req, res) => {
   res.json({
-    sandboxKeyConfigured: Boolean(process.env.STRIPE_SECRET_KEY && process.env.STRIPE_SECRET_KEY.startsWith("sk_test_")),
+    sandboxKeyConfigured: STRIPE_SECRET_KEY.startsWith("sk_test_"),
+    secretKeyPresent: Boolean(STRIPE_SECRET_KEY),
+    secretKeyType: STRIPE_SECRET_KEY.startsWith("sk_test_") ? "sandbox_secret" : STRIPE_SECRET_KEY.startsWith("rk_test_") ? "sandbox_restricted" : STRIPE_SECRET_KEY.startsWith("sk_live_") ? "live_secret" : STRIPE_SECRET_KEY ? "unrecognised_prefix" : "missing",
     testPriceAllowed: ALLOWED_PRICE_IDS.has("price_1UeBKkCZSbVi0P0k2iV6pmjP"),
     testRoute: "available"
   });
