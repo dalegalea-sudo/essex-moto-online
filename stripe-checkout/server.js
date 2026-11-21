@@ -72,13 +72,26 @@ app.get("/health", (_req, res) => {
   res.json({ status: "ok", service: "essex-moto-stripe-checkout" });
 });
 
-// Safe configuration check: reveals status only, never secret values.
-app.get("/test-checkout-status", (_req, res) => {
+// Safe configuration check: reveals account and price status only, never secret values.
+app.get("/test-checkout-status", async (_req, res) => {
+  const testPriceId = "price_1UeDXVCZSbVi0P0klzyJWaN8";
+  let stripeAccountId = null;
+  let priceLookup = "not_checked";
+  try {
+    const account = await stripe.accounts.retrieve();
+    stripeAccountId = account.id;
+    await stripe.prices.retrieve(testPriceId);
+    priceLookup = "found";
+  } catch (err) {
+    priceLookup = err.code === "resource_missing" ? "not_found_in_this_stripe_account" : "lookup_error";
+  }
   res.json({
     sandboxKeyConfigured: STRIPE_SECRET_KEY.startsWith("sk_test_"),
     secretKeyPresent: Boolean(STRIPE_SECRET_KEY),
     secretKeyType: STRIPE_SECRET_KEY.startsWith("sk_test_") ? "sandbox_secret" : STRIPE_SECRET_KEY.startsWith("rk_test_") ? "sandbox_restricted" : STRIPE_SECRET_KEY.startsWith("sk_live_") ? "live_secret" : STRIPE_SECRET_KEY ? "unrecognised_prefix" : "missing",
-    testPriceAllowed: ALLOWED_PRICE_IDS.has("price_1UeDXVCZSbVi0P0klzyJWaN8"),
+    stripeAccountId,
+    testPriceAllowed: ALLOWED_PRICE_IDS.has(testPriceId),
+    priceLookup,
     testRoute: "available"
   });
 });
