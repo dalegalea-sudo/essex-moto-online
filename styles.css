@@ -362,3 +362,94 @@ body.basket-open{overflow:hidden}
 .trust-strip{grid-template-columns:112px repeat(4,minmax(0,1fr))}
 .trust-strip-photo{width:112px;height:68px;object-fit:cover;object-position:center;align-self:center;border:1px solid #315274}
 @media(max-width:760px){.guide-photo{height:150px}.package-photo{height:145px}.section-feature-photo{max-height:180px}.contact-photo{height:175px;max-width:100%}.supplier-band-photo{width:100%;height:160px}.christmas-feature-photo{width:100%;height:150px;max-width:320px}.trust-strip{grid-template-columns:repeat(2,minmax(0,1fr))}.trust-strip-photo{width:100%;height:75px;grid-column:1/-1}}
+
+
+/* Professional usability polish — consistent spacing, readable cards and accessible controls */
+:root{scroll-behavior:smooth;scroll-padding-top:105px}
+body{font-size:16px;line-height:1.65;letter-spacing:.005em}
+.topline{font-size:11px;letter-spacing:.16em;padding:9px 16px;text-align:center}
+.header{min-height:82px;padding:10px clamp(16px,4vw,54px);gap:20px}
+.brand-image img{max-height:58px;width:auto;object-fit:contain}
+.nav{gap:clamp(12px,2vw,26px)}
+.nav a{font-size:13px;font-weight:750;letter-spacing:.035em;transition:color .18s ease}
+.nav a:hover,.text-link:hover{color:#8ccaff}
+.hero{min-height:490px;padding:clamp(38px,6vw,82px) clamp(18px,6vw,84px);gap:clamp(24px,5vw,68px)}
+.hero-copy{max-width:650px}
+.hero h1{font-size:clamp(40px,6vw,76px);line-height:.99;letter-spacing:-.045em}
+.hero-text{max-width:530px;font-size:clamp(17px,2vw,21px);line-height:1.55;color:#d4e3f3}
+.hero-note{max-width:490px;color:#a9bfd5;font-size:13px}
+.hero-photo{width:100%;height:clamp(280px,34vw,430px);object-fit:cover;object-position:center;border:1px solid rgba(135,195,245,.45);border-radius:9px;box-shadow:0 24px 60px rgba(0,0,0,.36)}
+.button{min-height:46px;padding:12px 20px;border-radius:5px;font-weight:800;letter-spacing:.02em;transition:transform .18s ease,box-shadow .18s ease,background .18s ease}
+.button:hover{transform:translateY(-2px);box-shadow:0 9px 22px rgba(0,0,0,.24)}
+.button:focus-visible,.filter:focus-visible,.subfilter:focus-visible,.nav a:focus-visible,.text-link:focus-visible{outline:3px solid #9bd2ff;outline-offset:3px}
+.section{padding:clamp(42px,6vw,76px) clamp(16px,5vw,64px)}
+.section-heading{align-items:end;gap:28px;margin-bottom:26px}
+.section-heading h2,.stock-heading h2{font-size:clamp(25px,3.5vw,39px);line-height:1.12;letter-spacing:-.025em}
+.section-heading>p{max-width:650px;color:#bdcde0;line-height:1.7;font-size:14px}
+.category-grid,.package-grid,.product-grid{gap:18px}
+.category-card,.package-card,.product-card{border-radius:8px;overflow:hidden;transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease}
+.category-card:hover,.product-card:hover{transform:translateY(-3px);box-shadow:0 16px 32px rgba(0,0,0,.24);border-color:#438fd0}
+.category-card .card-copy{padding:18px 18px 20px}
+.category-card h3{font-size:18px;line-height:1.25;margin:0 0 8px}
+.category-card p{font-size:13px;line-height:1.65;color:#b9cbe0}
+.guide-photo{height:190px;object-fit:contain;padding:8px;background:linear-gradient(145deg,#102943,#071426)}
+.category-art{height:210px;overflow:hidden}
+.category-art .category-photo{width:100%;height:100%;object-fit:contain;padding:10px;box-sizing:border-box}
+.text-link{display:inline-flex;align-items:center;gap:6px;margin-top:8px;font-size:13px;font-weight:850;text-decoration:none}
+.filters,.subfilters{display:flex;flex-wrap:wrap;gap:9px}
+.filter,.subfilter{min-height:40px;padding:9px 14px;border-radius:5px;font-weight:750;cursor:pointer}
+.subfilters{margin:12px 0 24px}
+.product-card .product-image{background:linear-gradient(145deg,#102943,#071426)}
+.product-card .product-image img{width:100%;height:220px;object-fit:contain;padding:10px;box-sizing:border-box}
+.product-info{padding:16px}
+.product-info h3{font-size:15px;line-height:1.4}
+.small-print{font-size:12px;line-height:1.65;color:#aebfd2}
+.trust-strip{padding:14px clamp(16px,5vw,64px);gap:16px}
+.trust-strip strong{font-size:12px;letter-spacing:.08em}
+.trust-strip span{font-size:11px;color:#b4c7db}
+.supplier-band{padding:clamp(24px,4vw,42px);gap:24px}
+.supplier-band h2{font-size:clamp(23px,3vw,34px);line-height:1.15}
+.contact{padding:clamp(34px,5vw,62px) clamp(16px,5vw,64px)}
+/* Christmas promotion: unmistakable seasonal feature while retaining Essex Moto blue/black branding */
+.christmas-banner{margin:clamp(18px,3vw,34px) auto;padding:clamp(24px,4vw,48px);width:min(92%,1320px);box-sizing:border-box;min-height:320px;display:flex;align-items:center;gap:clamp(18px,3vw,38px);border:2px solid #c7a96c;border-radius:12px;background:radial-gradient(ellipse at 16% 10%,rgba(201,42,58,.24),transparent 34%),radial-gradient(ellipse at 86% 92%,rgba(35,126,83,.22),transparent 36%),linear-gradient(118deg,#061326 0%,#102d4a 48%,#071426 100%);box-shadow:0 18px 55px rgba(0,0,0,.38),0 0 0 5px rgba(195,164,98,.10)}
+.christmas-feature-photo{width:clamp(180px,22vw,285px);height:220px;max-width:34%;object-fit:contain;background:rgba(255,255,255,.05);padding:8px;border:2px solid #d2b477;border-radius:8px;box-shadow:0 10px 28px rgba(0,0,0,.35)}
+.christmas-banner .eyebrow{display:inline-block;padding:7px 12px;border-radius:3px;background:linear-gradient(90deg,#8d1d2b,#174f39);color:#fff;font-weight:900;letter-spacing:.15em}
+.christmas-banner h2{max-width:650px;font-size:clamp(28px,4.2vw,50px);line-height:1.02;letter-spacing:-.03em;text-shadow:0 4px 18px rgba(0,0,0,.35)}
+.christmas-banner h2 span{display:block;color:#f0d69d}
+.christmas-banner p:not(.eyebrow){max-width:620px;color:#e0ebf6;line-height:1.65}
+.christmas-banner .button-blue{background:linear-gradient(110deg,#a51f32,#c33a45);border:1px solid #e2b978;color:#fff;box-shadow:0 7px 24px rgba(151,30,46,.32)}
+.christmas-banner .christmas-tree{font-size:clamp(52px,7vw,88px);margin-left:auto;filter:drop-shadow(0 8px 16px rgba(0,0,0,.4))}
+.christmas-packages{padding-top:clamp(44px,6vw,76px);border-top:2px solid rgba(198,165,99,.55);background:radial-gradient(ellipse at 50% 0,rgba(148,34,49,.15),transparent 48%),radial-gradient(ellipse at 90% 50%,rgba(26,100,65,.12),transparent 35%),#071426}
+.christmas-packages .section-heading .eyebrow{color:#e5c98e}
+.christmas-packages .package-card{border:1px solid #826a45;border-top:4px solid #c5a466;background:linear-gradient(160deg,#142b40,#081525 75%);box-shadow:0 12px 30px rgba(0,0,0,.3)}
+.christmas-packages .package-photo{height:205px;object-fit:contain;padding:10px;box-sizing:border-box;background:linear-gradient(145deg,#17344b,#091525);border:0;border-bottom:1px solid #826a45}
+.christmas-packages .package-card h3{font-size:20px;line-height:1.25}
+.christmas-packages .package-ribbon{margin:14px 18px 4px;background:linear-gradient(90deg,#8e1d2c,#18543b);border:1px solid #c6a76d;color:#fff;font-weight:900;letter-spacing:.08em}
+.christmas-packages .package-card>h3,.christmas-packages .package-card>p,.christmas-packages .package-card>ul,.christmas-packages .package-card>.button{margin-left:18px;margin-right:18px}
+.christmas-packages .package-card>.button{margin-bottom:20px;display:inline-flex}
+.christmas-packages .package-price{font-size:25px;font-weight:900;color:#f1d69d}
+.christmas-smallprint{max-width:900px;margin:24px auto 0;color:#c7d8e8;border-left-color:#c7a96c}
+@media(max-width:760px){
+ .header{gap:10px}.nav{padding:10px 0}
+ .hero{min-height:0;grid-template-columns:1fr;padding:38px 18px}
+ .hero-art{width:100%}.hero-photo{height:260px}
+ .hero-actions{display:flex;flex-wrap:wrap;gap:9px}
+ .section-heading{display:grid;grid-template-columns:1fr;gap:10px}
+ .guide-photo{height:165px}
+ .category-art{height:180px}
+ .product-card .product-image img{height:190px}
+ .christmas-banner{width:calc(100% - 24px);min-height:0;display:grid;grid-template-columns:1fr;gap:14px;padding:56px 18px 22px}
+ .christmas-feature-photo{width:100%;max-width:none;height:180px;object-fit:contain}
+ .christmas-banner .christmas-tree{display:none}
+ .christmas-gifts{display:none}
+ .christmas-banner h2{font-size:clamp(29px,8vw,42px)}
+ .christmas-packages .package-grid{grid-template-columns:1fr}
+ .christmas-packages .package-photo{height:210px}
+}
+@media(max-width:420px){
+ .topline{font-size:9px;letter-spacing:.09em}
+ .hero h1{font-size:39px}
+ .hero-actions .button{width:100%;justify-content:center}
+ .trust-strip{grid-template-columns:1fr 1fr}
+ .trust-strip>div{min-width:0}
+}
