@@ -298,3 +298,44 @@
   .christmas-banner .christmas-spark{top:14px;left:18px;font-size:16px}
 }
 @media(prefers-reduced-motion:reduce){.christmas-banner .christmas-spark{animation:none}}
+
+
+/* Essex Moto multi-item basket */
+.basket-toggle{margin-left:auto;white-space:nowrap;display:inline-flex;align-items:center;gap:8px}
+.basket-toggle span{display:inline-grid;place-items:center;min-width:23px;height:23px;padding:0 6px;border-radius:99px;background:#071426;color:#fff;font-size:12px;font-weight:800}
+.product-card .buy-now-button{cursor:pointer}
+.basket-panel[hidden]{display:none}
+.basket-panel{position:fixed;inset:0;z-index:9999;display:flex;justify-content:flex-end}
+.basket-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.68);backdrop-filter:blur(3px)}
+.basket-sheet{position:relative;width:min(100%,520px);height:100%;overflow:auto;padding:clamp(18px,4vw,30px);background:#071426;color:#f4f8ff;border-left:1px solid rgba(111,184,240,.4);box-shadow:-18px 0 55px rgba(0,0,0,.4)}
+.basket-head{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(130,190,240,.25);padding-bottom:15px;margin-bottom:18px}
+.basket-head h2{margin:3px 0 0;font-size:clamp(25px,5vw,34px)}
+.basket-head .eyebrow{margin:0;color:#78bfff;font-size:11px;letter-spacing:.16em}
+.basket-close{width:42px;height:42px;border:1px solid #47749a;border-radius:50%;background:#102d49;color:#fff;font-size:28px;cursor:pointer}
+.basket-lines{display:grid;gap:12px}
+.basket-line{display:grid;grid-template-columns:1fr auto;gap:10px;padding:13px 0;border-bottom:1px solid rgba(130,190,240,.18)}
+.basket-line-copy{display:grid;gap:5px}
+.basket-line-copy strong{font-size:14px}
+.basket-line-copy span,.basket-empty-help{color:#b5c9dc;font-size:12px}
+.basket-line-actions{display:flex;align-items:center;gap:8px;grid-column:1/-1}
+.basket-line-actions button{border:1px solid #47749a;background:#102d49;color:#fff;border-radius:5px;min-width:32px;min-height:32px;cursor:pointer}
+.basket-line-actions .basket-remove{margin-left:auto;padding:0 10px;color:#c8e4ff}
+.basket-line-total{justify-self:end;align-self:start;color:#a9d7ff}
+.basket-total{display:flex;justify-content:space-between;align-items:center;padding:18px 0;margin:5px 0 15px;border-bottom:1px solid rgba(130,190,240,.25);font-size:16px}
+.basket-total strong{font-size:20px;color:#a9d7ff}
+.basket-empty{padding:22px 14px;text-align:center;border:1px dashed #47749a;border-radius:8px;color:#d4e5f5}
+.basket-form{display:grid;gap:12px}
+.basket-form label{display:grid;gap:6px;font-size:13px;color:#d7e8f7}
+.basket-form input{width:100%;box-sizing:border-box;padding:12px;border:1px solid #365a78;border-radius:5px;background:#0c2035;color:#fff;font:inherit}
+.basket-form input::placeholder{color:#8da6bd}
+.basket-note{padding:12px;border-left:3px solid #4ba5ff;background:rgba(44,111,166,.18);font-size:12px;line-height:1.55;color:#d4e7f8}
+.basket-form .button{width:100%;justify-content:center}
+.basket-empty-help{margin-top:14px;line-height:1.5}
+body.basket-open{overflow:hidden}
+@media(max-width:650px){
+ .header{flex-wrap:wrap}
+ .basket-toggle{order:2;margin:8px 0 8px auto;padding:9px 13px;font-size:13px}
+ .menu-toggle{order:1}
+ .nav{order:3;width:100%}
+ .basket-sheet{width:100%;border-left:0}
+}
