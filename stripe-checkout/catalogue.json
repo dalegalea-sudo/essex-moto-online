@@ -286,8 +286,8 @@
       "id": "revvi-18-500w-36v-kids-electric-bike-black",
       "name": "Revvi 18 500W 36V Kids Electric Bike – Black",
       "unitAmount": 84900,
-      "stockStatus": "Availability confirmed before payment",
-      "available": true
+      "stockStatus": "Supplier listed: low on stock — reconfirm before order",
+      "available": false
     },
     {
       "id": "renegade-pro-1500w-60v-electric-quad-black",
