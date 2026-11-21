@@ -137,3 +137,125 @@ document.getElementById('year').textContent = new Date().getFullYear();
     applyAgreedCategories();
   }
 })();
+
+
+// Essex Moto basket: local basket with multi-item enquiry (no payment is taken here).
+(() => {
+  const STORAGE_KEY = 'essexMotoBasketV1';
+  let basket = [];
+  try { basket = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]'); } catch (_) { basket = []; }
+  if (!Array.isArray(basket)) basket = [];
+
+  const save = () => {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(basket)); } catch (_) {}
+    render();
+  };
+  const money = n => new Intl.NumberFormat('en-GB', { style:'currency', currency:'GBP' }).format(n);
+  const panel = document.createElement('aside');
+  panel.className = 'basket-panel';
+  panel.id = 'basket-panel';
+  panel.setAttribute('role','dialog');
+  panel.setAttribute('aria-modal','true');
+  panel.setAttribute('aria-labelledby','basket-title');
+  panel.hidden = true;
+  panel.innerHTML = `
+    <div class="basket-backdrop" data-basket-close></div>
+    <div class="basket-sheet">
+      <div class="basket-head"><div><p class="eyebrow">ESSEX MOTO</p><h2 id="basket-title">Your basket</h2></div><button class="basket-close" type="button" aria-label="Close basket" data-basket-close>×</button></div>
+      <div id="basket-lines" class="basket-lines"></div>
+      <div class="basket-total" id="basket-total"></div>
+      <form id="basket-enquiry-form" class="basket-form">
+        <p class="basket-note">Send your basket to Essex Moto. We will confirm current stock, compatibility, advertised prices and delivery before taking payment. This does not place an order or charge you.</p>
+        <label>Your name<input name="name" required autocomplete="name" placeholder="Your name"></label>
+        <label>Email address<input name="email" type="email" required autocomplete="email" placeholder="you@example.com"></label>
+        <label>Delivery postcode<input name="postcode" required autocomplete="postal-code" placeholder="Postcode"></label>
+        <button class="button button-blue" type="submit">Send basket enquiry</button>
+      </form>
+      <p class="basket-empty-help">Prices and delivery are reconfirmed before an order is accepted.</p>
+    </div>`;
+  document.body.appendChild(panel);
+
+  const countEl = document.getElementById('basket-count');
+  const render = () => {
+    const qty = basket.reduce((sum,item) => sum + item.qty, 0);
+    if (countEl) countEl.textContent = String(qty);
+    const lines = panel.querySelector('#basket-lines');
+    const totalEl = panel.querySelector('#basket-total');
+    if (!basket.length) {
+      lines.innerHTML = '<p class="basket-empty">Your basket is empty. Add products from the shop to get started.</p>';
+      totalEl.textContent = '';
+      return;
+    }
+    lines.innerHTML = basket.map(item => `
+      <article class="basket-line" data-line-id="${item.id}">
+        <div class="basket-line-copy"><strong>${escapeHtml(item.name)}</strong><span>${money(item.price)} each</span></div>
+        <div class="basket-line-actions">
+          <button type="button" data-qty="-1" aria-label="Decrease quantity">−</button><span>${item.qty}</span><button type="button" data-qty="1" aria-label="Increase quantity">+</button>
+          <button type="button" class="basket-remove" data-remove>Remove</button>
+        </div>
+        <strong class="basket-line-total">${money(item.price * item.qty)}</strong>
+      </article>`).join('');
+    totalEl.innerHTML = '<span>Product subtotal</span><strong>' + money(basket.reduce((sum,item)=>sum+item.price*item.qty,0)) + '</strong>';
+  };
+  const escapeHtml = value => String(value).replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+  const open = () => { panel.hidden = false; document.body.classList.add('basket-open'); panel.querySelector('.basket-close').focus(); };
+  const close = () => { panel.hidden = true; document.body.classList.remove('basket-open'); };
+  document.getElementById('basket-toggle')?.addEventListener('click', open);
+  panel.querySelectorAll('[data-basket-close]').forEach(el => el.addEventListener('click', close));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && !panel.hidden) close(); });
+
+  // Replace each enquiry-style Buy Now link with a real add-to-basket control.
+  document.querySelectorAll('.product-card .buy-now-button').forEach(link => {
+    const card = link.closest('.product-card');
+    const title = card?.querySelector('h3')?.textContent?.trim() || link.dataset.enquiry || 'Essex Moto product';
+    const priceText = card?.querySelector('.product-price')?.textContent || '';
+    const match = priceText.replace(/,/g,'').match(/£\s*(\d+(?:\.\d{1,2})?)/);
+    const price = match ? Number(match[1]) : NaN;
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = link.className;
+    button.textContent = 'Add to basket';
+    button.setAttribute('aria-label','Add ' + title + ' to basket');
+    button.addEventListener('click', () => {
+      if (!Number.isFinite(price)) {
+        open();
+        return;
+      }
+      const id = title.toLowerCase().replace(/[^a-z0-9]+/g,'-');
+      const existing = basket.find(item => item.id === id);
+      if (existing) existing.qty += 1;
+      else basket.push({id,name:title,price,qty:1});
+      save();
+      button.textContent = 'Added ✓';
+      window.setTimeout(() => { button.textContent = 'Add to basket'; }, 1300);
+    });
+    link.replaceWith(button);
+  });
+
+  panel.querySelector('#basket-lines').addEventListener('click', e => {
+    const line = e.target.closest('[data-line-id]');
+    if (!line) return;
+    const item = basket.find(entry => entry.id === line.dataset.lineId);
+    if (!item) return;
+    if (e.target.hasAttribute('data-remove')) basket = basket.filter(entry => entry.id !== item.id);
+    else if (e.target.hasAttribute('data-qty')) {
+      item.qty += Number(e.target.dataset.qty);
+      if (item.qty < 1) basket = basket.filter(entry => entry.id !== item.id);
+    } else return;
+    save();
+  });
+
+  panel.querySelector('#basket-enquiry-form').addEventListener('submit', e => {
+    e.preventDefault();
+    if (!basket.length) return;
+    const form = new FormData(e.currentTarget);
+    const subject = encodeURIComponent('Essex Moto basket enquiry (' + basket.reduce((sum,item)=>sum+item.qty,0) + ' items)');
+    const rows = basket.map(item => item.qty + ' x ' + item.name + ' — ' + money(item.price) + ' each = ' + money(item.price * item.qty));
+    rows.push('Product subtotal: ' + money(basket.reduce((sum,item)=>sum+item.price*item.qty,0)));
+    rows.push('Delivery: to be confirmed by Essex Moto');
+    rows.push('', 'Name: ' + form.get('name'), 'Email: ' + form.get('email'), 'Delivery postcode: ' + form.get('postcode'));
+    rows.push('', 'Please confirm current stock, compatibility, prices and delivery. I understand this is an enquiry and not an order or payment.');
+    window.location.href = 'mailto:info@essex-moto.co.uk?subject=' + subject + '&body=' + encodeURIComponent(rows.join('\n'));
+  });
+  render();
+})();
