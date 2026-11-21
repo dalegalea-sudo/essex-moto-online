@@ -167,14 +167,14 @@ document.getElementById('year').textContent = new Date().getFullYear();
       <div id="basket-lines" class="basket-lines"></div>
       <div class="basket-total" id="basket-total"></div>
       <form id="basket-enquiry-form" class="basket-form">
-        <p class="basket-note">Delivery is £102 (supplier charge £100 plus the agreed 2%). Optional pre-assembly/PDI can be requested for eligible bikes and quads; its price depends on the model and will be confirmed before payment. We check stock and product prices before accepting an order. This enquiry does not charge you.</p>
+        <p class="basket-note">Delivery is £102. Your card will be authorised through Stripe, but will not be charged until Essex Moto confirms stock and the advertised price. Optional pre-assembly/PDI must be quoted for your exact model before checkout.</p>
         <label class="assembly-choice"><input name="assembly" type="checkbox" value="yes"> I would like pre-assembly/PDI if available for my selected model(s)</label>
         <label>Your name<input name="name" required autocomplete="name" placeholder="Your name"></label>
         <label>Email address<input name="email" type="email" required autocomplete="email" placeholder="you@example.com"></label>
         <label>Delivery postcode<input name="postcode" required autocomplete="postal-code" placeholder="Postcode"></label>
-        <button class="button button-blue" type="submit">Send basket enquiry</button>
+        <button class="button button-blue" type="submit">Continue to secure checkout</button>
       </form>
-      <p class="basket-empty-help">Prices and delivery are reconfirmed before an order is accepted.</p>
+      <p class="basket-empty-help">Card payments are captured only after stock and price checks. Pre-assembly/PDI is quoted separately where available.</p>
     </div>`;
   document.body.appendChild(panel);
 
@@ -258,19 +258,37 @@ document.getElementById('year').textContent = new Date().getFullYear();
     save();
   });
 
-  panel.querySelector('#basket-enquiry-form').addEventListener('submit', e => {
+  panel.querySelector('#basket-enquiry-form').addEventListener('submit', async e => {
     e.preventDefault();
     if (!basket.length) return;
     const form = new FormData(e.currentTarget);
-    const subject = encodeURIComponent('Essex Moto basket enquiry (' + basket.reduce((sum,item)=>sum+item.qty,0) + ' items)');
-    const rows = basket.map(item => item.qty + ' x ' + item.name + ' — ' + money(item.price) + ' each = ' + money(item.price * item.qty));
-    rows.push('Product subtotal: ' + money(basket.reduce((sum,item)=>sum+item.price*item.qty,0)));
-    rows.push('Delivery (supplier £100 + 2%): ' + money(CUSTOMER_DELIVERY));
-    rows.push('Pre-assembly/PDI requested: ' + (form.get('assembly') === 'yes' ? 'Yes — confirm availability and exact model charge before payment' : 'No'));
-    rows.push('Total before optional assembly: ' + money(basket.reduce((sum,item)=>sum+item.price*item.qty,0) + CUSTOMER_DELIVERY));
-    rows.push('', 'Name: ' + form.get('name'), 'Email: ' + form.get('email'), 'Delivery postcode: ' + form.get('postcode'));
-    rows.push('', 'Please confirm current stock, compatibility, advertised prices and any requested assembly/PDI charge. I understand this is an enquiry and not an order or payment.');
-    window.location.href = 'mailto:info@essex-moto.co.uk?subject=' + subject + '&body=' + encodeURIComponent(rows.join('\n'));
+    if (form.get('assembly') === 'yes') {
+      alert('Pre-assembly/PDI has a model-specific supplier charge. Please contact Essex Moto on 07309 001841 for the exact quote before continuing to payment.');
+      return;
+    }
+    const submit = e.currentTarget.querySelector('button[type="submit"]');
+    submit.disabled = true;
+    submit.textContent = 'Connecting to secure checkout…';
+    try {
+      const response = await fetch('https://essex-moto-checkout.onrender.com/api/create-checkout-session', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          items: basket.map(item => ({ id: item.id, qty: item.qty })),
+          customerName: form.get('name'),
+          email: form.get('email'),
+          postcode: form.get('postcode'),
+          assemblyRequested: false
+        })
+      });
+      const result = await response.json();
+      if (!response.ok || !result.url) throw new Error(result.error || 'Secure checkout is not available yet.');
+      window.location.href = result.url;
+    } catch (error) {
+      alert(error.message || 'Unable to start checkout. Please try again or contact Essex Moto.');
+      submit.disabled = false;
+      submit.textContent = 'Continue to secure checkout';
+    }
   });
   render();
 })();
