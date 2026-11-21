@@ -72,57 +72,7 @@ app.get("/health", (_req, res) => {
   res.json({ status: "ok", service: "essex-moto-stripe-checkout" });
 });
 
-// Safe configuration check: reveals account and price status only, never secret values.
-app.get("/test-checkout-status", async (_req, res) => {
-  const testPriceId = ALLOWED_PRICE_IDS.values().next().value;
-  let stripeAccountId = null;
-  let priceLookup = "not_checked";
-  try {
-    const account = await stripe.accounts.retrieve();
-    stripeAccountId = account.id;
-    await stripe.prices.retrieve(testPriceId);
-    priceLookup = "found";
-  } catch (err) {
-    priceLookup = err.code === "resource_missing" ? "not_found_in_this_stripe_account" : "lookup_error";
-  }
-  res.json({
-    sandboxKeyConfigured: STRIPE_SECRET_KEY.startsWith("sk_test_"),
-    secretKeyPresent: Boolean(STRIPE_SECRET_KEY),
-    secretKeyType: STRIPE_SECRET_KEY.startsWith("sk_test_") ? "sandbox_secret" : STRIPE_SECRET_KEY.startsWith("rk_test_") ? "sandbox_restricted" : STRIPE_SECRET_KEY.startsWith("sk_live_") ? "live_secret" : STRIPE_SECRET_KEY ? "unrecognised_prefix" : "missing",
-    stripeAccountId,
-    testPriceAllowed: ALLOWED_PRICE_IDS.has(testPriceId),
-    priceLookup,
-    testRoute: "available"
-  });
-});
-
-// Temporary iPhone-friendly Sandbox test route. Remove after the test.
-app.get("/test-checkout", async (_req, res) => {
-  const testPriceId = ALLOWED_PRICE_IDS.values().next().value;
-  if (!process.env.STRIPE_SECRET_KEY.startsWith("sk_test_") || !ALLOWED_PRICE_IDS.has(testPriceId)) {
-    return res.status(404).send("Test checkout is not enabled.");
-  }
-  try {
-    const price = await stripe.prices.retrieve(testPriceId);
-    if (!price.active || price.currency !== "gbp" || price.unit_amount !== 10000) {
-      return res.status(400).send("The £100 Sandbox test price is unavailable.");
-    }
-    const session = await stripe.checkout.sessions.create({
-      mode: "payment",
-      line_items: [{ price: testPriceId, quantity: 1 }],
-      billing_address_collection: "required",
-      shipping_address_collection: { allowed_countries: ["GB"] },
-      phone_number_collection: { enabled: true },
-      success_url: SITE_URL + "/?payment=test-success&session_id={CHECKOUT_SESSION_ID}",
-      cancel_url: SITE_URL + "/?payment=test-cancelled",
-      metadata: { supplier_order_status: "PENDING_MANUAL_APPROVAL", test_order: "true" }
-    });
-    return res.redirect(303, session.url);
-  } catch (err) {
-    console.error("Sandbox test checkout failed:", err.message);
-    return res.status(500).send("Unable to start the Sandbox test checkout.");
-  }
-});
+// Temporary Sandbox test routes removed after successful verification.
 
 app.post("/api/create-checkout-session", async (req, res) => {
   try {
