@@ -214,21 +214,30 @@ document.getElementById('year').textContent = new Date().getFullYear();
     const button = document.createElement('button');
     button.type = 'button';
     button.className = link.className;
-    button.textContent = 'Add to basket';
-    button.setAttribute('aria-label','Add ' + title + ' to basket');
-    button.addEventListener('click', () => {
-      if (!Number.isFinite(price)) {
-        open();
-        return;
-      }
-      const id = title.toLowerCase().replace(/[^a-z0-9]+/g,'-');
-      const existing = basket.find(item => item.id === id);
-      if (existing) existing.qty += 1;
-      else basket.push({id,name:title,price,qty:1});
-      save();
-      button.textContent = 'Added ✓';
-      window.setTimeout(() => { button.textContent = 'Add to basket'; }, 1300);
-    });
+    const stockText = card?.querySelector('.stock-label')?.textContent?.trim().toLowerCase() || '';
+    const unavailable = stockText === 'out of stock' || stockText.includes('unavailable');
+    if (unavailable) {
+      button.textContent = 'Out of stock';
+      button.disabled = true;
+      button.setAttribute('aria-label', title + ' is out of stock');
+      button.classList.add('button-disabled');
+    } else {
+      button.textContent = 'Add to basket';
+      button.setAttribute('aria-label','Add ' + title + ' to basket');
+      button.addEventListener('click', () => {
+        if (!Number.isFinite(price)) {
+          open();
+          return;
+        }
+        const id = title.toLowerCase().replace(/[^a-z0-9]+/g,'-');
+        const existing = basket.find(item => item.id === id);
+        if (existing) existing.qty += 1;
+        else basket.push({id,name:title,price,qty:1});
+        save();
+        button.textContent = 'Added ✓';
+        window.setTimeout(() => { button.textContent = 'Add to basket'; }, 1300);
+      });
+    }
     link.replaceWith(button);
   });
 
