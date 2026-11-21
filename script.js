@@ -142,6 +142,8 @@ document.getElementById('year').textContent = new Date().getFullYear();
 // Essex Moto basket: local basket with multi-item enquiry (no payment is taken here).
 (() => {
   const STORAGE_KEY = 'essexMotoBasketV1';
+  // Supplier delivery £100 plus the agreed 2% uplift.
+  const CUSTOMER_DELIVERY = 102;
   let basket = [];
   try { basket = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]'); } catch (_) { basket = []; }
   if (!Array.isArray(basket)) basket = [];
@@ -165,7 +167,8 @@ document.getElementById('year').textContent = new Date().getFullYear();
       <div id="basket-lines" class="basket-lines"></div>
       <div class="basket-total" id="basket-total"></div>
       <form id="basket-enquiry-form" class="basket-form">
-        <p class="basket-note">Send your basket to Essex Moto. We will confirm current stock, compatibility, advertised prices and delivery before taking payment. This does not place an order or charge you.</p>
+        <p class="basket-note">Delivery is £102 (supplier charge £100 plus the agreed 2%). Optional pre-assembly/PDI can be requested for eligible bikes and quads; its price depends on the model and will be confirmed before payment. We check stock and product prices before accepting an order. This enquiry does not charge you.</p>
+        <label class="assembly-choice"><input name="assembly" type="checkbox" value="yes"> I would like pre-assembly/PDI if available for my selected model(s)</label>
         <label>Your name<input name="name" required autocomplete="name" placeholder="Your name"></label>
         <label>Email address<input name="email" type="email" required autocomplete="email" placeholder="you@example.com"></label>
         <label>Delivery postcode<input name="postcode" required autocomplete="postal-code" placeholder="Postcode"></label>
@@ -195,7 +198,8 @@ document.getElementById('year').textContent = new Date().getFullYear();
         </div>
         <strong class="basket-line-total">${money(item.price * item.qty)}</strong>
       </article>`).join('');
-    totalEl.innerHTML = '<span>Product subtotal</span><strong>' + money(basket.reduce((sum,item)=>sum+item.price*item.qty,0)) + '</strong>';
+    const subtotal = basket.reduce((sum,item)=>sum+item.price*item.qty,0);
+    totalEl.innerHTML = '<div><span>Product subtotal</span><strong>' + money(subtotal) + '</strong></div><div><span>Delivery</span><strong>' + money(CUSTOMER_DELIVERY) + '</strong></div><div class="basket-grand-total"><span>Total before any optional assembly</span><strong>' + money(subtotal + CUSTOMER_DELIVERY) + '</strong></div>';
   };
   const escapeHtml = value => String(value).replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
   const open = () => { panel.hidden = false; document.body.classList.add('basket-open'); panel.querySelector('.basket-close').focus(); };
@@ -261,9 +265,11 @@ document.getElementById('year').textContent = new Date().getFullYear();
     const subject = encodeURIComponent('Essex Moto basket enquiry (' + basket.reduce((sum,item)=>sum+item.qty,0) + ' items)');
     const rows = basket.map(item => item.qty + ' x ' + item.name + ' — ' + money(item.price) + ' each = ' + money(item.price * item.qty));
     rows.push('Product subtotal: ' + money(basket.reduce((sum,item)=>sum+item.price*item.qty,0)));
-    rows.push('Delivery: to be confirmed by Essex Moto');
+    rows.push('Delivery (supplier £100 + 2%): ' + money(CUSTOMER_DELIVERY));
+    rows.push('Pre-assembly/PDI requested: ' + (form.get('assembly') === 'yes' ? 'Yes — confirm availability and exact model charge before payment' : 'No'));
+    rows.push('Total before optional assembly: ' + money(basket.reduce((sum,item)=>sum+item.price*item.qty,0) + CUSTOMER_DELIVERY));
     rows.push('', 'Name: ' + form.get('name'), 'Email: ' + form.get('email'), 'Delivery postcode: ' + form.get('postcode'));
-    rows.push('', 'Please confirm current stock, compatibility, prices and delivery. I understand this is an enquiry and not an order or payment.');
+    rows.push('', 'Please confirm current stock, compatibility, advertised prices and any requested assembly/PDI charge. I understand this is an enquiry and not an order or payment.');
     window.location.href = 'mailto:info@essex-moto.co.uk?subject=' + subject + '&body=' + encodeURIComponent(rows.join('\n'));
   });
   render();
