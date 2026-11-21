@@ -1,11 +1,11 @@
 const menu = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.nav');
-menu.addEventListener('click', () => {
+menu?.addEventListener('click', () => {
   const open = nav.classList.toggle('open');
   menu.setAttribute('aria-expanded', String(open));
 });
 document.querySelectorAll('.nav a').forEach(a => a.addEventListener('click', () => {
-  nav.classList.remove('open'); menu.setAttribute('aria-expanded','false');
+  nav?.classList.remove('open'); menu?.setAttribute('aria-expanded','false');
 }));
 let activeCategory = 'all';
 let activeSubcategory = 'all';
@@ -41,16 +41,19 @@ document.querySelectorAll('[data-enquiry]').forEach(link => link.addEventListene
   const select = document.querySelector('select[name="interest"]');
   const message = document.querySelector('textarea[name="message"]');
   const enquiry = link.dataset.enquiry || '';
-  const option = [...select.options].find(o => o.text === enquiry);
-  if (option) select.value = option.value;
-  else if (/spare|part|chain|axle|brake|bolt|fitting/i.test(enquiry)) select.value = 'Spare parts and accessories';
-  else if (/\bRC\b|radio control|monster truck|truggy/i.test(enquiry)) select.value = 'RC cars and hobbies';
-  else if (/hoodie|t-shirt|polo|branded clothing/i.test(enquiry)) select.value = 'Essex Moto branded clothing';
-  else if (/quad/i.test(enquiry)) select.value = /adult|commander/i.test(enquiry) ? 'Adult quad bikes' : "Kids' electric quad bikes";
-  else if (/dirt bike|pit bike|motorcycle/i.test(enquiry)) select.value = /kids|junior/i.test(enquiry) ? "Kids' riding clothing" : 'Adult riding equipment';
+  if (select) {
+    const option = [...select.options].find(o => o.text === enquiry);
+    if (option) select.value = option.value;
+    else if (/spare|part|chain|axle|brake|bolt|fitting/i.test(enquiry)) select.value = 'Spare parts and accessories';
+    else if (/\bRC\b|radio control|monster truck|truggy/i.test(enquiry)) select.value = 'RC cars and hobbies';
+    else if (/hoodie|t-shirt|polo|branded clothing/i.test(enquiry)) select.value = 'Essex Moto branded clothing';
+    else if (/quad/i.test(enquiry)) select.value = /adult|commander/i.test(enquiry) ? 'Adult quad bikes' : "Kids' electric quad bikes";
+    else if (/dirt bike|pit bike|motorcycle/i.test(enquiry)) select.value = /kids|junior/i.test(enquiry) ? "Kids' riding clothing" : 'Adult riding equipment';
+  }
   if (message) message.value = enquiry;
 }));
-document.getElementById('enquiry-form').addEventListener('submit', e => {
+const enquiryForm = document.getElementById('enquiry-form');
+if (enquiryForm) enquiryForm.addEventListener('submit', e => {
   e.preventDefault();
   const data = new FormData(e.currentTarget);
   const subject = encodeURIComponent('Essex Moto enquiry — ' + data.get('interest'));
@@ -61,7 +64,8 @@ document.getElementById('enquiry-form').addEventListener('submit', e => {
   const businessEmail = e.currentTarget.dataset.businessEmail || 'info@essex-moto.co.uk';
   window.location.href = `mailto:${businessEmail}?subject=${subject}&body=${body}`;
 });
-document.getElementById('year').textContent = new Date().getFullYear();
+const yearElement = document.getElementById('year');
+if (yearElement) yearElement.textContent = new Date().getFullYear();
 
 // Essex Moto catalogue structure: keep every listed item in one of the five agreed ranges.
 (() => {
