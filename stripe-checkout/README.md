@@ -35,7 +35,7 @@ Copy the webhook signing secret into Render as `STRIPE_WEBHOOK_SECRET`.
 POST `/api/create-checkout-session` with JSON:
 `{"priceId":"price_...","quantity":1}`
 
-Only Price IDs in `STRIPE_PRICE_IDS` are accepted. Prices are retrieved from Stripe server-side; client-submitted amounts are never trusted. GBP orders are limited to £400. VAT/tax is not added by this service.
+Only Price IDs in `STRIPE_PRICE_IDS` are accepted. Prices are retrieved from Stripe server-side; client-submitted amounts are never trusted. GBP orders are limited to £5,000. VAT/tax is not added by this service.
 
 ## Important operating rules
 
