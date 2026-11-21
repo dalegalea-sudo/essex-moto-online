@@ -87,8 +87,8 @@ app.post("/api/create-checkout-session", async (req, res) => {
     if (!price.active || !price.unit_amount || price.currency !== "gbp") {
       return res.status(400).json({ error: "This product price is unavailable." });
     }
-    if (price.unit_amount * quantity > 40000) {
-      return res.status(400).json({ error: "The order limit is £400." });
+    if (price.unit_amount * quantity > 500000) {
+      return res.status(400).json({ error: "The order limit is £5,000." });
     }
 
     const session = await stripe.checkout.sessions.create({
