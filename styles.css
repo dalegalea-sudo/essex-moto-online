@@ -339,3 +339,14 @@ body.basket-open{overflow:hidden}
  .nav{order:3;width:100%}
  .basket-sheet{width:100%;border-left:0}
 }
+
+
+/* Compact basket typography for mobile and desktop */
+.basket-line-copy strong{font-size:12px}
+.basket-line-copy span,.basket-empty-help{font-size:10px}
+.basket-line-total{font-size:12px}
+.basket-total{font-size:13px}
+.basket-total strong{font-size:16px}
+.basket-form label{font-size:11px}
+.basket-note{font-size:10px;line-height:1.45}
+.basket-empty{font-size:12px}
