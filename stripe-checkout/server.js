@@ -55,7 +55,7 @@ app.post("/api/stripe/webhook", express.raw({ type: "application/json" }), async
       customerEmail: session.customer_details?.email || session.customer_email || null,
       shippingDetails: session.shipping_details || null,
       orderSummary: session.metadata?.order_summary || null,
-      supplierOrderStatus: "PENDING_STOCK_AND_PRICE_CONFIRMATION"
+      supplierOrderStatus: "PAYMENT_COLLECTED_FULFILMENT_PENDING"
     }));
   } else if (event.type === "payment_intent.amount_capturable_updated") {
     const intent = event.data.object;
@@ -95,7 +95,7 @@ app.get("/api/payment-status", (_req, res) => {
     expectedMode: EXPECTED_MODE,
     paymentsEnabled: PAYMENTS_ENABLED && modeMatches && liveAllowed,
     checkoutType: "stripe-hosted",
-    captureMode: "manual",
+    captureMode: "automatic",
     catalogueProducts: catalogue.products.length,
     deliveryPence: catalogue.deliveryAmount,
     webhookConfigured: Boolean(process.env.STRIPE_WEBHOOK_SECRET),
@@ -175,12 +175,12 @@ app.post("/api/create-checkout-session", async (req, res) => {
       shipping_address_collection: { allowed_countries: ["GB"] },
       phone_number_collection: { enabled: true },
       payment_intent_data: {
-        capture_method: "manual",
-        description: "Essex Moto order — stock and price confirmation required",
+        capture_method: "automatic",
+        description: "Essex Moto order — payment collected at checkout; supplier fulfilment pending",
         metadata: {
           customer_name: customerName.trim(),
           delivery_postcode_entered: postcode.trim().toUpperCase(),
-          supplier_order_status: "PENDING_STOCK_AND_PRICE_CONFIRMATION"
+          supplier_order_status: "PAYMENT_COLLECTED_FULFILMENT_PENDING"
         }
       },
       success_url: SITE_URL + "/?payment=authorised&session_id={CHECKOUT_SESSION_ID}",
