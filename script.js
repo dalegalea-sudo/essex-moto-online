@@ -46,7 +46,6 @@ document.querySelectorAll('[data-enquiry]').forEach(link => link.addEventListene
     if (option) select.value = option.value;
     else if (/spare|part|chain|axle|brake|bolt|fitting/i.test(enquiry)) select.value = 'Spare parts and accessories';
     else if (/\bRC\b|radio control|monster truck|truggy/i.test(enquiry)) select.value = 'RC cars and hobbies';
-    else if (/hoodie|t-shirt|polo|branded clothing/i.test(enquiry)) select.value = 'Essex Moto branded clothing';
     else if (/quad/i.test(enquiry)) select.value = /adult|commander/i.test(enquiry) ? 'Adult quad bikes' : "Kids' electric quad bikes";
     else if (/dirt bike|pit bike|motorcycle/i.test(enquiry)) select.value = /kids|junior/i.test(enquiry) ? "Kids' riding clothing" : 'Adult riding equipment';
   }
