@@ -71,6 +71,15 @@ app.get("/health", (_req, res) => {
   res.json({ status: "ok", service: "essex-moto-stripe-checkout" });
 });
 
+// Safe configuration check: reveals status only, never secret values.
+app.get("/test-checkout-status", (_req, res) => {
+  res.json({
+    sandboxKeyConfigured: Boolean(process.env.STRIPE_SECRET_KEY && process.env.STRIPE_SECRET_KEY.startsWith("sk_test_")),
+    testPriceAllowed: ALLOWED_PRICE_IDS.has("price_1UeBKkCZSbVi0P0k2iV6pmjP"),
+    testRoute: "available"
+  });
+});
+
 // Temporary iPhone-friendly Sandbox test route. Remove after the test.
 app.get("/test-checkout", async (_req, res) => {
   const testPriceId = "price_1UeBKkCZSbVi0P0k2iV6pmjP";
