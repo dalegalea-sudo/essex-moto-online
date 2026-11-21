@@ -16,11 +16,6 @@ if (!process.env.STRIPE_SECRET_KEY) {
   console.error("Missing STRIPE_SECRET_KEY environment variable.");
   process.exit(1);
 }
-if (!process.env.STRIPE_WEBHOOK_SECRET) {
-  console.error("Missing STRIPE_WEBHOOK_SECRET environment variable.");
-  process.exit(1);
-}
-
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 app.disable("x-powered-by");
 app.use(helmet());
@@ -33,6 +28,9 @@ app.use(cors({
 
 // Stripe requires the unparsed request body to verify webhook signatures.
 app.post("/api/stripe/webhook", express.raw({ type: "application/json" }), (req, res) => {
+  if (!process.env.STRIPE_WEBHOOK_SECRET) {
+    return res.status(503).send("Webhook is not configured yet.");
+  }
   const signature = req.headers["stripe-signature"];
   let event;
   try {
