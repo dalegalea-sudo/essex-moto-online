@@ -74,7 +74,7 @@ app.get("/health", (_req, res) => {
 
 // Safe configuration check: reveals account and price status only, never secret values.
 app.get("/test-checkout-status", async (_req, res) => {
-  const testPriceId = "price_1UeDXVCZSbVi0P0klzyJWaN8";
+  const testPriceId = ALLOWED_PRICE_IDS.values().next().value;
   let stripeAccountId = null;
   let priceLookup = "not_checked";
   try {
@@ -98,7 +98,7 @@ app.get("/test-checkout-status", async (_req, res) => {
 
 // Temporary iPhone-friendly Sandbox test route. Remove after the test.
 app.get("/test-checkout", async (_req, res) => {
-  const testPriceId = "price_1UeDXVCZSbVi0P0klzyJWaN8";
+  const testPriceId = ALLOWED_PRICE_IDS.values().next().value;
   if (!process.env.STRIPE_SECRET_KEY.startsWith("sk_test_") || !ALLOWED_PRICE_IDS.has(testPriceId)) {
     return res.status(404).send("Test checkout is not enabled.");
   }
