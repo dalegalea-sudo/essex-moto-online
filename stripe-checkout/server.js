@@ -183,7 +183,7 @@ app.post("/api/create-checkout-session", async (req, res) => {
           supplier_order_status: "PAYMENT_COLLECTED_FULFILMENT_PENDING"
         }
       },
-      success_url: SITE_URL + "/?payment=authorised&session_id={CHECKOUT_SESSION_ID}",
+      success_url: SITE_URL + "/?payment=paid&session_id={CHECKOUT_SESSION_ID}",
       cancel_url: SITE_URL + "/?payment=cancelled",
       client_reference_id: "EM-" + Date.now().toString(36).toUpperCase(),
       metadata: {
