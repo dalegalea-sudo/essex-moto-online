@@ -13,8 +13,8 @@
       "id": "renegade-ranger-1200w-48v-kids-quad-red",
       "name": "Renegade Ranger 1200W 48V Kids Quad – Red",
       "unitAmount": 79900,
-      "stockStatus": "Out of Stock",
-      "available": false
+      "stockStatus": "In Stock",
+      "available": true
     },
     {
       "id": "kids-800w-36v-electric-dirt-bike-10-10-pink",
@@ -69,8 +69,8 @@
       "id": "panther-110cc-kids-petrol-quad-black",
       "name": "Panther 110cc Kids Petrol Quad – Black",
       "unitAmount": 89900,
-      "stockStatus": "Availability confirmed before payment",
-      "available": true
+      "stockStatus": "Supplier listed: pre-order date passed — reconfirm before order",
+      "available": false
     },
     {
       "id": "sniper-pro-120cc-junior-quad-blue",
@@ -111,28 +111,28 @@
       "id": "rfn-thunder-pro-110cc-kids-semi-auto-pit-bike",
       "name": "RFN Thunder Pro 110cc Kids Semi-Auto Pit Bike",
       "unitAmount": 69900,
-      "stockStatus": "Supplier listed: in stock — reconfirm before order",
-      "available": false
+      "stockStatus": "In Stock",
+      "available": true
     },
     {
       "id": "rfn-thunder-140cc-xl-dirt-bike-19-16",
       "name": "RFN Thunder 140cc XL Dirt Bike – 19/16",
       "unitAmount": 99900,
-      "stockStatus": "Not confirmed",
-      "available": false
+      "stockStatus": "In Stock",
+      "available": true
     },
     {
       "id": "storm-3000w-48v-electric-dirt-bike-14-12",
       "name": "Storm 3000W 48V Electric Dirt Bike 14/12",
       "unitAmount": 129900,
-      "stockStatus": "Not confirmed",
+      "stockStatus": "Supplier listed: pre-order date passed — reconfirm before order",
       "available": false
     },
     {
       "id": "storm-5000w-72v-electric-dirt-bike-17-14",
       "name": "Storm 5000W 72V Electric Dirt Bike 17/14",
       "unitAmount": 169900,
-      "stockStatus": "Not confirmed",
+      "stockStatus": "Supplier listed: pre-order date passed — reconfirm before order",
       "available": false
     },
     {
@@ -216,8 +216,8 @@
       "id": "kids-1200w-48v-electric-dirt-bike-12-10-blue",
       "name": "Kids 1200W 48V Electric Dirt Bike 12/10 – Blue",
       "unitAmount": 79900,
-      "stockStatus": "Availability confirmed before payment",
-      "available": true
+      "stockStatus": "Supplier listed: low on stock — reconfirm before order",
+      "available": false
     },
     {
       "id": "2000w-60v-electric-dirt-bike-14-12-green",
@@ -230,8 +230,8 @@
       "id": "rfn-thunder-pro-fh-110cc-pit-bike-red-blue",
       "name": "RFN Thunder Pro FH 110cc Pit Bike – Red/Blue",
       "unitAmount": 69900,
-      "stockStatus": "Supplier listed: in stock — reconfirm before order",
-      "available": false
+      "stockStatus": "In Stock",
+      "available": true
     },
     {
       "id": "apollo-commander-200-adults-quad-black",
@@ -370,8 +370,8 @@
       "id": "air-filter-breather-pipe",
       "name": "Air Filter Breather Pipe",
       "unitAmount": 500,
-      "stockStatus": "Availability confirmed before payment",
-      "available": true
+      "stockStatus": "Supplier listed: low on stock — reconfirm before order",
+      "available": false
     },
     {
       "id": "connecting-rod-assembly",
@@ -461,8 +461,8 @@
       "id": "gts-150-side-arm-brush-bar",
       "name": "GTS 150 Side Arm Brush Bar",
       "unitAmount": 3499,
-      "stockStatus": "Availability confirmed before payment",
-      "available": true
+      "stockStatus": "Supplier listed: low on stock — reconfirm before order",
+      "available": false
     },
     {
       "id": "bolt-m6-12",
@@ -517,29 +517,29 @@
       "id": "apollo-quad-bike-sports-exhaust-system",
       "name": "Apollo Quad Bike Sports Exhaust System",
       "unitAmount": 4999,
-      "stockStatus": "Not confirmed",
-      "available": false
+      "stockStatus": "In Stock",
+      "available": true
     },
     {
       "id": "front-brake-disc-thunder-250cc",
       "name": "Front Brake Disc – Thunder 250cc",
       "unitAmount": 2299,
-      "stockStatus": "Supplier listed: in stock — reconfirm before order",
-      "available": false
+      "stockStatus": "In Stock",
+      "available": true
     },
     {
       "id": "throttle-cable-thunder-250cc",
       "name": "Throttle Cable – Thunder 250cc",
       "unitAmount": 999,
-      "stockStatus": "Supplier listed: in stock — reconfirm before order",
-      "available": false
+      "stockStatus": "In Stock",
+      "available": true
     },
     {
       "id": "right-middle-side-cover-thunder-250cc",
       "name": "Right Middle Side Cover – Thunder 250cc",
       "unitAmount": 1299,
-      "stockStatus": "Supplier listed: in stock — reconfirm before order",
-      "available": false
+      "stockStatus": "In Stock",
+      "available": true
     },
     {
       "id": "front-fork-plastics-thunder-250cc",
@@ -706,8 +706,8 @@
       "id": "kids-1200w-48v-electric-dirt-bike-12-10-grey",
       "name": "Kids 1200W 48V Electric Dirt Bike 12/10 – Grey",
       "unitAmount": 79900,
-      "stockStatus": "Availability confirmed before payment",
-      "available": true
+      "stockStatus": "Supplier listed: low on stock — reconfirm before order",
+      "available": false
     },
     {
       "id": "kids-1200w-48v-electric-dirt-bike-12-10-yellow",
@@ -727,8 +727,8 @@
       "id": "2000w-60v-electric-dirt-bike-14-12-grey",
       "name": "2000W 60V Electric Dirt Bike 14/12 – Grey",
       "unitAmount": 109900,
-      "stockStatus": "Availability confirmed before payment",
-      "available": true
+      "stockStatus": "Supplier listed: low on stock — reconfirm before order",
+      "available": false
     },
     {
       "id": "2000w-60v-electric-dirt-bike-14-12-yellow",
@@ -741,21 +741,21 @@
       "id": "2000w-60v-electric-dirt-bike-14-12-blue",
       "name": "2000W 60V Electric Dirt Bike 14/12 – Blue",
       "unitAmount": 109900,
-      "stockStatus": "Availability confirmed before payment",
-      "available": true
+      "stockStatus": "Supplier listed: low on stock — reconfirm before order",
+      "available": false
     },
     {
       "id": "revvi-20-800w-36v-kids-electric-bike-green",
       "name": "Revvi 20 800W 36V Kids Electric Bike – Green",
       "unitAmount": 109900,
-      "stockStatus": "Not confirmed",
+      "stockStatus": "Supplier listed: low on stock — reconfirm before order",
       "available": false
     },
     {
       "id": "talaria-sting-r-8kw-electric-dirt-bike-black-blue",
       "name": "Talaria Sting R 8kW Electric Dirt Bike – Black/Blue",
       "unitAmount": 349500,
-      "stockStatus": "Supplier listed: in stock — reconfirm before order",
+      "stockStatus": "Out of Stock",
       "available": false
     }
   ]
