@@ -1,5 +1,5 @@
 # Essex Moto — Google Shopping / Merchant Center readiness
-Updated 23 November 2026. **Not submitted to Merchant Center; no Google free-listing approval is implied.**
+Updated 23 November 2026. Shipping tiers updated that evening. **Not submitted to Merchant Center; no Google free-listing approval is implied.**
 
 ## Verified matches from existing Essex Moto listings to published Storm Buggies pages
 Three Wulfsport listings already on the Essex Moto riding-gear page now have their own product-information URLs on the Essex Moto domain. Their website prices match Storm Buggies' public prices at the time of review.
@@ -21,7 +21,7 @@ Machine-readable preparation: [supplier-matched-gear.json](google-merchant/suppl
 - The pages describe supplier status conservatively and are **not yet suitable for submitting as Merchant Center paid/free listings**.
 
 ## Still preventing a compliant Merchant Center product feed
-1. **Shipping**: the Essex Moto basket and Stripe catalogue currently apply **£102 flat delivery even to a small helmet, gloves or racing suit**. Storm Buggies' publicly accessible product pages use a postcode-based delivery calculator; no verified parcel rate was found. Confirm the applicable parcel shipping charges and implement them consistently in the website, backend, checkout and Merchant Center before advertising.
+1. **Shipping**: Essex Moto has now implemented its own customer shipping tiers: **£10 for small parcel baskets**, **£20 when any medium-sized parcel item is included**, and **£102 per bike** (plus one parcel-tier charge for any additional parcel items). The frontend and Stripe backend use the same catalogue classifications, with 43 bikes, 28 medium and 37 small products. [Customer delivery policy](https://essex-moto.co.uk/delivery.html). **Storm Buggies does not publish these fixed amounts as supplier charges**; its product pages have a postcode-based 'Check Delivery Price' calculator. Confirm wholesale/postcode cost impacts before submitting the rates to Merchant Center.
 2. **Size selection**: helmet, racing-suit and glove sizes must be selected and preserved in Essex Moto's basket, checkout and resulting order. Current basket/checkout does **not** capture each item's size. Avoid advertising sizes that can't be ordered accurately.
 3. **Returns**: Essex Moto needs its own truthful, accessible shipping, cancellation and refunds policy. Do **not** copy Storm Buggies' restrictive direct-sale conditions; UK law includes distance-selling cancellation and faulty-goods rights. See [GOV.UK](https://www.gov.uk/accepting-returns-and-giving-refunds).
 4. **Stock / identifiers**: reconfirm current stock per size before publication; verify whether manufacturer GTIN/MPN exists. Do not treat Storm's site-specific product code as a verified manufacturer identifier.
