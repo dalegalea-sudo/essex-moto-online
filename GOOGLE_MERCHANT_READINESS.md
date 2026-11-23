@@ -3,7 +3,7 @@ Updated 23 November 2026. Shipping tiers, UK returns page and three Wulfsport si
 
 ## Current Google Search status — temporary Render URL (23 November 2026)
 - **Preferred canonical:** https://essex-moto-online.onrender.com/ while the custom domain is being resolved.
-- **Sitemap:** https://essex-moto-online.onrender.com/sitemap.xml, with 11 matching canonical URLs, linked from `robots.txt`; three product pages have GBP offer price and per-item delivery information in Product structured data without unverified per-size availability claims.
+- **Sitemap:** https://essex-moto-online.onrender.com/sitemap.xml, with 13 matching canonical URLs, linked from `robots.txt`; three product pages have GBP offer price and per-item delivery information in Product structured data without unverified per-size availability claims.
 - **Checkout return flow:** validates the customer storefront origin against approved hosts, rather than blindly redirecting from Render to the custom domain.
 - **Action still required in Google:** add/verify the Render URL-prefix property and submit/check the sitemap from inside Search Console. Follow [Search Console instructions](GOOGLE_SEARCH_CONSOLE_SETUP.md). Neither indexing nor Merchant Center approval has been verified.
 - **Switch back to custom domain later** only when its SSL/DNS works, with coordinated canonical/sitemap/merchant/checkout changes.
@@ -54,6 +54,16 @@ Machine-readable preparation: [supplier-matched-gear.json](google-merchant/suppl
 - No verified publicly displayable Essex Moto geographic trading address has been provided. A previously discussed address service was only a proposal and must **not** be published or represented as active.
 - Neither a postcode-based wholesale shipping quote nor an estimated return transport charge for large vehicles was confirmed by the supplier. Do not invent these numbers. Essex Moto's customer shipping remains £10 small, £20 medium and £102 per bike.
 - No Google Merchant Center account is connected in the current integration. **Do not submit feed items until account access, stock, variants, seller details, VAT / product identifiers where applicable, checkout and shipping/return rules are verified.**
+
+
+## Adult and kids bike Google Search pages — 23 November 2026
+- Published <https://essex-moto-online.onrender.com/kids-bikes.html> with **24 kids' bike and quad listings** from Essex Moto's existing supplier-sourced catalogue.
+- Published <https://essex-moto-online.onrender.com/adult-bikes.html> with **8 distinct adult bike/ATV listings**. A repeated Apollo Commander listing was excluded from the SEO page to avoid duplication; the underlying shop catalogue was not removed.
+- The pages use supplier-provided product photos, existing Essex Moto prices, explicit £102 per-bike delivery and conservative stock labels. An availability enquiry links back to Essex Moto and does not imply stock confirmation.
+- The remaining **10 age-unclassified bikes** are still available via the general dirt-bike catalogue; they are not labelled as kids/adult without model suitability evidence.
+- Both pages are linked from the shop navigation, included in the 13-URL XML sitemap and provide CollectionPage / ItemList structured data for organic Google Search.
+- Supplier official categories: [Kids electric quads](https://www.stormbuggies.com/electric-mini-kids-quads-and-balance-bikes), [Mini and adult dirt bikes](https://www.stormbuggies.com/mini-bikes-pit-bikes-and-adults-dirt-bikes-rxf-racing), [Talaria](https://www.stormbuggies.com/talaria-road-legal-and-off-road-electric-dirt-bikes), [Adult Commander quads](https://www.stormbuggies.com/commander-200-adults-quad-bike). These category pages support model ranges but are **not real-time stock guarantees**.
+- **Do not send off-road motorcycles, kids' quads or ATVs into ordinary Google Merchant Center free-listing feeds without confirming product-type eligibility**. Organic Search category pages are separate from Merchant Center and can still be indexed. Google Vehicle ads programmes have their own eligibility rules and do not automatically accept off-road vehicles.
 
 ## Official reference material
 - [Google free listings](https://support.google.com/merchants/answer/13889434?hl=en-GB)
