@@ -225,6 +225,7 @@ if (yearElement) yearElement.textContent = new Date().getFullYear();
   const open = () => { panel.hidden = false; document.body.classList.add('basket-open'); panel.querySelector('.basket-close').focus(); };
   const close = () => { panel.hidden = true; document.body.classList.remove('basket-open'); };
   document.getElementById('basket-toggle')?.addEventListener('click', open);
+  if (new URLSearchParams(window.location.search).get('basket') === 'open') open();
   panel.querySelectorAll('[data-basket-close]').forEach(el => el.addEventListener('click', close));
   document.addEventListener('keydown', e => { if (e.key === 'Escape' && !panel.hidden) close(); });
 
