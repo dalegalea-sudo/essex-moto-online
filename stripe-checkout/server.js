@@ -136,14 +136,26 @@ app.post("/api/create-checkout-session", async (req, res) => {
     let bikeQuantity = 0;
     let parcelTier = null;
     for (const entry of items) {
-      if (!entry || typeof entry.id !== "string" || !Number.isInteger(entry.qty) || entry.qty < 1 || entry.qty > 5 || seen.has(entry.id)) {
+      if (!entry || typeof entry.id !== "string" || !Number.isInteger(entry.qty) || entry.qty < 1 || entry.qty > 5) {
         return res.status(400).json({ error: "One or more basket items are invalid." });
       }
-      seen.add(entry.id);
       const product = catalogue.products.find((p) => p.id === entry.id);
       if (!product || !product.available) {
         return res.status(409).json({ error: "A product in your basket is currently unavailable. Please refresh your basket." });
       }
+      const size = typeof entry.size === "string" ? entry.size.trim() : "";
+      const allowed = Array.isArray(product.sizeOptions) ? product.sizeOptions : [];
+      if (allowed.length && !allowed.includes(size)) {
+        return res.status(400).json({ error: "Please select an available size for " + product.name + " before checking out." });
+      }
+      if (!allowed.length && size) {
+        return res.status(400).json({ error: "Size selection is not supported for " + product.name + "." });
+      }
+      const key = product.id + "|" + size;
+      if (seen.has(key)) {
+        return res.status(400).json({ error: "Your basket contains duplicate product-size entries." });
+      }
+      seen.add(key);
       const tier = product.shippingClass;
       if (!["bike", "medium", "small"].includes(tier)) {
         return res.status(409).json({ error: "Delivery category not set for a selected product. Contact Essex Moto before paying." });
@@ -157,11 +169,11 @@ app.post("/api/create-checkout-session", async (req, res) => {
         price_data: {
           currency: "gbp",
           unit_amount: product.unitAmount,
-          product_data: { name: product.name }
+          product_data: { name: product.name + (size ? " — " + size : "") }
         },
         quantity: entry.qty
       });
-      summary.push(product.id + "x" + entry.qty);
+      summary.push(product.id + (size ? "[" + size + "]" : "") + "x" + entry.qty);
     }
 
     const bands = catalogue.deliveryBandsPence;
