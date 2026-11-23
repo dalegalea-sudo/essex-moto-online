@@ -97,7 +97,9 @@ app.get("/api/payment-status", (_req, res) => {
     checkoutType: "stripe-hosted",
     captureMode: "automatic",
     catalogueProducts: catalogue.products.length,
-    deliveryPence: catalogue.deliveryAmount,
+    deliveryPence: null, // tiered; final amount depends on basket contents
+    deliveryBandsPence: catalogue.deliveryBandsPence,
+    deliveryCalculation: catalogue.deliveryCalculation,
     webhookConfigured: Boolean(process.env.STRIPE_WEBHOOK_SECRET),
     livePaymentsEnabled: PAYMENTS_ENABLED && modeMatches && keyMode === "live" && LIVE_CHECKOUT_ALLOWED
   });
@@ -131,6 +133,8 @@ app.post("/api/create-checkout-session", async (req, res) => {
     const lineItems = [];
     const summary = [];
     let subtotal = 0;
+    let bikeQuantity = 0;
+    let parcelTier = null;
     for (const entry of items) {
       if (!entry || typeof entry.id !== "string" || !Number.isInteger(entry.qty) || entry.qty < 1 || entry.qty > 5 || seen.has(entry.id)) {
         return res.status(400).json({ error: "One or more basket items are invalid." });
@@ -140,6 +144,13 @@ app.post("/api/create-checkout-session", async (req, res) => {
       if (!product || !product.available) {
         return res.status(409).json({ error: "A product in your basket is currently unavailable. Please refresh your basket." });
       }
+      const tier = product.shippingClass;
+      if (!["bike", "medium", "small"].includes(tier)) {
+        return res.status(409).json({ error: "Delivery category not set for a selected product. Contact Essex Moto before paying." });
+      }
+      if (tier === "bike") bikeQuantity += entry.qty;
+      else if (tier === "medium") parcelTier = "medium";
+      else if (!parcelTier) parcelTier = "small";
       const amount = product.unitAmount * entry.qty;
       subtotal += amount;
       lineItems.push({
@@ -153,7 +164,11 @@ app.post("/api/create-checkout-session", async (req, res) => {
       summary.push(product.id + "x" + entry.qty);
     }
 
-    const delivery = catalogue.deliveryAmount;
+    const bands = catalogue.deliveryBandsPence;
+    const delivery = bikeQuantity * bands.bike + (parcelTier ? bands[parcelTier] : 0);
+    if (!Number.isInteger(delivery) || delivery < 0) {
+      return res.status(503).json({ error: "Delivery price cannot be calculated. Please contact Essex Moto." });
+    }
     if (subtotal + delivery > 500000) {
       return res.status(400).json({ error: "The maximum online order total is £5,000 including delivery. Please contact Essex Moto for larger orders." });
     }
@@ -161,7 +176,7 @@ app.post("/api/create-checkout-session", async (req, res) => {
       price_data: {
         currency: "gbp",
         unit_amount: delivery,
-        product_data: { name: "UK delivery" }
+        product_data: { name: "UK delivery – bikes and parcel items" }
       },
       quantity: 1
     });
