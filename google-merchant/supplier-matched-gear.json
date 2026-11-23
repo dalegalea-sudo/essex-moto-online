@@ -32,9 +32,9 @@
       ],
       "selectedVariantAvailabilityVerified": false,
       "supplierUrl": "https://www.stormbuggies.com/products/wulfsport-kids-air-x-helmet-pink-new-2025",
-      "essexMotoUrl": "https://essex-moto.co.uk/products/wulfsport-kids-air-x-helmet-pink.html",
+      "essexMotoUrl": "https://essex-moto-online.onrender.com/products/wulfsport-kids-air-x-helmet-pink.html",
       "imageUrl": "https://ahead4-stormbuggies.s3.eu-west-1.amazonaws.com/image-cache/w/u/l/f/s/wulfsport-kids-air-x-helmet---pink---new-2024-d8737eed94a9e12ff740021c47352f8f361d56aa.jpeg",
-      "essexMotoCategoryUrl": "https://essex-moto.co.uk/riding-gear.html#wulfsport-kids-air-x-helmet-pink",
+      "essexMotoCategoryUrl": "https://essex-moto-online.onrender.com/riding-gear.html#wulfsport-kids-air-x-helmet-pink",
       "merchantCenterSubmissionStatus": "HOLD",
       "merchantCenterBlockers": [
         "Validate size selection through actual Essex Moto basket and checkout",
@@ -66,9 +66,9 @@
       ],
       "selectedVariantAvailabilityVerified": false,
       "supplierUrl": "https://www.stormbuggies.com/products/wulfsport-cub-racing-suit-pink",
-      "essexMotoUrl": "https://essex-moto.co.uk/products/wulfsport-cub-racing-suit-pink.html",
+      "essexMotoUrl": "https://essex-moto-online.onrender.com/products/wulfsport-cub-racing-suit-pink.html",
       "imageUrl": "https://ahead4-stormbuggies.s3.eu-west-1.amazonaws.com/image-cache/w/u/l/f/s/wulfsport-cub-racing-suit---pink-96fccc84205c234e2b004c1ba8bae35b005534af.jpeg",
-      "essexMotoCategoryUrl": "https://essex-moto.co.uk/riding-gear.html#wulfsport-cub-racing-suit-pink",
+      "essexMotoCategoryUrl": "https://essex-moto-online.onrender.com/riding-gear.html#wulfsport-cub-racing-suit-pink",
       "merchantCenterSubmissionStatus": "HOLD",
       "merchantCenterBlockers": [
         "Validate size selection through actual Essex Moto basket and checkout",
@@ -94,9 +94,9 @@
       "sizeVariantsFromSupplier": null,
       "selectedVariantAvailabilityVerified": false,
       "supplierUrl": "https://www.stormbuggies.com/products/wulfsport-kids-attack-gloves-pink",
-      "essexMotoUrl": "https://essex-moto.co.uk/products/wulfsport-kids-attack-gloves-pink.html",
+      "essexMotoUrl": "https://essex-moto-online.onrender.com/products/wulfsport-kids-attack-gloves-pink.html",
       "imageUrl": "https://ahead4-stormbuggies.s3.eu-west-1.amazonaws.com/image-cache/w/u/l/f/s/wulfsport-kids-attack-gloves---pink-2a417adf8bb5f1be797bf70b903cb4cb29be21f9.jpeg",
-      "essexMotoCategoryUrl": "https://essex-moto.co.uk/riding-gear.html#wulfsport-kids-attack-gloves-pink",
+      "essexMotoCategoryUrl": "https://essex-moto-online.onrender.com/riding-gear.html#wulfsport-kids-attack-gloves-pink",
       "merchantCenterSubmissionStatus": "HOLD",
       "merchantCenterBlockers": [
         "Validate size selection through actual Essex Moto basket and checkout",
@@ -105,5 +105,7 @@
         "Revalidate stock, price, product identifiers and consumer checkout before upload"
       ]
     }
-  ]
+  ],
+  "canonicalSiteForGoogleSearch": "https://essex-moto-online.onrender.com/",
+  "websiteMigrationNote": "Temporary Render storefront chosen for Google Search; switch these references back only when the custom domain resolves and canonical/checkout/Search Console are migrated."
 }
