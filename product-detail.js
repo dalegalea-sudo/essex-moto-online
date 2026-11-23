@@ -29,8 +29,16 @@
     if (!Array.isArray(basket)) basket = [];
     const existing = basket.find(item => item.id === id && (item.size || "") === size);
     if (existing) {
-      existing.qty = Math.min(5, existing.qty + 1);
+      if (existing.qty >= 5) {
+        if (feedback) feedback.textContent = "The maximum online quantity is five of each size.";
+        return;
+      }
+      existing.qty += 1;
     } else {
+      if (basket.length >= 20) {
+        if (feedback) feedback.textContent = "The online basket can contain up to 20 different items.";
+        return;
+      }
       basket.push({id, name, price, qty:1, size});
     }
     try {
