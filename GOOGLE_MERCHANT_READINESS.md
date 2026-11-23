@@ -36,6 +36,18 @@ Machine-readable preparation: [supplier-matched-gear.json](google-merchant/suppl
 - Size-specific supplier stock is **not confirmed**. Do not publish Google ads/free Shopping listings as in-stock variants until confirmed.
 - Both website and checkout Render deployments should be checked following their latest GitHub commits; deployment alone is not proof of successful payment or Merchant Center compliance.
 
+
+## Checkout and site audit — 23 November 2026 evening
+- Checked 108 Essex Moto product cards against the Stripe checkout catalogue. Product names, GBP prices and delivery classes are aligned. **Nine products** are enabled for direct checkout; **99 other catalogue entries** remain displayed for stock enquiry only. This is a conservative stock safeguard pending fresh supplier confirmation.
+- Fixed product ID normalisation and enforced backend-compatible basket limits (maximum 5 per product/size and 20 distinct entries). Changed disabled 'Check availability' buttons into working enquiry links that retain the item name.
+- Three Wulfsport landing pages can now select size and add to the shop basket; the selected size is validated in Stripe order data. Corrected duplicate HTML anchor IDs.
+- Added exact Storm Buggies images to **seven** missing spare-part product cards on the homepage and spare-parts page; **eleven** listings still lack verified matching photos. Do not use unrelated stock photography or fabricate product imagery.
+- Added [privacy notice](https://essex-moto.co.uk/privacy.html) and linked it alongside delivery and returns information.
+- Added Essex Moto custom-domain origins to checkout CORS allowlist; no wildcard origin is used. **Actual live end-to-end payment was not tested in this audit.** The ChatGPT-connected Stripe account appears to be Trade & Tidy, not Essex Moto.
+- No verified publicly displayable Essex Moto geographic trading address has been provided. A previously discussed address service was only a proposal and must **not** be published or represented as active.
+- Neither a postcode-based wholesale shipping quote nor an estimated return transport charge for large vehicles was confirmed by the supplier. Do not invent these numbers. Essex Moto's customer shipping remains £10 small, £20 medium and £102 per bike.
+- No Google Merchant Center account is connected in the current integration. **Do not submit feed items until account access, stock, variants, seller details, VAT / product identifiers where applicable, checkout and shipping/return rules are verified.**
+
 ## Official reference material
 - [Google free listings](https://support.google.com/merchants/answer/13889434?hl=en-GB)
 - [Product landing page requirements](https://support.google.com/merchants/answer/4752265?hl=en-GB)
