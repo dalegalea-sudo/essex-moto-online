@@ -165,6 +165,9 @@ if (yearElement) yearElement.textContent = new Date().getFullYear();
   let basket = [];
   try { basket = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]'); } catch (_) { basket = []; }
   if (!Array.isArray(basket)) basket = [];
+  // Normalise older saved basket IDs and discard malformed entries.
+  basket = basket.filter(item => item && typeof item.id === 'string' && Number.isInteger(item.qty) && item.qty > 0 && Number.isFinite(item.price))
+    .map(item => ({ ...item, id: item.id.replace(/^-+|-+$/g, ''), qty: Math.min(5, item.qty) }));
 
   const save = () => {
     try { localStorage.setItem(STORAGE_KEY, JSON.stringify(basket)); } catch (_) {}
@@ -242,7 +245,7 @@ if (yearElement) yearElement.textContent = new Date().getFullYear();
     const supplierStockStatus = {"panther-110cc-kids-petrol-quad-black":"Supplier listed: pre-order date passed — reconfirm before order","sniper-pro-120cc-junior-quad-blue":"Not confirmed","sniper-pro-120cc-junior-quad-yellow":"Not confirmed","sniper-pro-120cc-junior-quad-grey":"Not confirmed","sniper-pro-120cc-junior-quad-multiple-colours":"Not confirmed","storm-3000w-48v-electric-dirt-bike-14-12":"Supplier listed: pre-order date passed — reconfirm before order","storm-5000w-72v-electric-dirt-bike-17-14":"Supplier listed: pre-order date passed — reconfirm before order","blue-wulfsport-kids-helmet-clothing-bundle":"Supplier listed: in stock — reconfirm before order","kids-1200w-48v-electric-dirt-bike-12-10-blue":"Supplier listed: low on stock — reconfirm before order","revvi-18-500w-36v-kids-electric-bike-black":"Supplier listed: low on stock — reconfirm before order","air-filter-breather-pipe":"Supplier listed: low on stock — reconfirm before order","gts-150-side-arm-brush-bar":"Supplier listed: low on stock — reconfirm before order","wulfsport-waterproof-jacket-over-trousers-set":"Supplier listed: in stock — reconfirm before order","kids-1200w-48v-electric-dirt-bike-12-10-grey":"Supplier listed: low on stock — reconfirm before order","2000w-60v-electric-dirt-bike-14-12-grey":"Supplier listed: low on stock — reconfirm before order","2000w-60v-electric-dirt-bike-14-12-blue":"Supplier listed: low on stock — reconfirm before order","revvi-20-800w-36v-kids-electric-bike-green":"Supplier listed: low on stock — reconfirm before order","talaria-sting-r-8kw-electric-dirt-bike-black-blue":"Not confirmed"}
     // Use only confirmed in-stock catalogue items for direct basket checkout.
     // Supplier overrides cover low-stock, pre-order and unverified variants.
-    const id = title.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+    const id = title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
     let sizeSelect = null;
     const allowedSizes = SIZE_OPTIONS_BY_ID[id];
     if (allowedSizes?.length) {
@@ -296,8 +299,19 @@ if (yearElement) yearElement.textContent = new Date().getFullYear();
           return;
         }
         const existing = basket.find(item => item.id === id && (item.size || '') === chosenSize);
-        if (existing) existing.qty += 1;
-        else basket.push({id,name:title,price,qty:1,size:chosenSize});
+        if (existing) {
+          if (existing.qty >= 5) {
+            alert('You can order up to five of each item or size online. Contact Essex Moto for larger quantities.');
+            return;
+          }
+          existing.qty += 1;
+        } else {
+          if (basket.length >= 20) {
+            alert('The online basket can contain up to 20 different items. Please contact Essex Moto for a larger order.');
+            return;
+          }
+          basket.push({id,name:title,price,qty:1,size:chosenSize});
+        }
         save();
         button.textContent = 'Added ✓';
         window.setTimeout(() => { button.textContent = 'Add to basket'; }, 1300);
@@ -313,7 +327,12 @@ if (yearElement) yearElement.textContent = new Date().getFullYear();
     if (!item) return;
     if (e.target.hasAttribute('data-remove')) basket = basket.filter(entry => basketItemKey(entry) !== basketItemKey(item));
     else if (e.target.hasAttribute('data-qty')) {
-      item.qty += Number(e.target.dataset.qty);
+      const nextQty = item.qty + Number(e.target.dataset.qty);
+      if (nextQty > 5) {
+        alert('The maximum online quantity is five per item or size.');
+        return;
+      }
+      item.qty = nextQty;
       if (item.qty < 1) basket = basket.filter(entry => basketItemKey(entry) !== basketItemKey(item));
     } else return;
     save();
