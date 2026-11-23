@@ -47,7 +47,14 @@
       "unitAmount": 4995,
       "stockStatus": "In Stock",
       "available": true,
-      "shippingClass": "medium"
+      "shippingClass": "medium",
+      "sizeOptions": [
+        "Small – 48 cm",
+        "Medium – 50 cm",
+        "Large – 52 cm",
+        "XL – 54 cm"
+      ],
+      "sizeOptionSource": "Storm Buggies product selector"
     },
     {
       "id": "wulfsport-cub-racing-suit-pink",
@@ -55,7 +62,15 @@
       "unitAmount": 3999,
       "stockStatus": "In Stock",
       "available": true,
-      "shippingClass": "medium"
+      "shippingClass": "medium",
+      "sizeOptions": [
+        "XS – 3–4 years",
+        "S – 5–6 years",
+        "M – 7–8 years",
+        "L – 9–10 years",
+        "XL – 11–12 years"
+      ],
+      "sizeOptionSource": "Storm Buggies product selector"
     },
     {
       "id": "wulfsport-kids-attack-gloves-pink",
@@ -63,7 +78,13 @@
       "unitAmount": 1595,
       "stockStatus": "In Stock",
       "available": true,
-      "shippingClass": "small"
+      "shippingClass": "small",
+      "sizeOptions": [
+        "XXXS – 3–4 years",
+        "XXS – 5–7 years",
+        "XS – 8–12 years"
+      ],
+      "sizeOptionSource": "Quads4Kids listing of matching Wulfsport Kids Attack Gloves; Storm Buggies per-size availability not verified"
     },
     {
       "id": "apollo-mikro-rfz70-kids-petrol-quad",
