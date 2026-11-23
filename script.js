@@ -51,6 +51,14 @@ document.querySelectorAll('[data-enquiry]').forEach(link => link.addEventListene
   }
   if (message) message.value = enquiry;
 }));
+// Preserve the chosen product when following an availability enquiry link.
+const requestedProduct = new URLSearchParams(window.location.search).get('enquiry');
+if (requestedProduct) {
+  const message = document.querySelector('#enquiry-form textarea[name="message"]');
+  const interest = document.querySelector('#enquiry-form select[name="interest"]');
+  if (message && !message.value) message.value = 'Please confirm current availability, UK delivery and ordering details for: ' + requestedProduct;
+  if (interest && [...interest.options].some(option => option.text === 'General enquiry')) interest.value = 'General enquiry';
+}
 const enquiryForm = document.getElementById('enquiry-form');
 if (enquiryForm) enquiryForm.addEventListener('submit', e => {
   e.preventDefault();
@@ -280,10 +288,13 @@ if (yearElement) yearElement.textContent = new Date().getFullYear();
           status.startsWith('Supplier listed:') ? 'Supplier stock needs reconfirmation — please enquire' :
           'Availability not confirmed — please enquire';
       }
-      button.textContent = status === 'Out of Stock' ? 'Out of stock' : 'Check availability';
-      button.disabled = true;
-      button.setAttribute('aria-label', title + ' is not currently available to purchase online');
-      button.classList.add('button-disabled');
+      button.textContent = status === 'Out of Stock' ? 'Enquire about restock' : 'Check availability';
+      button.disabled = false;
+      button.setAttribute('aria-label', 'Enquire about ' + title + ' availability');
+      // Keep enquiry possible while stock is unconfirmed; do not charge online.
+      button.addEventListener('click', () => {
+        window.location.assign('index.html?enquiry=' + encodeURIComponent(title) + '#contact');
+      });
     } else {
       button.textContent = 'Add to basket';
       button.setAttribute('aria-label','Add ' + title + ' to basket');
