@@ -6,9 +6,16 @@ const catalogue = require("./catalogue.json");
 
 const app = express();
 const PORT = process.env.PORT || 10000;
-const SITE_URL = (process.env.SITE_URL || "https://essex-moto-online.onrender.com").replace(/\/$/, "");
-const ALLOWED_ORIGINS = (process.env.ALLOWED_ORIGINS || SITE_URL)
-  .split(",").map((value) => value.trim()).filter(Boolean);
+const SITE_URL = (process.env.SITE_URL || "https://essex-moto.co.uk").replace(/\/$/, "");
+// Always permit the verified Essex Moto storefront and Render preview in addition
+// to explicitly configured origins. Never use wildcard CORS for checkout.
+const ALLOWED_ORIGINS = [...new Set([
+  SITE_URL,
+  "https://essex-moto.co.uk",
+  "https://www.essex-moto.co.uk",
+  "https://essex-moto-online.onrender.com",
+  ...(process.env.ALLOWED_ORIGINS || "").split(",").map((value) => value.trim()).filter(Boolean)
+])];
 const PAYMENTS_ENABLED = process.env.PAYMENTS_ENABLED === "true";
 const EXPECTED_MODE = process.env.CHECKOUT_EXPECTED_MODE || "test";
 const LIVE_CHECKOUT_ALLOWED = process.env.ALLOW_LIVE_CHECKOUT === "true";
