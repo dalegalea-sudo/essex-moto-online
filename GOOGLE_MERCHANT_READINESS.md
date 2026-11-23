@@ -1,39 +1,39 @@
 # Essex Moto — Google Shopping / Merchant Center readiness
-Reviewed: 23 November 2026. Status: **audit and preparation only; no products submitted or approved**.
+Updated 23 November 2026. **Not submitted to Merchant Center; no Google free-listing approval is implied.**
 
-## Current state (source audit)
-- Site uses category pages (`index.html`, `riding-gear.html`, `spare-parts.html`), rather than individual product landing pages.
-- `script.js` currently displays a flat **£102 delivery** in the basket for products, which needs checking for helmets, clothing and small spare parts before advertising any items.
-- Product prices, stock labels and checkout totals must be confirmed as consistent at the time of publication. Many stock labels are subject to supplier confirmation.
-- No complete, standalone delivery and returns policy links were found on the reviewed product category pages.
-- Checkout and customer payment have not been tested end-to-end in this review.
+## Verified matches from existing Essex Moto listings to published Storm Buggies pages
+Three Wulfsport listings already on the Essex Moto riding-gear page now have their own product-information URLs on the Essex Moto domain. Their website prices match Storm Buggies' public prices at the time of review.
 
-## Priority: Google free listings for eligible gear and spare parts
-Assess specific helmets, gloves, boots, protective clothing and suitable spare parts first. Do not submit motorised vehicles/ATVs into ordinary free Shopping listings without checking Google's restrictions; vehicle listings use different policies. Google may reject unsupported vehicle types.
+| Existing Essex Moto product | Essex Moto page | Storm Buggies page | Supplier reference | Public price | Supplier listing |
+| --- | --- | --- | --- | ---: | --- |
+| Wulfsport Kids Air-X Helmet – Pink | [Product details](https://essex-moto.co.uk/products/wulfsport-kids-air-x-helmet-pink.html) | [Supplier](https://www.stormbuggies.com/products/wulfsport-kids-air-x-helmet-pink-new-2025) | `wulf-jun-air-x-hel-pink` | £49.95 | In Stock |
+| Wulfsport Cub Racing Suit – Pink | [Product details](https://essex-moto.co.uk/products/wulfsport-cub-racing-suit-pink.html) | [Supplier](https://www.stormbuggies.com/products/wulfsport-cub-racing-suit-pink) | `cubracingsuit-pink` | £39.99 | In Stock |
+| Wulfsport Kids Attack Gloves – Pink | [Product details](https://essex-moto.co.uk/products/wulfsport-kids-attack-gloves-pink.html) | [Supplier category](https://www.stormbuggies.com/pretty-in-pink) | Not verified | £15.95 | In Stock |
 
-### Products to check with supplier (website figures only, not live stock verification)
-| Candidate | Site price | Site stock label |
-| --- | ---: | --- |
-| Wulfsport Kids Air-X Helmet – Pink | £49.95 | In Stock |
-| Wulfsport Cub Racing Suit – Pink | £39.99 | In Stock |
-| Wulfsport Kids Attack Gloves – Pink | £15.95 | In Stock |
+These are supplier **public listing statuses**, not a real-time warehouse or variant-level inventory guarantee. The helmet supplier listing shows S 48 cm, M 50 cm, L 52 cm, and XL 54 cm; the racing suit listing shows XS approximately 3–4 years to XL approximately 11–12 years. Check exact sizes against the buyer's measurements.
 
-Do not infer manufacturer GTIN/MPN, helmet size/certification, or exact availability from old page text.
+Machine-readable preparation: [supplier-matched-gear.json](google-merchant/supplier-matched-gear.json). Its supplier product reference codes are **not presumed to be official manufacturer MPNs or GTINs**. Google requires accurate product identifiers where applicable.
 
-## Required before Merchant Center submissions
-1. Confirm supplier fulfilment, actual small-item delivery rates, VAT-inclusive prices, variants, product identifiers and buyer-facing returns handling. Correct any blanket shipping charge that does not reflect real order costs.
-2. Create one permanent individual product URL per approved SKU, with its own image, H1/title, variant/size/description, accurate GBP price, real stock status, relevant safety specs, visible delivery/returns information and direct purchase path.
-3. Publish accurate business, delivery and return policy information (including contact details and clear rights). Do not invent business details or promise policies not implemented.
-4. Test add-to-basket, checkout and order/dispatch workflow from each landing page; ensure the item/price/shipping match page, feed, cart and final checkout.
-5. Then add correct Product + Offer structured data, with a truthful availability value, verified price, image and canonical URL for each eligible product.
-6. Verify/claim domain and configure shipping and returns in Merchant Center, then submit **only approved, verified products**. Review product diagnostics and free-listings status.
+## What was updated on the site
+- Three dedicated SEO product information pages with visible names, images, GBP prices, concise specifications and size information.
+- Links from the existing `riding-gear.html` product cards to those new pages.
+- Three URLs in the XML sitemap (`sitemap.xml`), allowing Google Search to discover them.
+- The pages describe supplier status conservatively and are **not yet suitable for submitting as Merchant Center paid/free listings**.
 
-No feed has been submitted. This work is only a preparatory audit; Merchant Center admin access is still needed.
+## Still preventing a compliant Merchant Center product feed
+1. **Shipping**: the Essex Moto basket and Stripe catalogue currently apply **£102 flat delivery even to a small helmet, gloves or racing suit**. Storm Buggies' publicly accessible product pages use a postcode-based delivery calculator; no verified parcel rate was found. Confirm the applicable parcel shipping charges and implement them consistently in the website, backend, checkout and Merchant Center before advertising.
+2. **Size selection**: helmet, racing-suit and glove sizes must be selected and preserved in Essex Moto's basket, checkout and resulting order. Current basket/checkout does **not** capture each item's size. Avoid advertising sizes that can't be ordered accurately.
+3. **Returns**: Essex Moto needs its own truthful, accessible shipping, cancellation and refunds policy. Do **not** copy Storm Buggies' restrictive direct-sale conditions; UK law includes distance-selling cancellation and faulty-goods rights. See [GOV.UK](https://www.gov.uk/accepting-returns-and-giving-refunds).
+4. **Stock / identifiers**: reconfirm current stock per size before publication; verify whether manufacturer GTIN/MPN exists. Do not treat Storm's site-specific product code as a verified manufacturer identifier.
+5. **Merchant account**: connect, verify and claim `essex-moto.co.uk` in Merchant Center, configure shipping and returns, test checkout then submit feed. Account access to perform this step is not available through the current ChatGPT connection.
+6. **Eligibility**: start with eligible safety gear and spare parts; avoid submitting quad bikes and dirt bikes to ordinary free Shopping listings until their product-type restrictions are resolved.
 
-## Official Google references
-- Free product listings: https://support.google.com/merchants/answer/13889434?hl=en-GB
-- Landing page requirements: https://support.google.com/merchants/answer/4752265?hl=en-GB
-- Product data specification: https://support.google.com/merchants/answer/7052112?hl=en-GB
-- Unsupported Shopping content: https://support.google.com/merchants/answer/6150006?hl=en-GB
-- Vehicle ads policy: https://support.google.com/merchants/answer/11544533?hl=en-GB
-- Product structured data: https://developers.google.com/search/docs/appearance/structured-data/product
+## Official reference material
+- [Google free listings](https://support.google.com/merchants/answer/13889434?hl=en-GB)
+- [Product landing page requirements](https://support.google.com/merchants/answer/4752265?hl=en-GB)
+- [Google product data specification](https://support.google.com/merchants/answer/7052112?hl=en-GB)
+- [Google product identifiers](https://support.google.com/merchants/answer/160161?hl=en-GB)
+- [Google unsupported Shopping content](https://support.google.com/merchants/answer/6150006?hl=en-GB)
+- [UK online returns and refunds](https://www.gov.uk/accepting-returns-and-giving-refunds)
+
+**No products were sent to Google, no emails were sent and no payments were initiated.**
