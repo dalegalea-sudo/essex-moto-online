@@ -228,7 +228,7 @@ if (yearElement) yearElement.textContent = new Date().getFullYear();
     const stockLabel = card?.querySelector('.stock-label')?.textContent?.trim() || '';
     const unavailable = Boolean(supplierStockStatus[id]) || !/^in stock$/i.test(stockLabel);
     if (unavailable) {
-      const status = supplierStockStatus[id] || (/out\\s*of\\s*stock/i.test(stockLabel) ? 'Out of Stock' : 'Not confirmed');
+      const status = supplierStockStatus[id] || (/out\s*of\s*stock/i.test(stockLabel) ? 'Out of Stock' : 'Not confirmed');
       const label = card?.querySelector('.stock-label');
       if (label) {
         label.textContent = status === 'Out of Stock' ? 'Out of stock' :
