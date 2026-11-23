@@ -6,7 +6,7 @@ const catalogue = require("./catalogue.json");
 
 const app = express();
 const PORT = process.env.PORT || 10000;
-const SITE_URL = (process.env.SITE_URL || "https://essex-moto.co.uk").replace(/\/$/, "");
+const SITE_URL = (process.env.SITE_URL || "https://essex-moto-online.onrender.com").replace(/\/$/, "");
 // Always permit the verified Essex Moto storefront and Render preview in addition
 // to explicitly configured origins. Never use wildcard CORS for checkout.
 const ALLOWED_ORIGINS = [...new Set([
