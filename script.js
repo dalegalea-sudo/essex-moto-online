@@ -222,8 +222,13 @@ if (yearElement) yearElement.textContent = new Date().getFullYear();
     button.type = 'button';
     button.className = link.className;
     const supplierStockStatus = {"panther-110cc-kids-petrol-quad-black":"Supplier listed: pre-order date passed — reconfirm before order","sniper-pro-120cc-junior-quad-blue":"Not confirmed","sniper-pro-120cc-junior-quad-yellow":"Not confirmed","sniper-pro-120cc-junior-quad-grey":"Not confirmed","sniper-pro-120cc-junior-quad-multiple-colours":"Not confirmed","storm-3000w-48v-electric-dirt-bike-14-12":"Supplier listed: pre-order date passed — reconfirm before order","storm-5000w-72v-electric-dirt-bike-17-14":"Supplier listed: pre-order date passed — reconfirm before order","blue-wulfsport-kids-helmet-clothing-bundle":"Supplier listed: in stock — reconfirm before order","kids-1200w-48v-electric-dirt-bike-12-10-blue":"Supplier listed: low on stock — reconfirm before order","revvi-18-500w-36v-kids-electric-bike-black":"Supplier listed: low on stock — reconfirm before order","air-filter-breather-pipe":"Supplier listed: low on stock — reconfirm before order","gts-150-side-arm-brush-bar":"Supplier listed: low on stock — reconfirm before order","wulfsport-waterproof-jacket-over-trousers-set":"Supplier listed: in stock — reconfirm before order","kids-1200w-48v-electric-dirt-bike-12-10-grey":"Supplier listed: low on stock — reconfirm before order","2000w-60v-electric-dirt-bike-14-12-grey":"Supplier listed: low on stock — reconfirm before order","2000w-60v-electric-dirt-bike-14-12-blue":"Supplier listed: low on stock — reconfirm before order","revvi-20-800w-36v-kids-electric-bike-green":"Supplier listed: low on stock — reconfirm before order","talaria-sting-r-8kw-electric-dirt-bike-black-blue":"Not confirmed"}
+    // Use only confirmed in-stock catalogue items for direct basket checkout.
+    // Supplier overrides cover low-stock, pre-order and unverified variants.
+    const id = title.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+    const stockLabel = card?.querySelector('.stock-label')?.textContent?.trim() || '';
+    const unavailable = Boolean(supplierStockStatus[id]) || !/^in stock$/i.test(stockLabel);
     if (unavailable) {
-      const status = supplierStockStatus[id] || 'Out of Stock';
+      const status = supplierStockStatus[id] || (/out\\s*of\\s*stock/i.test(stockLabel) ? 'Out of Stock' : 'Not confirmed');
       const label = card?.querySelector('.stock-label');
       if (label) {
         label.textContent = status === 'Out of Stock' ? 'Out of stock' :
