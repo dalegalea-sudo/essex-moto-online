@@ -14,8 +14,9 @@
       "name": "Renegade Ranger 1200W 48V Kids Quad – Red",
       "unitAmount": 79900,
       "stockStatus": "In Stock",
-      "available": true,
-      "shippingClass": "bike"
+      "available": false,
+      "shippingClass": "bike",
+      "checkoutAvailabilityReason": "Out of Stock"
     },
     {
       "id": "kids-800w-36v-electric-dirt-bike-10-10-pink",
@@ -92,8 +93,9 @@
       "name": "Apollo Mikro RFZ70 Kids Petrol Quad",
       "unitAmount": 69900,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "bike"
+      "available": false,
+      "shippingClass": "bike",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "panther-110cc-kids-petrol-quad-black",
@@ -140,24 +142,27 @@
       "name": "RFN Thunder 70cc Kids Automatic Pit Bike",
       "unitAmount": 64900,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "bike"
+      "available": false,
+      "shippingClass": "bike",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "rfn-thunder-pro-110cc-kids-semi-auto-pit-bike",
       "name": "RFN Thunder Pro 110cc Kids Semi-Auto Pit Bike",
       "unitAmount": 69900,
       "stockStatus": "In Stock",
-      "available": true,
-      "shippingClass": "bike"
+      "available": false,
+      "shippingClass": "bike",
+      "checkoutAvailabilityReason": "Supplier listed: in stock — reconfirm before order"
     },
     {
       "id": "rfn-thunder-140cc-xl-dirt-bike-19-16",
       "name": "RFN Thunder 140cc XL Dirt Bike – 19/16",
       "unitAmount": 99900,
       "stockStatus": "In Stock",
-      "available": true,
-      "shippingClass": "bike"
+      "available": false,
+      "shippingClass": "bike",
+      "checkoutAvailabilityReason": "Not confirmed"
     },
     {
       "id": "storm-3000w-48v-electric-dirt-bike-14-12",
@@ -180,32 +185,36 @@
       "name": "Thunder 250cc Adults Dirt Bike – 21/18 XL",
       "unitAmount": 219500,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "bike"
+      "available": false,
+      "shippingClass": "bike",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "2026-wulfsport-adults-astral-helmet-blue",
       "name": "2026 Wulfsport Adults Astral Helmet – Blue",
       "unitAmount": 6499,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "medium"
+      "available": false,
+      "shippingClass": "medium",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "wulfsport-cub-youth-armoured-jacket",
       "name": "Wulfsport Cub Youth Armoured Jacket",
       "unitAmount": 5495,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "medium"
+      "available": false,
+      "shippingClass": "medium",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "wulfsport-trackstar-adult-boots-black",
       "name": "Wulfsport Trackstar Adult Boots – Black",
       "unitAmount": 9695,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "medium"
+      "available": false,
+      "shippingClass": "medium",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "blue-wulfsport-kids-helmet-clothing-bundle",
@@ -220,40 +229,45 @@
       "name": "Wulfsport Cub Tech Kids MX Goggles – Black",
       "unitAmount": 1999,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "small"
+      "available": false,
+      "shippingClass": "small",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "talaria-sting-l35-electric-dirt-bike-black-blue",
       "name": "Talaria Sting L35 Electric Dirt Bike – Black/Blue",
       "unitAmount": 379500,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "bike"
+      "available": false,
+      "shippingClass": "bike",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "talaria-x3-pro-electric-dirt-bike",
       "name": "Talaria X3 Pro Electric Dirt Bike",
       "unitAmount": 319500,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "bike"
+      "available": false,
+      "shippingClass": "bike",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "talaria-sting-pro-l1e-13kw-electric-dirt-bike",
       "name": "Talaria Sting Pro L1E 13kW Electric Dirt Bike",
       "unitAmount": 439500,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "bike"
+      "available": false,
+      "shippingClass": "bike",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "talaria-komodo-l3e-32kw-electric-dirt-bike",
       "name": "Talaria Komodo L3E 32kW Electric Dirt Bike",
       "unitAmount": 569500,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "bike"
+      "available": false,
+      "shippingClass": "bike",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "kids-800w-36v-electric-dirt-bike-10-10-red",
@@ -276,24 +290,27 @@
       "name": "2000W 60V Electric Dirt Bike 14/12 – Green",
       "unitAmount": 109900,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "bike"
+      "available": false,
+      "shippingClass": "bike",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "rfn-thunder-pro-fh-110cc-pit-bike-red-blue",
       "name": "RFN Thunder Pro FH 110cc Pit Bike – Red/Blue",
       "unitAmount": 69900,
       "stockStatus": "In Stock",
-      "available": true,
-      "shippingClass": "bike"
+      "available": false,
+      "shippingClass": "bike",
+      "checkoutAvailabilityReason": "Supplier listed: in stock — reconfirm before order"
     },
     {
       "id": "apollo-commander-200-adults-quad-black",
       "name": "Apollo Commander 200 Adults Quad – Black",
       "unitAmount": 179900,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "bike"
+      "available": false,
+      "shippingClass": "bike",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "kids-800w-36v-electric-dirt-bike-10-10-blue",
@@ -308,40 +325,45 @@
       "name": "Revvi 24 1500W 48V Kids Electric Off-Road Bike – Black",
       "unitAmount": 159900,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "bike"
+      "available": false,
+      "shippingClass": "bike",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "apollo-commander-200-adult-quad-bike-black",
       "name": "Apollo Commander 200 Adult Quad Bike – Black",
       "unitAmount": 179900,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "bike"
+      "available": false,
+      "shippingClass": "bike",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "storm-2000w-60v-electric-dirt-bike-14-12-red",
       "name": "Storm 2000W 60V Electric Dirt Bike 14/12 – Red",
       "unitAmount": 109900,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "bike"
+      "available": false,
+      "shippingClass": "bike",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "revvi-twelve-100w-kids-electric-balance-bike-black",
       "name": "Revvi Twelve 100W Kids Electric Balance Bike – Black",
       "unitAmount": 32500,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "bike"
+      "available": false,
+      "shippingClass": "bike",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "revvi-twelve-100w-kids-electric-balance-bike-blue",
       "name": "Revvi Twelve 100W Kids Electric Balance Bike – Blue",
       "unitAmount": 32500,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "bike"
+      "available": false,
+      "shippingClass": "bike",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "revvi-18-500w-36v-kids-electric-bike-black",
@@ -356,88 +378,99 @@
       "name": "Renegade Pro 1500W 60V Electric Quad – Black",
       "unitAmount": 114900,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "bike"
+      "available": false,
+      "shippingClass": "bike",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "48v-15ah-lithium-battery-1200w-electric-dirt-bike",
       "name": "48V 15Ah Lithium Battery – 1200W Electric Dirt Bike",
       "unitAmount": 27900,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "medium"
+      "available": false,
+      "shippingClass": "medium",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "48v-brushless-controller-1200w-electric-dirt-bike",
       "name": "48V Brushless Controller – 1200W Electric Dirt Bike",
       "unitAmount": 6499,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "small"
+      "available": false,
+      "shippingClass": "small",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "48v-charger-1200w-electric-dirt-bike",
       "name": "48V Charger – 1200W Electric Dirt Bike",
       "unitAmount": 4799,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "small"
+      "available": false,
+      "shippingClass": "small",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "3-speed-key-switch-1200w-electric-dirt-bike",
       "name": "3-Speed Key Switch – 1200W Electric Dirt Bike",
       "unitAmount": 1499,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "small"
+      "available": false,
+      "shippingClass": "small",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "1000w-electric-quad-headlamp-with-light",
       "name": "1000W Electric Quad Headlamp with Light",
       "unitAmount": 2424,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "small"
+      "available": false,
+      "shippingClass": "small",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "1000w-electric-quad-front-brake-lever-cable",
       "name": "1000W Electric Quad Front Brake Lever & Cable",
       "unitAmount": 3024,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "small"
+      "available": false,
+      "shippingClass": "small",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "1000w-electric-quad-handlebar",
       "name": "1000W Electric Quad Handlebar",
       "unitAmount": 2424,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "medium"
+      "available": false,
+      "shippingClass": "medium",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "mudhead-drive-belt-725",
       "name": "Mudhead Drive Belt 725",
       "unitAmount": 2499,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "small"
+      "available": false,
+      "shippingClass": "small",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "1-4-fuel-tap",
       "name": "1/4 Fuel Tap",
       "unitAmount": 1800,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "small"
+      "available": false,
+      "shippingClass": "small",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "air-filter",
       "name": "Air Filter",
       "unitAmount": 950,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "small"
+      "available": false,
+      "shippingClass": "small",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "air-filter-breather-pipe",
@@ -452,96 +485,108 @@
       "name": "Connecting Rod Assembly",
       "unitAmount": 1799,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "small"
+      "available": false,
+      "shippingClass": "small",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "cooling-fan-flywheel",
       "name": "Cooling Fan – Flywheel",
       "unitAmount": 1999,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "small"
+      "available": false,
+      "shippingClass": "small",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "engine-gasket-set",
       "name": "Engine Gasket Set",
       "unitAmount": 2795,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "small"
+      "available": false,
+      "shippingClass": "small",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "engine-output-shaft",
       "name": "Engine Output Shaft",
       "unitAmount": 7200,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "small"
+      "available": false,
+      "shippingClass": "small",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "engine-output-shaft-bearing-crank",
       "name": "Engine Output Shaft Bearing (Crank)",
       "unitAmount": 1299,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "small"
+      "available": false,
+      "shippingClass": "small",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "connector",
       "name": "Connector",
       "unitAmount": 199,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "small"
+      "available": false,
+      "shippingClass": "small",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "fuse-reset-button-unit",
       "name": "Fuse / Reset Button Unit",
       "unitAmount": 1000,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "small"
+      "available": false,
+      "shippingClass": "small",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "gts-150-complete-plastic-set-black",
       "name": "GTS 150 Complete Plastic Set – Black",
       "unitAmount": 16999,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "medium"
+      "available": false,
+      "shippingClass": "medium",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "gts-150-complete-plastic-set-red",
       "name": "GTS 150 Complete Plastic Set – Red",
       "unitAmount": 16999,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "medium"
+      "available": false,
+      "shippingClass": "medium",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "gts-150-complete-plastic-set-orange",
       "name": "GTS 150 Complete Plastic Set – Orange",
       "unitAmount": 16999,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "medium"
+      "available": false,
+      "shippingClass": "medium",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "150-gts-lower-hood",
       "name": "150 GTS Lower Hood",
       "unitAmount": 6499,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "medium"
+      "available": false,
+      "shippingClass": "medium",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "150-gts-owner-s-manual",
       "name": "150 GTS Owner’s Manual",
       "unitAmount": 1499,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "small"
+      "available": false,
+      "shippingClass": "small",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "gts-150-side-arm-brush-bar",
@@ -556,240 +601,270 @@
       "name": "Bolt M6 × 12",
       "unitAmount": 150,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "small"
+      "available": false,
+      "shippingClass": "small",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "110cc-120cc-quad-carburettor",
       "name": "110cc & 120cc Quad Carburettor",
       "unitAmount": 3499,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "small"
+      "available": false,
+      "shippingClass": "small",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "front-brake-lever-rfn-rxf-rfz",
       "name": "Front Brake Lever – RFN, RXF & RFZ",
       "unitAmount": 799,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "small"
+      "available": false,
+      "shippingClass": "small",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "38mm-air-filter-assembly-sniper-pro-120cc",
       "name": "38mm Air Filter Assembly – Sniper Pro 120cc",
       "unitAmount": 1499,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "small"
+      "available": false,
+      "shippingClass": "small",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "110cc-quad-bike-piston-ring-set",
       "name": "110cc Quad Bike Piston Ring Set",
       "unitAmount": 840,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "small"
+      "available": false,
+      "shippingClass": "small",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "apollo-quad-bike-choke-cable",
       "name": "Apollo Quad Bike Choke Cable",
       "unitAmount": 840,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "small"
+      "available": false,
+      "shippingClass": "small",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "apollo-120cc-125cc-quad-clutch-assembly",
       "name": "Apollo 120cc & 125cc Quad Clutch Assembly",
       "unitAmount": 4999,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "small"
+      "available": false,
+      "shippingClass": "small",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "apollo-quad-bike-sports-exhaust-system",
       "name": "Apollo Quad Bike Sports Exhaust System",
       "unitAmount": 4999,
       "stockStatus": "In Stock",
-      "available": true,
-      "shippingClass": "medium"
+      "available": false,
+      "shippingClass": "medium",
+      "checkoutAvailabilityReason": "Not confirmed"
     },
     {
       "id": "front-brake-disc-thunder-250cc",
       "name": "Front Brake Disc – Thunder 250cc",
       "unitAmount": 2299,
       "stockStatus": "In Stock",
-      "available": true,
-      "shippingClass": "small"
+      "available": false,
+      "shippingClass": "small",
+      "checkoutAvailabilityReason": "Supplier listed: in stock — reconfirm before order"
     },
     {
       "id": "throttle-cable-thunder-250cc",
       "name": "Throttle Cable – Thunder 250cc",
       "unitAmount": 999,
       "stockStatus": "In Stock",
-      "available": true,
-      "shippingClass": "small"
+      "available": false,
+      "shippingClass": "small",
+      "checkoutAvailabilityReason": "Supplier listed: in stock — reconfirm before order"
     },
     {
       "id": "right-middle-side-cover-thunder-250cc",
       "name": "Right Middle Side Cover – Thunder 250cc",
       "unitAmount": 1299,
       "stockStatus": "In Stock",
-      "available": true,
-      "shippingClass": "small"
+      "available": false,
+      "shippingClass": "small",
+      "checkoutAvailabilityReason": "Supplier listed: in stock — reconfirm before order"
     },
     {
       "id": "front-fork-plastics-thunder-250cc",
       "name": "Front Fork Plastics – Thunder 250cc",
       "unitAmount": 1299,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "small"
+      "available": false,
+      "shippingClass": "small",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "wulfsport-kids-air-x-helmet-blue",
       "name": "Wulfsport Kids Air-X Helmet – Blue",
       "unitAmount": 4995,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "medium"
+      "available": false,
+      "shippingClass": "medium",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "wulfsport-kids-air-x-helmet-green",
       "name": "Wulfsport Kids Air-X Helmet – Green",
       "unitAmount": 4995,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "medium"
+      "available": false,
+      "shippingClass": "medium",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "wulfsport-adults-astral-helmet-black",
       "name": "Wulfsport Adults Astral Helmet – Black",
       "unitAmount": 6499,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "medium"
+      "available": false,
+      "shippingClass": "medium",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "wulfsport-adults-attack-gloves-blue",
       "name": "Wulfsport Adults Attack Gloves – Blue",
       "unitAmount": 1795,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "small"
+      "available": false,
+      "shippingClass": "small",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "wulfsport-proban-racing-suit",
       "name": "Wulfsport Proban Racing Suit",
       "unitAmount": 11999,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "medium"
+      "available": false,
+      "shippingClass": "medium",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "wulfsport-super-boot-la",
       "name": "Wulfsport Super Boot-LA",
       "unitAmount": 8995,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "medium"
+      "available": false,
+      "shippingClass": "medium",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "wulfsport-trackstar-boots-black",
       "name": "Wulfsport Trackstar Boots – Black",
       "unitAmount": 9695,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "medium"
+      "available": false,
+      "shippingClass": "medium",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "wulfsport-trackstar-boots-white",
       "name": "Wulfsport Trackstar Boots – White",
       "unitAmount": 9695,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "medium"
+      "available": false,
+      "shippingClass": "medium",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "wulfsport-cub-max-kids-off-road-boots",
       "name": "Wulfsport Cub Max Kids' Off-Road Boots",
       "unitAmount": 7499,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "medium"
+      "available": false,
+      "shippingClass": "medium",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "wulfsport-cub-racing-camo-suit-blue",
       "name": "Wulfsport Cub Racing Camo Suit – Blue",
       "unitAmount": 3999,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "medium"
+      "available": false,
+      "shippingClass": "medium",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "2026-wulfsport-warhammer-kids-race-shirt-blue",
       "name": "2026 Wulfsport Warhammer Kids Race Shirt – Blue",
       "unitAmount": 2574,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "small"
+      "available": false,
+      "shippingClass": "small",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "wulfsport-cub-youth-protective-jacket",
       "name": "Wulfsport Cub Youth Protective Jacket",
       "unitAmount": 5495,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "medium"
+      "available": false,
+      "shippingClass": "medium",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "wulfsport-pro-series-adult-deflector",
       "name": "Wulfsport Pro Series Adult Deflector",
       "unitAmount": 7209,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "medium"
+      "available": false,
+      "shippingClass": "medium",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "wulfsport-cub-hinged-kids-knee-pads",
       "name": "Wulfsport Cub Hinged Kids' Knee Pads",
       "unitAmount": 2795,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "small"
+      "available": false,
+      "shippingClass": "small",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "wulfsport-cub-kids-elbow-pads",
       "name": "Wulfsport Cub Kids' Elbow Pads",
       "unitAmount": 1599,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "small"
+      "available": false,
+      "shippingClass": "small",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "wulfsport-cub-tech-mx-goggles-blue",
       "name": "Wulfsport Cub Tech MX Goggles – Blue",
       "unitAmount": 1999,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "small"
+      "available": false,
+      "shippingClass": "small",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "wulfsport-corsair-adults-race-shirt-blue",
       "name": "Wulfsport Corsair Adults Race Shirt – Blue",
       "unitAmount": 2695,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "small"
+      "available": false,
+      "shippingClass": "small",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "wulfsport-matrix-adults-race-jacket-blue",
       "name": "Wulfsport Matrix Adults Race Jacket – Blue",
       "unitAmount": 5994,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "medium"
+      "available": false,
+      "shippingClass": "medium",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "wulfsport-waterproof-jacket-over-trousers-set",
@@ -804,24 +879,27 @@
       "name": "Wulfsport Matrix Adults Race Jacket – Orange",
       "unitAmount": 5994,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "medium"
+      "available": false,
+      "shippingClass": "medium",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "wulfsport-corsair-adults-race-shirt-pink-blue",
       "name": "Wulfsport Corsair Adults Race Shirt – Pink / Blue",
       "unitAmount": 2695,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "small"
+      "available": false,
+      "shippingClass": "small",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "kids-1200w-48v-electric-dirt-bike-12-10-green",
       "name": "Kids 1200W 48V Electric Dirt Bike 12/10 – Green",
       "unitAmount": 79900,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "bike"
+      "available": false,
+      "shippingClass": "bike",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "kids-1200w-48v-electric-dirt-bike-12-10-grey",
@@ -836,16 +914,18 @@
       "name": "Kids 1200W 48V Electric Dirt Bike 12/10 – Yellow",
       "unitAmount": 79900,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "bike"
+      "available": false,
+      "shippingClass": "bike",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "kids-800w-36v-electric-dirt-bike-10-10-grey",
       "name": "Kids 800W 36V Electric Dirt Bike 10/10 – Grey",
       "unitAmount": 47900,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "bike"
+      "available": false,
+      "shippingClass": "bike",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "2000w-60v-electric-dirt-bike-14-12-grey",
@@ -860,8 +940,9 @@
       "name": "2000W 60V Electric Dirt Bike 14/12 – Yellow",
       "unitAmount": 109900,
       "stockStatus": "Availability confirmed before payment",
-      "available": true,
-      "shippingClass": "bike"
+      "available": false,
+      "shippingClass": "bike",
+      "checkoutAvailabilityReason": "Check supplier stock"
     },
     {
       "id": "2000w-60v-electric-dirt-bike-14-12-blue",
