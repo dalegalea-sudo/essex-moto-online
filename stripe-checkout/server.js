@@ -200,6 +200,10 @@ app.post("/api/create-checkout-session", async (req, res) => {
       quantity: 1
     });
 
+    // Return shoppers to the storefront domain that actually initiated checkout.
+    // This also works while the temporary Render URL is the canonical site.
+    const requestedOrigin = req.headers.origin || "";
+    const storefrontUrl = ALLOWED_ORIGINS.includes(requestedOrigin) ? requestedOrigin : SITE_URL;
     const session = await stripe.checkout.sessions.create({
       mode: "payment",
       payment_method_types: ["card"],
@@ -217,8 +221,8 @@ app.post("/api/create-checkout-session", async (req, res) => {
           supplier_order_status: "PAYMENT_COLLECTED_FULFILMENT_PENDING"
         }
       },
-      success_url: SITE_URL + "/?payment=paid&session_id={CHECKOUT_SESSION_ID}",
-      cancel_url: SITE_URL + "/?payment=cancelled",
+      success_url: storefrontUrl + "/?payment=paid&session_id={CHECKOUT_SESSION_ID}",
+      cancel_url: storefrontUrl + "/?payment=cancelled",
       client_reference_id: "EM-" + Date.now().toString(36).toUpperCase(),
       metadata: {
         customer_name: customerName.trim(),
