@@ -148,6 +148,8 @@ if (yearElement) yearElement.textContent = new Date().getFullYear();
   // Essex Moto customer charges, not published Storm Buggies wholesale tariffs.
   // Charge per vehicle and one combined parcel tier for smaller products.
   const SHIPPING_RATES = Object.freeze({ small: 10, medium: 20, bike: 102 });
+  const SIZE_OPTIONS_BY_ID = Object.freeze({"wulfsport-kids-air-x-helmet-pink":["Small – 48 cm","Medium – 50 cm","Large – 52 cm","XL – 54 cm"],"wulfsport-cub-racing-suit-pink":["XS – 3–4 years","S – 5–6 years","M – 7–8 years","L – 9–10 years","XL – 11–12 years"],"wulfsport-kids-attack-gloves-pink":["XXXS – 3–4 years","XXS – 5–7 years","XS – 8–12 years"]});
+  const basketItemKey = item => item.id + "|" + (item.size || "");
   const SHIPPING_CLASS_BY_ID = Object.freeze({"renegade-ranger-1100w-48v-kids-quad-pink":"bike","renegade-ranger-1200w-48v-kids-quad-red":"bike","kids-800w-36v-electric-dirt-bike-10-10-pink":"bike","kids-1200w-48v-electric-dirt-bike-12-10-pink":"bike","2000w-60v-electric-dirt-bike-14-12-pink":"bike","wulfsport-kids-air-x-helmet-pink":"medium","wulfsport-cub-racing-suit-pink":"medium","wulfsport-kids-attack-gloves-pink":"small","apollo-mikro-rfz70-kids-petrol-quad":"bike","panther-110cc-kids-petrol-quad-black":"bike","sniper-pro-120cc-junior-quad-blue":"bike","sniper-pro-120cc-junior-quad-yellow":"bike","sniper-pro-120cc-junior-quad-grey":"bike","sniper-pro-120cc-junior-quad-multiple-colours":"bike","rfn-thunder-70cc-kids-automatic-pit-bike":"bike","rfn-thunder-pro-110cc-kids-semi-auto-pit-bike":"bike","rfn-thunder-140cc-xl-dirt-bike-19-16":"bike","storm-3000w-48v-electric-dirt-bike-14-12":"bike","storm-5000w-72v-electric-dirt-bike-17-14":"bike","thunder-250cc-adults-dirt-bike-21-18-xl":"bike","2026-wulfsport-adults-astral-helmet-blue":"medium","wulfsport-cub-youth-armoured-jacket":"medium","wulfsport-trackstar-adult-boots-black":"medium","blue-wulfsport-kids-helmet-clothing-bundle":"medium","wulfsport-cub-tech-kids-mx-goggles-black":"small","talaria-sting-l35-electric-dirt-bike-black-blue":"bike","talaria-x3-pro-electric-dirt-bike":"bike","talaria-sting-pro-l1e-13kw-electric-dirt-bike":"bike","talaria-komodo-l3e-32kw-electric-dirt-bike":"bike","kids-800w-36v-electric-dirt-bike-10-10-red":"bike","kids-1200w-48v-electric-dirt-bike-12-10-blue":"bike","2000w-60v-electric-dirt-bike-14-12-green":"bike","rfn-thunder-pro-fh-110cc-pit-bike-red-blue":"bike","apollo-commander-200-adults-quad-black":"bike","kids-800w-36v-electric-dirt-bike-10-10-blue":"bike","revvi-24-1500w-48v-kids-electric-off-road-bike-black":"bike","apollo-commander-200-adult-quad-bike-black":"bike","storm-2000w-60v-electric-dirt-bike-14-12-red":"bike","revvi-twelve-100w-kids-electric-balance-bike-black":"bike","revvi-twelve-100w-kids-electric-balance-bike-blue":"bike","revvi-18-500w-36v-kids-electric-bike-black":"bike","renegade-pro-1500w-60v-electric-quad-black":"bike","48v-15ah-lithium-battery-1200w-electric-dirt-bike":"medium","48v-brushless-controller-1200w-electric-dirt-bike":"small","48v-charger-1200w-electric-dirt-bike":"small","3-speed-key-switch-1200w-electric-dirt-bike":"small","1000w-electric-quad-headlamp-with-light":"small","1000w-electric-quad-front-brake-lever-cable":"small","1000w-electric-quad-handlebar":"medium","mudhead-drive-belt-725":"small","1-4-fuel-tap":"small","air-filter":"small","air-filter-breather-pipe":"small","connecting-rod-assembly":"small","cooling-fan-flywheel":"small","engine-gasket-set":"small","engine-output-shaft":"small","engine-output-shaft-bearing-crank":"small","connector":"small","fuse-reset-button-unit":"small","gts-150-complete-plastic-set-black":"medium","gts-150-complete-plastic-set-red":"medium","gts-150-complete-plastic-set-orange":"medium","150-gts-lower-hood":"medium","150-gts-owner-s-manual":"small","gts-150-side-arm-brush-bar":"medium","bolt-m6-12":"small","110cc-120cc-quad-carburettor":"small","front-brake-lever-rfn-rxf-rfz":"small","38mm-air-filter-assembly-sniper-pro-120cc":"small","110cc-quad-bike-piston-ring-set":"small","apollo-quad-bike-choke-cable":"small","apollo-120cc-125cc-quad-clutch-assembly":"small","apollo-quad-bike-sports-exhaust-system":"medium","front-brake-disc-thunder-250cc":"small","throttle-cable-thunder-250cc":"small","right-middle-side-cover-thunder-250cc":"small","front-fork-plastics-thunder-250cc":"small","wulfsport-kids-air-x-helmet-blue":"medium","wulfsport-kids-air-x-helmet-green":"medium","wulfsport-adults-astral-helmet-black":"medium","wulfsport-adults-attack-gloves-blue":"small","wulfsport-proban-racing-suit":"medium","wulfsport-super-boot-la":"medium","wulfsport-trackstar-boots-black":"medium","wulfsport-trackstar-boots-white":"medium","wulfsport-cub-max-kids-off-road-boots":"medium","wulfsport-cub-racing-camo-suit-blue":"medium","2026-wulfsport-warhammer-kids-race-shirt-blue":"small","wulfsport-cub-youth-protective-jacket":"medium","wulfsport-pro-series-adult-deflector":"medium","wulfsport-cub-hinged-kids-knee-pads":"small","wulfsport-cub-kids-elbow-pads":"small","wulfsport-cub-tech-mx-goggles-blue":"small","wulfsport-corsair-adults-race-shirt-blue":"small","wulfsport-matrix-adults-race-jacket-blue":"medium","wulfsport-waterproof-jacket-over-trousers-set":"medium","wulfsport-matrix-adults-race-jacket-orange":"medium","wulfsport-corsair-adults-race-shirt-pink-blue":"small","kids-1200w-48v-electric-dirt-bike-12-10-green":"bike","kids-1200w-48v-electric-dirt-bike-12-10-grey":"bike","kids-1200w-48v-electric-dirt-bike-12-10-yellow":"bike","kids-800w-36v-electric-dirt-bike-10-10-grey":"bike","2000w-60v-electric-dirt-bike-14-12-grey":"bike","2000w-60v-electric-dirt-bike-14-12-yellow":"bike","2000w-60v-electric-dirt-bike-14-12-blue":"bike","revvi-20-800w-36v-kids-electric-bike-green":"bike","talaria-sting-r-8kw-electric-dirt-bike-black-blue":"bike"});
   const deliveryForBasket = () => {
     let vehicles = 0;
@@ -206,8 +208,8 @@ if (yearElement) yearElement.textContent = new Date().getFullYear();
       return;
     }
     lines.innerHTML = basket.map(item => `
-      <article class="basket-line" data-line-id="${item.id}">
-        <div class="basket-line-copy"><strong>${escapeHtml(item.name)}</strong><span>${money(item.price)} each</span></div>
+      <article class="basket-line" data-line-key="${escapeHtml(basketItemKey(item))}">
+        <div class="basket-line-copy"><strong>${escapeHtml(item.name)}</strong>${item.size ? '<span>Size: ' + escapeHtml(item.size) + '</span>' : ''}<span>${money(item.price)} each</span></div>
         <div class="basket-line-actions">
           <button type="button" data-qty="-1" aria-label="Decrease quantity">−</button><span>${item.qty}</span><button type="button" data-qty="1" aria-label="Increase quantity">+</button>
           <button type="button" class="basket-remove" data-remove>Remove</button>
@@ -240,6 +242,30 @@ if (yearElement) yearElement.textContent = new Date().getFullYear();
     // Use only confirmed in-stock catalogue items for direct basket checkout.
     // Supplier overrides cover low-stock, pre-order and unverified variants.
     const id = title.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+    let sizeSelect = null;
+    const allowedSizes = SIZE_OPTIONS_BY_ID[id];
+    if (allowedSizes?.length) {
+      const label = document.createElement('label');
+      label.textContent = 'Select size ';
+      label.className = 'item-size-picker';
+      label.style.display = 'block';
+      label.style.margin = '10px 0';
+      label.style.fontSize = '14px';
+      sizeSelect = document.createElement('select');
+      sizeSelect.setAttribute('aria-label', 'Choose size for ' + title);
+      sizeSelect.required = true;
+      sizeSelect.style.display = 'block';
+      sizeSelect.style.padding = '9px 8px';
+      sizeSelect.style.marginTop = '5px';
+      sizeSelect.style.width = '100%';
+      sizeSelect.style.background = '#fff';
+      sizeSelect.style.color = '#111';
+      sizeSelect.style.borderRadius = '6px';
+      sizeSelect.appendChild(new Option('Choose a size', ''));
+      allowedSizes.forEach(option => sizeSelect.appendChild(new Option(option, option)));
+      label.appendChild(sizeSelect);
+      link.before(label);
+    }
     const stockLabel = card?.querySelector('.stock-label')?.textContent?.trim() || '';
     const unavailable = Boolean(supplierStockStatus[id]) || !/^in stock$/i.test(stockLabel);
     if (unavailable) {
@@ -262,10 +288,15 @@ if (yearElement) yearElement.textContent = new Date().getFullYear();
           open();
           return;
         }
-        const id = title.toLowerCase().replace(/[^a-z0-9]+/g,'-');
-        const existing = basket.find(item => item.id === id);
+        const chosenSize = sizeSelect?.value || '';
+        if (allowedSizes?.length && !allowedSizes.includes(chosenSize)) {
+          alert('Please choose a size for ' + title + ' before adding it to your basket.');
+          sizeSelect?.focus();
+          return;
+        }
+        const existing = basket.find(item => item.id === id && (item.size || '') === chosenSize);
         if (existing) existing.qty += 1;
-        else basket.push({id,name:title,price,qty:1});
+        else basket.push({id,name:title,price,qty:1,size:chosenSize});
         save();
         button.textContent = 'Added ✓';
         window.setTimeout(() => { button.textContent = 'Add to basket'; }, 1300);
@@ -275,14 +306,14 @@ if (yearElement) yearElement.textContent = new Date().getFullYear();
   });
 
   panel.querySelector('#basket-lines').addEventListener('click', e => {
-    const line = e.target.closest('[data-line-id]');
+    const line = e.target.closest('[data-line-key]');
     if (!line) return;
-    const item = basket.find(entry => entry.id === line.dataset.lineId);
+    const item = basket.find(entry => basketItemKey(entry) === line.dataset.lineKey);
     if (!item) return;
-    if (e.target.hasAttribute('data-remove')) basket = basket.filter(entry => entry.id !== item.id);
+    if (e.target.hasAttribute('data-remove')) basket = basket.filter(entry => basketItemKey(entry) !== basketItemKey(item));
     else if (e.target.hasAttribute('data-qty')) {
       item.qty += Number(e.target.dataset.qty);
-      if (item.qty < 1) basket = basket.filter(entry => entry.id !== item.id);
+      if (item.qty < 1) basket = basket.filter(entry => basketItemKey(entry) !== basketItemKey(item));
     } else return;
     save();
   });
@@ -290,6 +321,12 @@ if (yearElement) yearElement.textContent = new Date().getFullYear();
   panel.querySelector('#basket-enquiry-form').addEventListener('submit', async e => {
     e.preventDefault();
     if (!basket.length) return;
+    const missingSize = basket.find(item => SIZE_OPTIONS_BY_ID[item.id]?.length && !SIZE_OPTIONS_BY_ID[item.id].includes(item.size || ''));
+    if (missingSize) {
+      alert('Please remove and re-add ' + missingSize.name + ' and choose the required size before checkout.');
+      open();
+      return;
+    }
     const form = new FormData(e.currentTarget);
     if (form.get('assembly') === 'yes') {
       alert('Pre-assembly/PDI has a model-specific supplier charge. Please contact Essex Moto on 07309 001841 for the exact quote before continuing to payment.');
@@ -303,7 +340,7 @@ if (yearElement) yearElement.textContent = new Date().getFullYear();
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          items: basket.map(item => ({ id: item.id, qty: item.qty })),
+          items: basket.map(item => ({ id: item.id, qty: item.qty, size: item.size || '' })),
           customerName: form.get('name'),
           email: form.get('email'),
           postcode: form.get('postcode'),
