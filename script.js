@@ -1,3 +1,9 @@
+// Keep obsolete GitHub Pages and temporary custom-domain visits on the Render shop.
+if (['essex-moto.co.uk','www.essex-moto.co.uk','dalegalea-sudo.github.io'].includes(window.location.hostname)) {
+  window.location.replace('https://essex-moto-online.onrender.com' +
+    window.location.pathname.replace(/^\/essex-moto-online(?=\/|$)/, '') +
+    window.location.search + window.location.hash);
+}
 const menu = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.nav');
 menu?.addEventListener('click', () => {
