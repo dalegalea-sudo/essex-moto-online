@@ -3,6 +3,17 @@
 <head>
 <meta name="google-site-verification" content="iRNep0bqhDXrX_XA3KxN2GwNK3uhb2GMbRlxxtrntu8" />
   <meta charset="utf-8">
+  <script>
+  // Temporary canonical storefront while the custom domain is being repaired.
+  if (location.hostname === 'essex-moto.co.uk' ||
+      location.hostname === 'www.essex-moto.co.uk' ||
+      location.hostname === 'dalegalea-sudo.github.io') {
+    location.replace('https://essex-moto-online.onrender.com' +
+      location.pathname.replace(/^\/essex-moto-online(?=\/|$)/, '') +
+      location.search + location.hash);
+  }
+</script>
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Essex Moto offers selected quad bikes, dirt bikes, riding gear and replacement spare parts in Essex, with UK delivery options.">
   <meta name="theme-color" content="#071426">
