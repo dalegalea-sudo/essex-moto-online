@@ -104,6 +104,7 @@ app.get("/api/payment-status", (_req, res) => {
     checkoutType: "stripe-hosted",
     captureMode: "automatic",
     catalogueProducts: catalogue.products.length,
+    productsAvailableToBuy: catalogue.products.filter(product => product.available).length,
     deliveryPence: null, // tiered; final amount depends on basket contents
     deliveryBandsPence: catalogue.deliveryBandsPence,
     deliveryCalculation: catalogue.deliveryCalculation,

@@ -474,3 +474,5 @@ body{font-size:16px;line-height:1.65;letter-spacing:.005em}
 .featured-disclaimer{color:#c0d2e2;font-size:13px;max-width:940px;margin:23px 0 0}
 @media(max-width:900px){.featured-products-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:540px){.featured-products-grid{grid-template-columns:1fr}.featured-section{padding-top:35px;padding-bottom:35px}.featured-product-image{height:240px}.featured-product-link{width:100%}}
+
+button.buy-now-button:disabled { opacity: .55; cursor: not-allowed; }

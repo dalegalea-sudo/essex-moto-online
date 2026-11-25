@@ -5,48 +5,57 @@
       "id": "renegade-ranger-1100w-48v-kids-quad-pink",
       "name": "Renegade Ranger 1100W 48V Kids Quad – Pink",
       "unitAmount": 59900,
-      "stockStatus": "In Stock",
+      "stockStatus": "In stock",
       "available": true,
-      "shippingClass": "bike"
+      "shippingClass": "bike",
+      "supplierUrl": "https://www.stormbuggies.com/products/renegade-ranger-1100w-48v-electric-kids-quad-bike-pink",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "renegade-ranger-1200w-48v-kids-quad-red",
       "name": "Renegade Ranger 1200W 48V Kids Quad – Red",
       "unitAmount": 79900,
-      "stockStatus": "In Stock",
-      "available": false,
+      "stockStatus": "Low stock",
+      "available": true,
       "shippingClass": "bike",
-      "checkoutAvailabilityReason": "Out of Stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/renegade-ranger-1200w-48v-20ah-electric-kids-quad-bike-red",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "kids-800w-36v-electric-dirt-bike-10-10-pink",
       "name": "Kids 800W 36V Electric Dirt Bike 10/10 – Pink",
       "unitAmount": 47900,
-      "stockStatus": "In Stock",
+      "stockStatus": "In stock",
       "available": true,
-      "shippingClass": "bike"
+      "shippingClass": "bike",
+      "supplierUrl": "https://www.stormbuggies.com/products/kids-800w-36v-electric-dirt-bike-10-10-pink",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "kids-1200w-48v-electric-dirt-bike-12-10-pink",
       "name": "Kids 1200W 48V Electric Dirt Bike 12/10 – Pink",
       "unitAmount": 79900,
-      "stockStatus": "In Stock",
+      "stockStatus": "In stock",
       "available": true,
-      "shippingClass": "bike"
+      "shippingClass": "bike",
+      "supplierUrl": "https://www.stormbuggies.com/products/kids-1200w-48v-electric-dirt-bike-12-10-pink",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "2000w-60v-electric-dirt-bike-14-12-pink",
       "name": "2000W 60V Electric Dirt Bike 14/12 – Pink",
       "unitAmount": 109900,
-      "stockStatus": "In Stock",
+      "stockStatus": "In stock",
       "available": true,
-      "shippingClass": "bike"
+      "shippingClass": "bike",
+      "supplierUrl": "https://www.stormbuggies.com/products/2000w-60v-electric-dirt-bike-14-12-pink",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "wulfsport-kids-air-x-helmet-pink",
       "name": "Wulfsport Kids Air-X Helmet – Pink",
       "unitAmount": 4995,
-      "stockStatus": "In Stock",
+      "stockStatus": "In stock",
       "available": true,
       "shippingClass": "medium",
       "sizeOptions": [
@@ -55,13 +64,15 @@
         "Large – 52 cm",
         "XL – 54 cm"
       ],
-      "sizeOptionSource": "Storm Buggies product selector"
+      "sizeOptionSource": "Storm Buggies product selector",
+      "supplierUrl": "https://www.stormbuggies.com/products/wulfsport-kids-air-x-helmet-pink-new-2025",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "wulfsport-cub-racing-suit-pink",
       "name": "Wulfsport Cub Racing Suit – Pink",
       "unitAmount": 3999,
-      "stockStatus": "In Stock",
+      "stockStatus": "In stock",
       "available": true,
       "shippingClass": "medium",
       "sizeOptions": [
@@ -71,13 +82,15 @@
         "L – 9–10 years",
         "XL – 11–12 years"
       ],
-      "sizeOptionSource": "Storm Buggies product selector"
+      "sizeOptionSource": "Storm Buggies product selector",
+      "supplierUrl": "https://www.stormbuggies.com/products/wulfsport-cub-racing-suit-pink",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "wulfsport-kids-attack-gloves-pink",
       "name": "Wulfsport Kids Attack Gloves – Pink",
       "unitAmount": 1595,
-      "stockStatus": "In Stock",
+      "stockStatus": "In stock",
       "available": true,
       "shippingClass": "small",
       "sizeOptions": [
@@ -86,22 +99,25 @@
         "XS – 8–12 years"
       ],
       "sizeOptionSource": "Storm Buggies pink Wulfsport clothing/helmet bundle (same Wulfsport Attack gloves): https://www.stormbuggies.com/products/wulfsport-helmet-race-suit-and-gloves-bundle-deal-pink-camo",
-      "sizeLevelStockConfirmed": false
+      "sizeLevelStockConfirmed": false,
+      "supplierUrl": "https://www.stormbuggies.com/products/wulfsport-kids-attack-gloves-pink",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "apollo-mikro-rfz70-kids-petrol-quad",
       "name": "Apollo Mikro RFZ70 Kids Petrol Quad",
       "unitAmount": 69900,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "bike",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/kids-70cc-automatic-vrx70-quad-bike-black",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "panther-110cc-kids-petrol-quad-black",
       "name": "Panther 110cc Kids Petrol Quad – Black",
       "unitAmount": 89900,
-      "stockStatus": "Supplier listed: pre-order date passed — reconfirm before order",
+      "stockStatus": "Stock unconfirmed",
       "available": false,
       "shippingClass": "bike"
     },
@@ -109,31 +125,37 @@
       "id": "sniper-pro-120cc-junior-quad-blue",
       "name": "Sniper Pro 120cc Junior Quad – Blue",
       "unitAmount": 99900,
-      "stockStatus": "Not confirmed",
+      "stockStatus": "Pre Order For 11 Dec, 2026",
       "available": false,
-      "shippingClass": "bike"
+      "shippingClass": "bike",
+      "supplierUrl": "https://www.stormbuggies.com/products/blue-120cc-sniper-pro-fully-automatic-with-reverse",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "sniper-pro-120cc-junior-quad-yellow",
       "name": "Sniper Pro 120cc Junior Quad – Yellow",
       "unitAmount": 99900,
-      "stockStatus": "Not confirmed",
+      "stockStatus": "Pre Order For 11 Dec, 2026",
       "available": false,
-      "shippingClass": "bike"
+      "shippingClass": "bike",
+      "supplierUrl": "https://www.stormbuggies.com/products/yellow-120cc-sniper-pro-fully-automatic",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "sniper-pro-120cc-junior-quad-grey",
       "name": "Sniper Pro 120cc Junior Quad – Grey",
       "unitAmount": 99900,
-      "stockStatus": "Not confirmed",
+      "stockStatus": "Pre Order For 11 Dec, 2026",
       "available": false,
-      "shippingClass": "bike"
+      "shippingClass": "bike",
+      "supplierUrl": "https://www.stormbuggies.com/products/grey-120cc-sniper-pro-fully-automatic-with-reverse",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "sniper-pro-120cc-junior-quad-multiple-colours",
       "name": "Sniper Pro 120cc Junior Quad – multiple colours",
       "unitAmount": 99900,
-      "stockStatus": "Not confirmed",
+      "stockStatus": "Stock unconfirmed",
       "available": false,
       "shippingClass": "bike"
     },
@@ -141,832 +163,1221 @@
       "id": "rfn-thunder-70cc-kids-automatic-pit-bike",
       "name": "RFN Thunder 70cc Kids Automatic Pit Bike",
       "unitAmount": 64900,
-      "stockStatus": "Availability confirmed before payment",
+      "stockStatus": "Out of stock",
       "available": false,
       "shippingClass": "bike",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/70cc-rfn-racing-tm-thunder-fully-auto-pit-bike-12-10-black",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "rfn-thunder-pro-110cc-kids-semi-auto-pit-bike",
       "name": "RFN Thunder Pro 110cc Kids Semi-Auto Pit Bike",
       "unitAmount": 69900,
-      "stockStatus": "In Stock",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "bike",
-      "checkoutAvailabilityReason": "Supplier listed: in stock — reconfirm before order"
+      "supplierUrl": "https://www.stormbuggies.com/products/110cc-rfn-racing-tm-thunder-pro-semi-auto-pit-bike-14-12-black",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "rfn-thunder-140cc-xl-dirt-bike-19-16",
       "name": "RFN Thunder 140cc XL Dirt Bike – 19/16",
       "unitAmount": 99900,
-      "stockStatus": "In Stock",
+      "stockStatus": "Pre Order For 11 Dec, 2026",
       "available": false,
       "shippingClass": "bike",
-      "checkoutAvailabilityReason": "Not confirmed"
+      "supplierUrl": "https://www.stormbuggies.com/products/140cc-rfn-thunder-dirt-bike-xl-wheel-19-16-black",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "storm-3000w-48v-electric-dirt-bike-14-12",
       "name": "Storm 3000W 48V Electric Dirt Bike 14/12",
       "unitAmount": 129900,
-      "stockStatus": "Supplier listed: pre-order date passed — reconfirm before order",
-      "available": false,
-      "shippingClass": "bike"
+      "stockStatus": "In stock",
+      "available": true,
+      "shippingClass": "bike",
+      "supplierUrl": "https://www.stormbuggies.com/products/3000w-48v-electric-dirt-bike-14-12-black",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "storm-5000w-72v-electric-dirt-bike-17-14",
       "name": "Storm 5000W 72V Electric Dirt Bike 17/14",
       "unitAmount": 169900,
-      "stockStatus": "Supplier listed: pre-order date passed — reconfirm before order",
-      "available": false,
-      "shippingClass": "bike"
+      "stockStatus": "In stock",
+      "available": true,
+      "shippingClass": "bike",
+      "supplierUrl": "https://www.stormbuggies.com/products/5000w-72v-electric-dirt-bike-17-14-black",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "thunder-250cc-adults-dirt-bike-21-18-xl",
       "name": "Thunder 250cc Adults Dirt Bike – 21/18 XL",
       "unitAmount": 219500,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "bike",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/250cc-rfz-thunder-adults-dirt-bike-21-18-xl-red",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "2026-wulfsport-adults-astral-helmet-blue",
       "name": "2026 Wulfsport Adults Astral Helmet – Blue",
       "unitAmount": 6499,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "medium",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/2026-wulfsport-adults-astral-helmet-blue",
+      "stockChecked": "2026-11-25",
+      "sizeOptions": [
+        "XS - 54cm",
+        "Small - 56cm",
+        "Medium - 58cm",
+        "Large - 60cm",
+        "XL - 62cm",
+        "XXL - 64cm"
+      ]
     },
     {
       "id": "wulfsport-cub-youth-armoured-jacket",
       "name": "Wulfsport Cub Youth Armoured Jacket",
       "unitAmount": 5495,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "medium",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/wulfsport-cub-deflector-jacket",
+      "stockChecked": "2026-11-25",
+      "sizeOptions": [
+        "128cm (approx 3-4 yrs)",
+        "146cm (approx 5-7 yrs)",
+        "164cm (approx 8-10 yrs)",
+        "176cm (approx 11-13 yrs)"
+      ]
     },
     {
       "id": "wulfsport-trackstar-adult-boots-black",
       "name": "Wulfsport Trackstar Adult Boots – Black",
       "unitAmount": 9695,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "medium",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/wulfsport-trackstar-boots-black",
+      "stockChecked": "2026-11-25",
+      "sizeOptions": [
+        "UK 5.5 - EU39",
+        "UK 6.5 - EU40",
+        "UK 7 - EU41",
+        "UK 8 - EU 42",
+        "UK 9 - EU43",
+        "UK 9.5 - EU44",
+        "UK 10.5 - EU45",
+        "UK 11 - EU46",
+        "UK 12 - EU47",
+        "UK 13 - EU48"
+      ]
     },
     {
       "id": "blue-wulfsport-kids-helmet-clothing-bundle",
       "name": "Blue Wulfsport Kids Helmet & Clothing Bundle",
       "unitAmount": 9999,
-      "stockStatus": "Supplier listed: in stock — reconfirm before order",
-      "available": false,
-      "shippingClass": "medium"
+      "stockStatus": "In stock",
+      "available": true,
+      "shippingClass": "medium",
+      "supplierUrl": "https://www.stormbuggies.com/products/wulfsport-helmet-race-suit-and-gloves-bundle-deal-blue",
+      "stockChecked": "2026-11-25",
+      "sizeOptions": [
+        "Helmet Size: S - 48cm / Race Suit Size: XS - 3-4yrs / Glove Size: XXXS - 3-4yrs",
+        "Helmet Size: S - 48cm / Race Suit Size: XS - 3-4yrs / Glove Size: XXS - 5-7yrs",
+        "Helmet Size: S - 48cm / Race Suit Size: XS - 3-4yrs / Glove Size: XS - 8-12yrs",
+        "Helmet Size: S - 48cm / Race Suit Size: S - 5-6yrs / Glove Size: XXXS - 3-4yrs",
+        "Helmet Size: S - 48cm / Race Suit Size: S - 5-6yrs / Glove Size: XXS - 5-7yrs",
+        "Helmet Size: S - 48cm / Race Suit Size: S - 5-6yrs / Glove Size: XS - 8-12yrs",
+        "Helmet Size: S - 48cm / Race Suit Size: M - 7-8yrs / Glove Size: XXXS - 3-4yrs",
+        "Helmet Size: S - 48cm / Race Suit Size: M - 7-8yrs / Glove Size: XXS - 5-7yrs",
+        "Helmet Size: S - 48cm / Race Suit Size: M - 7-8yrs / Glove Size: XS - 8-12yrs",
+        "Helmet Size: S - 48cm / Race Suit Size: L - 9-10yrs / Glove Size: XXXS - 3-4yrs",
+        "Helmet Size: S - 48cm / Race Suit Size: L - 9-10yrs / Glove Size: XXS - 5-7yrs",
+        "Helmet Size: S - 48cm / Race Suit Size: L - 9-10yrs / Glove Size: XS - 8-12yrs",
+        "Helmet Size: S - 48cm / Race Suit Size: XL - 11-12yrs / Glove Size: XXXS - 3-4yrs",
+        "Helmet Size: S - 48cm / Race Suit Size: XL - 11-12yrs / Glove Size: XXS - 5-7yrs",
+        "Helmet Size: S - 48cm / Race Suit Size: XL - 11-12yrs / Glove Size: XS - 8-12yrs",
+        "Helmet Size: M - 50cm / Race Suit Size: XS - 3-4yrs / Glove Size: XXXS - 3-4yrs",
+        "Helmet Size: M - 50cm / Race Suit Size: XS - 3-4yrs / Glove Size: XXS - 5-7yrs",
+        "Helmet Size: M - 50cm / Race Suit Size: XS - 3-4yrs / Glove Size: XS - 8-12yrs",
+        "Helmet Size: M - 50cm / Race Suit Size: S - 5-6yrs / Glove Size: XXXS - 3-4yrs",
+        "Helmet Size: M - 50cm / Race Suit Size: S - 5-6yrs / Glove Size: XXS - 5-7yrs",
+        "Helmet Size: M - 50cm / Race Suit Size: S - 5-6yrs / Glove Size: XS - 8-12yrs",
+        "Helmet Size: M - 50cm / Race Suit Size: M - 7-8yrs / Glove Size: XXXS - 3-4yrs",
+        "Helmet Size: M - 50cm / Race Suit Size: M - 7-8yrs / Glove Size: XXS - 5-7yrs",
+        "Helmet Size: M - 50cm / Race Suit Size: M - 7-8yrs / Glove Size: XS - 8-12yrs",
+        "Helmet Size: M - 50cm / Race Suit Size: L - 9-10yrs / Glove Size: XXXS - 3-4yrs",
+        "Helmet Size: M - 50cm / Race Suit Size: L - 9-10yrs / Glove Size: XXS - 5-7yrs",
+        "Helmet Size: M - 50cm / Race Suit Size: L - 9-10yrs / Glove Size: XS - 8-12yrs",
+        "Helmet Size: M - 50cm / Race Suit Size: XL - 11-12yrs / Glove Size: XXXS - 3-4yrs",
+        "Helmet Size: M - 50cm / Race Suit Size: XL - 11-12yrs / Glove Size: XXS - 5-7yrs",
+        "Helmet Size: M - 50cm / Race Suit Size: XL - 11-12yrs / Glove Size: XS - 8-12yrs",
+        "Helmet Size: L - 52cm / Race Suit Size: XS - 3-4yrs / Glove Size: XXXS - 3-4yrs",
+        "Helmet Size: L - 52cm / Race Suit Size: XS - 3-4yrs / Glove Size: XXS - 5-7yrs",
+        "Helmet Size: L - 52cm / Race Suit Size: XS - 3-4yrs / Glove Size: XS - 8-12yrs",
+        "Helmet Size: L - 52cm / Race Suit Size: S - 5-6yrs / Glove Size: XXXS - 3-4yrs",
+        "Helmet Size: L - 52cm / Race Suit Size: S - 5-6yrs / Glove Size: XXS - 5-7yrs",
+        "Helmet Size: L - 52cm / Race Suit Size: S - 5-6yrs / Glove Size: XS - 8-12yrs",
+        "Helmet Size: L - 52cm / Race Suit Size: M - 7-8yrs / Glove Size: XXXS - 3-4yrs",
+        "Helmet Size: L - 52cm / Race Suit Size: M - 7-8yrs / Glove Size: XXS - 5-7yrs",
+        "Helmet Size: L - 52cm / Race Suit Size: M - 7-8yrs / Glove Size: XS - 8-12yrs",
+        "Helmet Size: L - 52cm / Race Suit Size: L - 9-10yrs / Glove Size: XXXS - 3-4yrs",
+        "Helmet Size: L - 52cm / Race Suit Size: L - 9-10yrs / Glove Size: XXS - 5-7yrs",
+        "Helmet Size: L - 52cm / Race Suit Size: L - 9-10yrs / Glove Size: XS - 8-12yrs",
+        "Helmet Size: L - 52cm / Race Suit Size: XL - 11-12yrs / Glove Size: XXXS - 3-4yrs",
+        "Helmet Size: L - 52cm / Race Suit Size: XL - 11-12yrs / Glove Size: XXS - 5-7yrs",
+        "Helmet Size: L - 52cm / Race Suit Size: XL - 11-12yrs / Glove Size: XS - 8-12yrs",
+        "Helmet Size: XL - 54cm / Race Suit Size: XS - 3-4yrs / Glove Size: XXXS - 3-4yrs",
+        "Helmet Size: XL - 54cm / Race Suit Size: XS - 3-4yrs / Glove Size: XXS - 5-7yrs",
+        "Helmet Size: XL - 54cm / Race Suit Size: XS - 3-4yrs / Glove Size: XS - 8-12yrs",
+        "Helmet Size: XL - 54cm / Race Suit Size: S - 5-6yrs / Glove Size: XXXS - 3-4yrs",
+        "Helmet Size: XL - 54cm / Race Suit Size: S - 5-6yrs / Glove Size: XXS - 5-7yrs",
+        "Helmet Size: XL - 54cm / Race Suit Size: S - 5-6yrs / Glove Size: XS - 8-12yrs",
+        "Helmet Size: XL - 54cm / Race Suit Size: M - 7-8yrs / Glove Size: XXXS - 3-4yrs",
+        "Helmet Size: XL - 54cm / Race Suit Size: M - 7-8yrs / Glove Size: XXS - 5-7yrs",
+        "Helmet Size: XL - 54cm / Race Suit Size: M - 7-8yrs / Glove Size: XS - 8-12yrs",
+        "Helmet Size: XL - 54cm / Race Suit Size: L - 9-10yrs / Glove Size: XXXS - 3-4yrs",
+        "Helmet Size: XL - 54cm / Race Suit Size: L - 9-10yrs / Glove Size: XXS - 5-7yrs",
+        "Helmet Size: XL - 54cm / Race Suit Size: L - 9-10yrs / Glove Size: XS - 8-12yrs",
+        "Helmet Size: XL - 54cm / Race Suit Size: XL - 11-12yrs / Glove Size: XXXS - 3-4yrs",
+        "Helmet Size: XL - 54cm / Race Suit Size: XL - 11-12yrs / Glove Size: XXS - 5-7yrs",
+        "Helmet Size: XL - 54cm / Race Suit Size: XL - 11-12yrs / Glove Size: XS - 8-12yrs"
+      ]
     },
     {
       "id": "wulfsport-cub-tech-kids-mx-goggles-black",
       "name": "Wulfsport Cub Tech Kids MX Goggles – Black",
       "unitAmount": 1999,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "small",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/wulfsport-cub-tech-goggles-for-mx-enduro-black",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "talaria-sting-l35-electric-dirt-bike-black-blue",
       "name": "Talaria Sting L35 Electric Dirt Bike – Black/Blue",
       "unitAmount": 379500,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "bike",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/talaria-sting-l35-electric-mx-road-legal-dirt-bike-black-blue",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "talaria-x3-pro-electric-dirt-bike",
       "name": "Talaria X3 Pro Electric Dirt Bike",
       "unitAmount": 319500,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "bike",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/talaria-x3-pro-road-legal-electric-dirt-bike",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "talaria-sting-pro-l1e-13kw-electric-dirt-bike",
       "name": "Talaria Sting Pro L1E 13kW Electric Dirt Bike",
       "unitAmount": 439500,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "bike",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/talaria-sting-pro-l1e-13kw-electric-mx-road-legal-dirt-bike-black-red",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "talaria-komodo-l3e-32kw-electric-dirt-bike",
       "name": "Talaria Komodo L3E 32kW Electric Dirt Bike",
       "unitAmount": 569500,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "bike",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/talaria-komodo-l3e-32kw-electric-mx-road-legal-dirt-bike-black",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "kids-800w-36v-electric-dirt-bike-10-10-red",
       "name": "Kids 800W 36V Electric Dirt Bike 10/10 – Red",
       "unitAmount": 47900,
-      "stockStatus": "Availability confirmed before payment",
+      "stockStatus": "In stock",
       "available": true,
-      "shippingClass": "bike"
+      "shippingClass": "bike",
+      "supplierUrl": "https://www.stormbuggies.com/products/kids-800w-36v-electric-dirt-bike-10-10-red",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "kids-1200w-48v-electric-dirt-bike-12-10-blue",
       "name": "Kids 1200W 48V Electric Dirt Bike 12/10 – Blue",
       "unitAmount": 79900,
-      "stockStatus": "Supplier listed: low on stock — reconfirm before order",
-      "available": false,
-      "shippingClass": "bike"
+      "stockStatus": "In stock",
+      "available": true,
+      "shippingClass": "bike",
+      "supplierUrl": "https://www.stormbuggies.com/products/kids-1200w-48v-electric-dirt-bike-12-10-blue",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "2000w-60v-electric-dirt-bike-14-12-green",
       "name": "2000W 60V Electric Dirt Bike 14/12 – Green",
       "unitAmount": 109900,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "bike",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/2000w-60v-electric-dirt-bike-14-12-green",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "rfn-thunder-pro-fh-110cc-pit-bike-red-blue",
       "name": "RFN Thunder Pro FH 110cc Pit Bike – Red/Blue",
       "unitAmount": 69900,
-      "stockStatus": "In Stock",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "bike",
-      "checkoutAvailabilityReason": "Supplier listed: in stock — reconfirm before order"
+      "supplierUrl": "https://www.stormbuggies.com/products/110cc-rfn-racing-tm-thunder-pro-semi-auto-pit-bike-14-12-red-and-blue",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "apollo-commander-200-adults-quad-black",
       "name": "Apollo Commander 200 Adults Quad – Black",
       "unitAmount": 179900,
-      "stockStatus": "Availability confirmed before payment",
+      "stockStatus": "Out of stock",
       "available": false,
       "shippingClass": "bike",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/commander-180cc-adults-quad-bike",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "kids-800w-36v-electric-dirt-bike-10-10-blue",
       "name": "Kids 800W 36V Electric Dirt Bike 10/10 – Blue",
       "unitAmount": 47900,
-      "stockStatus": "Availability confirmed before payment",
+      "stockStatus": "In stock",
       "available": true,
-      "shippingClass": "bike"
+      "shippingClass": "bike",
+      "supplierUrl": "https://www.stormbuggies.com/products/kids-800w-36v-electric-dirt-bike-10-10-blue",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "revvi-24-1500w-48v-kids-electric-off-road-bike-black",
       "name": "Revvi 24 1500W 48V Kids Electric Off-Road Bike – Black",
       "unitAmount": 159900,
-      "stockStatus": "Availability confirmed before payment",
+      "stockStatus": "Pre Order For 11 Dec, 2026",
       "available": false,
       "shippingClass": "bike",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/kids-1500w-48v-electric-bike-revvi-24-black",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "apollo-commander-200-adult-quad-bike-black",
       "name": "Apollo Commander 200 Adult Quad Bike – Black",
       "unitAmount": 179900,
-      "stockStatus": "Availability confirmed before payment",
+      "stockStatus": "Out of stock",
       "available": false,
       "shippingClass": "bike",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/commander-180cc-adults-quad-bike",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "storm-2000w-60v-electric-dirt-bike-14-12-red",
       "name": "Storm 2000W 60V Electric Dirt Bike 14/12 – Red",
       "unitAmount": 109900,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "bike",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/2000w-60v-electric-dirt-bike-14-12-red",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "revvi-twelve-100w-kids-electric-balance-bike-black",
       "name": "Revvi Twelve 100W Kids Electric Balance Bike – Black",
       "unitAmount": 32500,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "bike",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/kids-100w-electric-balance-bike-revvi-twelve-black",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "revvi-twelve-100w-kids-electric-balance-bike-blue",
       "name": "Revvi Twelve 100W Kids Electric Balance Bike – Blue",
       "unitAmount": 32500,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "bike",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/kids-100w-electric-balance-bike-revvi-twelve-blue",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "revvi-18-500w-36v-kids-electric-bike-black",
       "name": "Revvi 18 500W 36V Kids Electric Bike – Black",
       "unitAmount": 84900,
-      "stockStatus": "Supplier listed: low on stock — reconfirm before order",
-      "available": false,
-      "shippingClass": "bike"
+      "stockStatus": "Low stock",
+      "available": true,
+      "shippingClass": "bike",
+      "supplierUrl": "https://www.stormbuggies.com/products/kids-500w-36v-electric-bike-revvi-18-black",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "renegade-pro-1500w-60v-electric-quad-black",
       "name": "Renegade Pro 1500W 60V Electric Quad – Black",
       "unitAmount": 114900,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "bike",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/renegade-pro-1500w-60v-32ah-electric-quad-bike",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "48v-15ah-lithium-battery-1200w-electric-dirt-bike",
       "name": "48V 15Ah Lithium Battery – 1200W Electric Dirt Bike",
       "unitAmount": 27900,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "medium",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/48v-15ah-lithium-battery-1200w-electric-dirt-bike",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "48v-brushless-controller-1200w-electric-dirt-bike",
       "name": "48V Brushless Controller – 1200W Electric Dirt Bike",
       "unitAmount": 6499,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "small",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/48v-brushless-controller-1200w-electric-dirt-bike",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "48v-charger-1200w-electric-dirt-bike",
       "name": "48V Charger – 1200W Electric Dirt Bike",
       "unitAmount": 4799,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "small",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/48v-charger-1200w-electric-dirt-bike",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "3-speed-key-switch-1200w-electric-dirt-bike",
       "name": "3-Speed Key Switch – 1200W Electric Dirt Bike",
       "unitAmount": 1499,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "small",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/3-speed-key-switch-1200w-electric-dirt-bike",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "1000w-electric-quad-headlamp-with-light",
       "name": "1000W Electric Quad Headlamp with Light",
       "unitAmount": 2424,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "small",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/1000w-electric-quad-headlamp-with-light",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "1000w-electric-quad-front-brake-lever-cable",
       "name": "1000W Electric Quad Front Brake Lever & Cable",
       "unitAmount": 3024,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "small",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/1000w-electric-quad-front-brake-lever-and-cable",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "1000w-electric-quad-handlebar",
       "name": "1000W Electric Quad Handlebar",
       "unitAmount": 2424,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "medium",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/1000w-electric-quad-handlebar",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "mudhead-drive-belt-725",
       "name": "Mudhead Drive Belt 725",
       "unitAmount": 2499,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "small",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/drive-belt-725",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "1-4-fuel-tap",
       "name": "1/4 Fuel Tap",
       "unitAmount": 1800,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "small",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/14-fuel-tap",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "air-filter",
       "name": "Air Filter",
       "unitAmount": 950,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "small",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/air-filter-hammerhead-mudhead-lct",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "air-filter-breather-pipe",
       "name": "Air Filter Breather Pipe",
       "unitAmount": 500,
-      "stockStatus": "Supplier listed: low on stock — reconfirm before order",
-      "available": false,
-      "shippingClass": "small"
+      "stockStatus": "Low stock",
+      "available": true,
+      "shippingClass": "small",
+      "supplierUrl": "https://www.stormbuggies.com/products/air-filter-breather-pipe",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "connecting-rod-assembly",
       "name": "Connecting Rod Assembly",
       "unitAmount": 1799,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "small",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/connecting-rod-assembly",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "cooling-fan-flywheel",
       "name": "Cooling Fan – Flywheel",
       "unitAmount": 1999,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "small",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/cooling-fan-flywheel",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "engine-gasket-set",
       "name": "Engine Gasket Set",
       "unitAmount": 2795,
-      "stockStatus": "Availability confirmed before payment",
+      "stockStatus": "Stock unconfirmed",
       "available": false,
-      "shippingClass": "small",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "shippingClass": "small"
     },
     {
       "id": "engine-output-shaft",
       "name": "Engine Output Shaft",
       "unitAmount": 7200,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "small",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/engine-output-shaft",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "engine-output-shaft-bearing-crank",
       "name": "Engine Output Shaft Bearing (Crank)",
       "unitAmount": 1299,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "small",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/engine-output-shaft-1-bearing",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "connector",
       "name": "Connector",
       "unitAmount": 199,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "small",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/connector",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "fuse-reset-button-unit",
       "name": "Fuse / Reset Button Unit",
       "unitAmount": 1000,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "small",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/fuse-reset-button-unit",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "gts-150-complete-plastic-set-black",
       "name": "GTS 150 Complete Plastic Set – Black",
       "unitAmount": 16999,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "medium",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/gts-150-complete-plastic-set-black",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "gts-150-complete-plastic-set-red",
       "name": "GTS 150 Complete Plastic Set – Red",
       "unitAmount": 16999,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "medium",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/gts-150-complete-plastic-set-red",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "gts-150-complete-plastic-set-orange",
       "name": "GTS 150 Complete Plastic Set – Orange",
       "unitAmount": 16999,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "medium",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/gts-150-complete-plastic-set-orange",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "150-gts-lower-hood",
       "name": "150 GTS Lower Hood",
       "unitAmount": 6499,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "medium",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/150-gts-lower-hood",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "150-gts-owner-s-manual",
       "name": "150 GTS Owner’s Manual",
       "unitAmount": 1499,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "small",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/150gts-owners-manual",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "gts-150-side-arm-brush-bar",
       "name": "GTS 150 Side Arm Brush Bar",
       "unitAmount": 3499,
-      "stockStatus": "Supplier listed: low on stock — reconfirm before order",
-      "available": false,
-      "shippingClass": "medium"
+      "stockStatus": "Low stock",
+      "available": true,
+      "shippingClass": "medium",
+      "supplierUrl": "https://www.stormbuggies.com/products/150gts-side-arm-brush-bar",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "bolt-m6-12",
       "name": "Bolt M6 × 12",
       "unitAmount": 150,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "small",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/bolt-m6x12-1",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "110cc-120cc-quad-carburettor",
       "name": "110cc & 120cc Quad Carburettor",
       "unitAmount": 3499,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "small",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/110cc-and-120cc-quad-carburettor",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "front-brake-lever-rfn-rxf-rfz",
       "name": "Front Brake Lever – RFN, RXF & RFZ",
       "unitAmount": 799,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "small",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/front-brake-lever-rfn-rxf-and-rfz-dirt-bikes",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "38mm-air-filter-assembly-sniper-pro-120cc",
       "name": "38mm Air Filter Assembly – Sniper Pro 120cc",
       "unitAmount": 1499,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "small",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/air-filter-assembly-38mm-sniper-pro-120cc",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "110cc-quad-bike-piston-ring-set",
       "name": "110cc Quad Bike Piston Ring Set",
       "unitAmount": 840,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "small",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/110cc-quad-bike-piston-ring-set",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "apollo-quad-bike-choke-cable",
       "name": "Apollo Quad Bike Choke Cable",
       "unitAmount": 840,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "small",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/apollo-quad-bike-choke-cable",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "apollo-120cc-125cc-quad-clutch-assembly",
       "name": "Apollo 120cc & 125cc Quad Clutch Assembly",
       "unitAmount": 4999,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "small",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/apollo-120cc-and-125cc-quad-clutch-assembly",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "apollo-quad-bike-sports-exhaust-system",
       "name": "Apollo Quad Bike Sports Exhaust System",
       "unitAmount": 4999,
-      "stockStatus": "In Stock",
-      "available": false,
+      "stockStatus": "Low stock",
+      "available": true,
       "shippingClass": "medium",
-      "checkoutAvailabilityReason": "Not confirmed"
+      "supplierUrl": "https://www.stormbuggies.com/products/apollo-quad-bike-complete-sports-exhaust-system",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "front-brake-disc-thunder-250cc",
       "name": "Front Brake Disc – Thunder 250cc",
       "unitAmount": 2299,
-      "stockStatus": "In Stock",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "small",
-      "checkoutAvailabilityReason": "Supplier listed: in stock — reconfirm before order"
+      "supplierUrl": "https://www.stormbuggies.com/products/front-brake-disc-thunder-250cc-dirt-bike",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "throttle-cable-thunder-250cc",
       "name": "Throttle Cable – Thunder 250cc",
       "unitAmount": 999,
-      "stockStatus": "In Stock",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "small",
-      "checkoutAvailabilityReason": "Supplier listed: in stock — reconfirm before order"
+      "supplierUrl": "https://www.stormbuggies.com/products/throttle-cable-100cm-thunder-250cc-dirt-bike",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "right-middle-side-cover-thunder-250cc",
       "name": "Right Middle Side Cover – Thunder 250cc",
       "unitAmount": 1299,
-      "stockStatus": "In Stock",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "small",
-      "checkoutAvailabilityReason": "Supplier listed: in stock — reconfirm before order"
+      "supplierUrl": "https://www.stormbuggies.com/products/right-middle-side-cover-plastic-thunder-250cc-dirt-bike",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "front-fork-plastics-thunder-250cc",
       "name": "Front Fork Plastics – Thunder 250cc",
       "unitAmount": 1299,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "small",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/front-fork-plastics-thunder-250cc-dirt-bike",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "wulfsport-kids-air-x-helmet-blue",
       "name": "Wulfsport Kids Air-X Helmet – Blue",
       "unitAmount": 4995,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "medium",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/wulfsport-kids-air-x-helmet-blue-new-2025",
+      "stockChecked": "2026-11-25",
+      "sizeOptions": [
+        "Small - 48cm",
+        "Medium - 50cm",
+        "Large - 52cm",
+        "XL - 54cm"
+      ]
     },
     {
       "id": "wulfsport-kids-air-x-helmet-green",
       "name": "Wulfsport Kids Air-X Helmet – Green",
       "unitAmount": 4995,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "medium",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/wulfsport-kids-air-x-helmet-green-new-2025",
+      "stockChecked": "2026-11-25",
+      "sizeOptions": [
+        "Small - 48cm",
+        "Medium - 50cm",
+        "Large - 52cm",
+        "XL - 54cm"
+      ]
     },
     {
       "id": "wulfsport-adults-astral-helmet-black",
       "name": "Wulfsport Adults Astral Helmet – Black",
       "unitAmount": 6499,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "medium",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/2026-wulfsport-adults-astral-helmet-black",
+      "stockChecked": "2026-11-25",
+      "sizeOptions": [
+        "XS - 54cm",
+        "Small - 56cm",
+        "Medium - 58cm",
+        "Large - 60cm",
+        "XL - 62cm",
+        "XXL - 64cm"
+      ]
     },
     {
       "id": "wulfsport-adults-attack-gloves-blue",
       "name": "Wulfsport Adults Attack Gloves – Blue",
       "unitAmount": 1795,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "small",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/wulfsport-adults-attack-gloves-blue",
+      "stockChecked": "2026-11-25",
+      "sizeOptions": [
+        "Small",
+        "Medium",
+        "Large",
+        "XL",
+        "XXL"
+      ]
     },
     {
       "id": "wulfsport-proban-racing-suit",
       "name": "Wulfsport Proban Racing Suit",
       "unitAmount": 11999,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "medium",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/wulfsport-proban-racing-suit",
+      "stockChecked": "2026-11-25",
+      "sizeOptions": [
+        "Size: Small / Colour: Black / White",
+        "Size: Small / Colour: Blue / Yellow",
+        "Size: Small / Colour: Grey / Red",
+        "Size: Small / Colour: Grey / Yellow",
+        "Size: Small / Colour: Orange / Black",
+        "Size: Medium / Colour: Black / White",
+        "Size: Medium / Colour: Blue / Yellow",
+        "Size: Medium / Colour: Grey / Red",
+        "Size: Medium / Colour: Grey / Yellow",
+        "Size: Medium / Colour: Orange / Black",
+        "Size: Large / Colour: Black / White",
+        "Size: Large / Colour: Blue / Yellow",
+        "Size: Large / Colour: Grey / Red",
+        "Size: Large / Colour: Grey / Yellow",
+        "Size: Large / Colour: Orange / Black",
+        "Size: XL / Colour: Black / White",
+        "Size: XL / Colour: Blue / Yellow",
+        "Size: XL / Colour: Grey / Red",
+        "Size: XL / Colour: Grey / Yellow",
+        "Size: XL / Colour: Orange / Black",
+        "Size: XXL / Colour: Black / White",
+        "Size: XXL / Colour: Blue / Yellow",
+        "Size: XXL / Colour: Grey / Red",
+        "Size: XXL / Colour: Grey / Yellow",
+        "Size: XXL / Colour: Orange / Black",
+        "Size: XXXL / Colour: Black / White",
+        "Size: XXXL / Colour: Blue / Yellow",
+        "Size: XXXL / Colour: Grey / Red",
+        "Size: XXXL / Colour: Grey / Yellow",
+        "Size: XXXL / Colour: Orange / Black"
+      ]
     },
     {
       "id": "wulfsport-super-boot-la",
       "name": "Wulfsport Super Boot-LA",
       "unitAmount": 8995,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "medium",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/wulfsport-super-boot-la",
+      "stockChecked": "2026-11-25",
+      "sizeOptions": [
+        "Euro 39   UK 5.5 - White",
+        "Euro 39   UK 5.5 - Black",
+        "Euro 40   UK 6.5 - White",
+        "Euro 40  UK 6.5 - Black",
+        "Euro 41   UK 7 - White",
+        "Euro 41   UK 7 - Black",
+        "Euro 42   UK 8  - White",
+        "Euro 42   UK  8 - Black",
+        "Euro 43   UK 9 - White",
+        "Euro 43    UK  9 - Black",
+        "Euro 44   UK 9.5 - White",
+        "Euro 44   UK 9.5 - Black",
+        "Euro 45   UK 10.5 - White",
+        "Euro 45   UK 10.5 - Black",
+        "Euro 46  UK 11 - White",
+        "Euro 46   UK 11- Black",
+        "Euro 47  UK 12 - Black",
+        "Euro 47   UK 12 - White",
+        "Euro 48   UK 13 - Black",
+        "Euro 48  UK 13 - White"
+      ]
     },
     {
       "id": "wulfsport-trackstar-boots-black",
       "name": "Wulfsport Trackstar Boots – Black",
       "unitAmount": 9695,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "medium",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/wulfsport-trackstar-boots-black",
+      "stockChecked": "2026-11-25",
+      "sizeOptions": [
+        "UK 5.5 - EU39",
+        "UK 6.5 - EU40",
+        "UK 7 - EU41",
+        "UK 8 - EU 42",
+        "UK 9 - EU43",
+        "UK 9.5 - EU44",
+        "UK 10.5 - EU45",
+        "UK 11 - EU46",
+        "UK 12 - EU47",
+        "UK 13 - EU48"
+      ]
     },
     {
       "id": "wulfsport-trackstar-boots-white",
       "name": "Wulfsport Trackstar Boots – White",
       "unitAmount": 9695,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "medium",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/wulfsport-trackstar-boots-white",
+      "stockChecked": "2026-11-25",
+      "sizeOptions": [
+        "UK 5.5 - EU39",
+        "UK 6.5 - EU40",
+        "UK 7 - EU41",
+        "UK 8 - EU 42",
+        "UK 9 - EU43",
+        "UK 9.5 - EU44",
+        "UK 10.5 - EU45",
+        "UK 11 - EU46",
+        "UK 12 - EU47",
+        "UK 13 - EU48"
+      ]
     },
     {
       "id": "wulfsport-cub-max-kids-off-road-boots",
       "name": "Wulfsport Cub Max Kids' Off-Road Boots",
       "unitAmount": 7499,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "medium",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/wulfsport-cub-max-off-road-boots",
+      "stockChecked": "2026-11-25",
+      "sizeOptions": [
+        "UK 9 - EU 27",
+        "UK 10 - EU 28",
+        "UK 11 - EU 29",
+        "UK 12 - EU 30",
+        "UK 12.5 - EU 31",
+        "UK 13 - EU 32",
+        "UK 1 - EU 33",
+        "UK 2 - EU 34",
+        "UK 2.5 - EU 35",
+        "UK 3 - EU 36",
+        "UK 4 - EU 37",
+        "UK 5 - EU 38",
+        "UK 6 - EU 39"
+      ]
     },
     {
       "id": "wulfsport-cub-racing-camo-suit-blue",
       "name": "Wulfsport Cub Racing Camo Suit – Blue",
       "unitAmount": 3999,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "medium",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/wulfsport-cub-racing-camo-suit-blue",
+      "stockChecked": "2026-11-25",
+      "sizeOptions": [
+        "XS 3-4yrs",
+        "S 5-6yrs",
+        "M 7-8yrs",
+        "L 9-10yrs",
+        "XL 11-12yrs"
+      ]
     },
     {
       "id": "2026-wulfsport-warhammer-kids-race-shirt-blue",
       "name": "2026 Wulfsport Warhammer Kids Race Shirt – Blue",
       "unitAmount": 2574,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "small",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/2026-wulfsport-warhammer-kids-race-shirt-blue",
+      "stockChecked": "2026-11-25",
+      "sizeOptions": [
+        "3-4 Years",
+        "5-7 Years",
+        "8-10 Years",
+        "11-13 Years"
+      ]
     },
     {
       "id": "wulfsport-cub-youth-protective-jacket",
       "name": "Wulfsport Cub Youth Protective Jacket",
       "unitAmount": 5495,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "medium",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/wulfsport-cub-deflector-jacket",
+      "stockChecked": "2026-11-25",
+      "sizeOptions": [
+        "128cm (approx 3-4 yrs)",
+        "146cm (approx 5-7 yrs)",
+        "164cm (approx 8-10 yrs)",
+        "176cm (approx 11-13 yrs)"
+      ]
     },
     {
       "id": "wulfsport-pro-series-adult-deflector",
       "name": "Wulfsport Pro Series Adult Deflector",
       "unitAmount": 7209,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "medium",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/wulfsport-pro-series-deflector",
+      "stockChecked": "2026-11-25",
+      "sizeOptions": [
+        "Colour: Black / Yellow",
+        "Colour: Black / Silver"
+      ]
     },
     {
       "id": "wulfsport-cub-hinged-kids-knee-pads",
       "name": "Wulfsport Cub Hinged Kids' Knee Pads",
       "unitAmount": 2795,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "small",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/wulfsport-cub-hinged-kids-knee-pads",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "wulfsport-cub-kids-elbow-pads",
       "name": "Wulfsport Cub Kids' Elbow Pads",
       "unitAmount": 1599,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "small",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/wulfsport-cub-mx-kids-elbow-pads",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "wulfsport-cub-tech-mx-goggles-blue",
       "name": "Wulfsport Cub Tech MX Goggles – Blue",
       "unitAmount": 1999,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "small",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/wulfsport-cub-tech-goggles-for-mx-enduro-blue",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "wulfsport-corsair-adults-race-shirt-blue",
       "name": "Wulfsport Corsair Adults Race Shirt – Blue",
       "unitAmount": 2695,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "small",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/2024-wulfsport-corsair-adults-race-shirt-blue",
+      "stockChecked": "2026-11-25",
+      "sizeOptions": [
+        "Small - 40\"",
+        "Medium - 42\"",
+        "Large - 44\"",
+        "XL - 46\"",
+        "XXL - 48\"",
+        "XXXL - 50\""
+      ]
     },
     {
       "id": "wulfsport-matrix-adults-race-jacket-blue",
       "name": "Wulfsport Matrix Adults Race Jacket – Blue",
       "unitAmount": 5994,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "medium",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/2022-wulfsport-matrix-adults-race-jacket-blue",
+      "stockChecked": "2026-11-25",
+      "sizeOptions": [
+        "Small - 40\"",
+        "Medium - 42\"",
+        "Large - 44\"",
+        "XL - 46\"",
+        "XXL - 48\"",
+        "XXXL - 50\""
+      ]
     },
     {
       "id": "wulfsport-waterproof-jacket-over-trousers-set",
       "name": "Wulfsport Waterproof Jacket & Over-Trousers Set",
       "unitAmount": 3999,
-      "stockStatus": "Supplier listed: in stock — reconfirm before order",
-      "available": false,
-      "shippingClass": "medium"
+      "stockStatus": "In stock",
+      "available": true,
+      "shippingClass": "medium",
+      "supplierUrl": "https://www.stormbuggies.com/products/wulfsport-wet-weather-over-jacket-over-pants",
+      "stockChecked": "2026-11-25",
+      "sizeOptions": [
+        "Colour: Blue - XS",
+        "Colour: Blue - Small",
+        "Colour: Blue - Medium",
+        "Colour: Blue - Large",
+        "Colour: Blue - XL",
+        "Colour: Blue - XXL",
+        "Colour: Black - XS",
+        "Colour: Black - Small",
+        "Colour: Black - Medium",
+        "Colour: Black - Large",
+        "Colour: Black - XL",
+        "Colour: Black - XXL",
+        "Colour: Red - XS",
+        "Colour: Red - Small",
+        "Colour: Red - Medium",
+        "Colour: Red - Large",
+        "Colour: Red - XL",
+        "Colour: Red - XXL"
+      ]
     },
     {
       "id": "wulfsport-matrix-adults-race-jacket-orange",
       "name": "Wulfsport Matrix Adults Race Jacket – Orange",
       "unitAmount": 5994,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "medium",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/2022-wulfsport-matrix-adults-race-jacket-orange",
+      "stockChecked": "2026-11-25",
+      "sizeOptions": [
+        "Small - 40\"",
+        "Medium - 42\"",
+        "Large - 44\"",
+        "XL - 46\"",
+        "XXL - 48\""
+      ]
     },
     {
       "id": "wulfsport-corsair-adults-race-shirt-pink-blue",
       "name": "Wulfsport Corsair Adults Race Shirt – Pink / Blue",
       "unitAmount": 2695,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "small",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/2024-wulfsport-corsair-adults-race-shirt-pink-blue",
+      "stockChecked": "2026-11-25",
+      "sizeOptions": [
+        "Small - 40\"",
+        "Medium - 42\"",
+        "Large - 44\"",
+        "XL - 46\"",
+        "XXL - 48\"",
+        "XXXL - 50\""
+      ]
     },
     {
       "id": "kids-1200w-48v-electric-dirt-bike-12-10-green",
       "name": "Kids 1200W 48V Electric Dirt Bike 12/10 – Green",
       "unitAmount": 79900,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "bike",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/kids-1200w-48v-electric-dirt-bike-12-10-green",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "kids-1200w-48v-electric-dirt-bike-12-10-grey",
       "name": "Kids 1200W 48V Electric Dirt Bike 12/10 – Grey",
       "unitAmount": 79900,
-      "stockStatus": "Supplier listed: low on stock — reconfirm before order",
-      "available": false,
-      "shippingClass": "bike"
+      "stockStatus": "In stock",
+      "available": true,
+      "shippingClass": "bike",
+      "supplierUrl": "https://www.stormbuggies.com/products/kids-1200w-48v-electric-dirt-bike-12-10-grey",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "kids-1200w-48v-electric-dirt-bike-12-10-yellow",
       "name": "Kids 1200W 48V Electric Dirt Bike 12/10 – Yellow",
       "unitAmount": 79900,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "bike",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/kids-1200w-48v-electric-dirt-bike-12-10-yellow",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "kids-800w-36v-electric-dirt-bike-10-10-grey",
       "name": "Kids 800W 36V Electric Dirt Bike 10/10 – Grey",
       "unitAmount": 47900,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "bike",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/kids-800w-36v-electric-dirt-bike-10-10-grey",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "2000w-60v-electric-dirt-bike-14-12-grey",
       "name": "2000W 60V Electric Dirt Bike 14/12 – Grey",
       "unitAmount": 109900,
-      "stockStatus": "Supplier listed: low on stock — reconfirm before order",
-      "available": false,
-      "shippingClass": "bike"
+      "stockStatus": "In stock",
+      "available": true,
+      "shippingClass": "bike",
+      "supplierUrl": "https://www.stormbuggies.com/products/2000w-60v-electric-dirt-bike-14-12-grey",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "2000w-60v-electric-dirt-bike-14-12-yellow",
       "name": "2000W 60V Electric Dirt Bike 14/12 – Yellow",
       "unitAmount": 109900,
-      "stockStatus": "Availability confirmed before payment",
-      "available": false,
+      "stockStatus": "In stock",
+      "available": true,
       "shippingClass": "bike",
-      "checkoutAvailabilityReason": "Check supplier stock"
+      "supplierUrl": "https://www.stormbuggies.com/products/2000w-60v-electric-dirt-bike-14-12-yellow",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "2000w-60v-electric-dirt-bike-14-12-blue",
       "name": "2000W 60V Electric Dirt Bike 14/12 – Blue",
       "unitAmount": 109900,
-      "stockStatus": "Supplier listed: low on stock — reconfirm before order",
-      "available": false,
-      "shippingClass": "bike"
+      "stockStatus": "In stock",
+      "available": true,
+      "shippingClass": "bike",
+      "supplierUrl": "https://www.stormbuggies.com/products/2000w-60v-electric-dirt-bike-14-12-blue",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "revvi-20-800w-36v-kids-electric-bike-green",
       "name": "Revvi 20 800W 36V Kids Electric Bike – Green",
       "unitAmount": 109900,
-      "stockStatus": "Supplier listed: low on stock — reconfirm before order",
-      "available": false,
-      "shippingClass": "bike"
+      "stockStatus": "Low stock",
+      "available": true,
+      "shippingClass": "bike",
+      "supplierUrl": "https://www.stormbuggies.com/products/kids-800w-36v-bike-revvi-20-green",
+      "stockChecked": "2026-11-25"
     },
     {
       "id": "talaria-sting-r-8kw-electric-dirt-bike-black-blue",
       "name": "Talaria Sting R 8kW Electric Dirt Bike – Black/Blue",
       "unitAmount": 349500,
-      "stockStatus": "Not confirmed",
-      "available": false,
-      "shippingClass": "bike"
+      "stockStatus": "In stock",
+      "available": true,
+      "shippingClass": "bike",
+      "supplierUrl": "https://www.stormbuggies.com/products/talaria-sting-r-8kw-electric-mx-off-road-dirt-bike-black-blue",
+      "stockChecked": "2026-11-25"
     }
   ],
   "deliveryBandsPence": {

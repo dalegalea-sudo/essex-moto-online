@@ -88,7 +88,7 @@ if (yearElement) yearElement.textContent = new Date().getFullYear();
       if (/\bRC cars|hobbies/i.test(option.text)) option.remove();
     });
     document.querySelectorAll('.product-card, .category-card, .package-card').forEach(card => {
-      if (/\bbugg(?:y|ies)\b|go[- ]?karts?/i.test(card.textContent)) card.remove();
+      if (card.dataset.category !== 'parts' && !/parts/.test(card.dataset.subcategory || '') && /\bbugg(?:y|ies)\b|go[- ]?karts?/i.test(card.textContent)) card.remove();
     });
     document.querySelectorAll('[data-enquiry]').forEach(link => {
       if (/\bRC\b|radio control|monster truck|truggy/i.test(link.dataset.enquiry || '')) link.remove();
@@ -162,7 +162,7 @@ if (yearElement) yearElement.textContent = new Date().getFullYear();
   // Essex Moto customer charges, not published Storm Buggies wholesale tariffs.
   // Charge per vehicle and one combined parcel tier for smaller products.
   const SHIPPING_RATES = Object.freeze({ small: 10, medium: 20, bike: 102 });
-  const SIZE_OPTIONS_BY_ID = Object.freeze({"wulfsport-kids-air-x-helmet-pink":["Small – 48 cm","Medium – 50 cm","Large – 52 cm","XL – 54 cm"],"wulfsport-cub-racing-suit-pink":["XS – 3–4 years","S – 5–6 years","M – 7–8 years","L – 9–10 years","XL – 11–12 years"],"wulfsport-kids-attack-gloves-pink":["XXXS – 3–4 years","XXS – 5–7 years","XS – 8–12 years"]});
+  const SIZE_OPTIONS_BY_ID = Object.freeze({"wulfsport-kids-air-x-helmet-pink": ["Small – 48 cm", "Medium – 50 cm", "Large – 52 cm", "XL – 54 cm"], "wulfsport-cub-racing-suit-pink": ["XS – 3–4 years", "S – 5–6 years", "M – 7–8 years", "L – 9–10 years", "XL – 11–12 years"], "wulfsport-kids-attack-gloves-pink": ["XXXS – 3–4 years", "XXS – 5–7 years", "XS – 8–12 years"], "2026-wulfsport-adults-astral-helmet-blue": ["XS - 54cm", "Small - 56cm", "Medium - 58cm", "Large - 60cm", "XL - 62cm", "XXL - 64cm"], "wulfsport-cub-youth-armoured-jacket": ["128cm (approx 3-4 yrs)", "146cm (approx 5-7 yrs)", "164cm (approx 8-10 yrs)", "176cm (approx 11-13 yrs)"], "wulfsport-trackstar-adult-boots-black": ["UK 5.5 - EU39", "UK 6.5 - EU40", "UK 7 - EU41", "UK 8 - EU 42", "UK 9 - EU43", "UK 9.5 - EU44", "UK 10.5 - EU45", "UK 11 - EU46", "UK 12 - EU47", "UK 13 - EU48"], "blue-wulfsport-kids-helmet-clothing-bundle": ["Helmet Size: S - 48cm / Race Suit Size: XS - 3-4yrs / Glove Size: XXXS - 3-4yrs", "Helmet Size: S - 48cm / Race Suit Size: XS - 3-4yrs / Glove Size: XXS - 5-7yrs", "Helmet Size: S - 48cm / Race Suit Size: XS - 3-4yrs / Glove Size: XS - 8-12yrs", "Helmet Size: S - 48cm / Race Suit Size: S - 5-6yrs / Glove Size: XXXS - 3-4yrs", "Helmet Size: S - 48cm / Race Suit Size: S - 5-6yrs / Glove Size: XXS - 5-7yrs", "Helmet Size: S - 48cm / Race Suit Size: S - 5-6yrs / Glove Size: XS - 8-12yrs", "Helmet Size: S - 48cm / Race Suit Size: M - 7-8yrs / Glove Size: XXXS - 3-4yrs", "Helmet Size: S - 48cm / Race Suit Size: M - 7-8yrs / Glove Size: XXS - 5-7yrs", "Helmet Size: S - 48cm / Race Suit Size: M - 7-8yrs / Glove Size: XS - 8-12yrs", "Helmet Size: S - 48cm / Race Suit Size: L - 9-10yrs / Glove Size: XXXS - 3-4yrs", "Helmet Size: S - 48cm / Race Suit Size: L - 9-10yrs / Glove Size: XXS - 5-7yrs", "Helmet Size: S - 48cm / Race Suit Size: L - 9-10yrs / Glove Size: XS - 8-12yrs", "Helmet Size: S - 48cm / Race Suit Size: XL - 11-12yrs / Glove Size: XXXS - 3-4yrs", "Helmet Size: S - 48cm / Race Suit Size: XL - 11-12yrs / Glove Size: XXS - 5-7yrs", "Helmet Size: S - 48cm / Race Suit Size: XL - 11-12yrs / Glove Size: XS - 8-12yrs", "Helmet Size: M - 50cm / Race Suit Size: XS - 3-4yrs / Glove Size: XXXS - 3-4yrs", "Helmet Size: M - 50cm / Race Suit Size: XS - 3-4yrs / Glove Size: XXS - 5-7yrs", "Helmet Size: M - 50cm / Race Suit Size: XS - 3-4yrs / Glove Size: XS - 8-12yrs", "Helmet Size: M - 50cm / Race Suit Size: S - 5-6yrs / Glove Size: XXXS - 3-4yrs", "Helmet Size: M - 50cm / Race Suit Size: S - 5-6yrs / Glove Size: XXS - 5-7yrs", "Helmet Size: M - 50cm / Race Suit Size: S - 5-6yrs / Glove Size: XS - 8-12yrs", "Helmet Size: M - 50cm / Race Suit Size: M - 7-8yrs / Glove Size: XXXS - 3-4yrs", "Helmet Size: M - 50cm / Race Suit Size: M - 7-8yrs / Glove Size: XXS - 5-7yrs", "Helmet Size: M - 50cm / Race Suit Size: M - 7-8yrs / Glove Size: XS - 8-12yrs", "Helmet Size: M - 50cm / Race Suit Size: L - 9-10yrs / Glove Size: XXXS - 3-4yrs", "Helmet Size: M - 50cm / Race Suit Size: L - 9-10yrs / Glove Size: XXS - 5-7yrs", "Helmet Size: M - 50cm / Race Suit Size: L - 9-10yrs / Glove Size: XS - 8-12yrs", "Helmet Size: M - 50cm / Race Suit Size: XL - 11-12yrs / Glove Size: XXXS - 3-4yrs", "Helmet Size: M - 50cm / Race Suit Size: XL - 11-12yrs / Glove Size: XXS - 5-7yrs", "Helmet Size: M - 50cm / Race Suit Size: XL - 11-12yrs / Glove Size: XS - 8-12yrs", "Helmet Size: L - 52cm / Race Suit Size: XS - 3-4yrs / Glove Size: XXXS - 3-4yrs", "Helmet Size: L - 52cm / Race Suit Size: XS - 3-4yrs / Glove Size: XXS - 5-7yrs", "Helmet Size: L - 52cm / Race Suit Size: XS - 3-4yrs / Glove Size: XS - 8-12yrs", "Helmet Size: L - 52cm / Race Suit Size: S - 5-6yrs / Glove Size: XXXS - 3-4yrs", "Helmet Size: L - 52cm / Race Suit Size: S - 5-6yrs / Glove Size: XXS - 5-7yrs", "Helmet Size: L - 52cm / Race Suit Size: S - 5-6yrs / Glove Size: XS - 8-12yrs", "Helmet Size: L - 52cm / Race Suit Size: M - 7-8yrs / Glove Size: XXXS - 3-4yrs", "Helmet Size: L - 52cm / Race Suit Size: M - 7-8yrs / Glove Size: XXS - 5-7yrs", "Helmet Size: L - 52cm / Race Suit Size: M - 7-8yrs / Glove Size: XS - 8-12yrs", "Helmet Size: L - 52cm / Race Suit Size: L - 9-10yrs / Glove Size: XXXS - 3-4yrs", "Helmet Size: L - 52cm / Race Suit Size: L - 9-10yrs / Glove Size: XXS - 5-7yrs", "Helmet Size: L - 52cm / Race Suit Size: L - 9-10yrs / Glove Size: XS - 8-12yrs", "Helmet Size: L - 52cm / Race Suit Size: XL - 11-12yrs / Glove Size: XXXS - 3-4yrs", "Helmet Size: L - 52cm / Race Suit Size: XL - 11-12yrs / Glove Size: XXS - 5-7yrs", "Helmet Size: L - 52cm / Race Suit Size: XL - 11-12yrs / Glove Size: XS - 8-12yrs", "Helmet Size: XL - 54cm / Race Suit Size: XS - 3-4yrs / Glove Size: XXXS - 3-4yrs", "Helmet Size: XL - 54cm / Race Suit Size: XS - 3-4yrs / Glove Size: XXS - 5-7yrs", "Helmet Size: XL - 54cm / Race Suit Size: XS - 3-4yrs / Glove Size: XS - 8-12yrs", "Helmet Size: XL - 54cm / Race Suit Size: S - 5-6yrs / Glove Size: XXXS - 3-4yrs", "Helmet Size: XL - 54cm / Race Suit Size: S - 5-6yrs / Glove Size: XXS - 5-7yrs", "Helmet Size: XL - 54cm / Race Suit Size: S - 5-6yrs / Glove Size: XS - 8-12yrs", "Helmet Size: XL - 54cm / Race Suit Size: M - 7-8yrs / Glove Size: XXXS - 3-4yrs", "Helmet Size: XL - 54cm / Race Suit Size: M - 7-8yrs / Glove Size: XXS - 5-7yrs", "Helmet Size: XL - 54cm / Race Suit Size: M - 7-8yrs / Glove Size: XS - 8-12yrs", "Helmet Size: XL - 54cm / Race Suit Size: L - 9-10yrs / Glove Size: XXXS - 3-4yrs", "Helmet Size: XL - 54cm / Race Suit Size: L - 9-10yrs / Glove Size: XXS - 5-7yrs", "Helmet Size: XL - 54cm / Race Suit Size: L - 9-10yrs / Glove Size: XS - 8-12yrs", "Helmet Size: XL - 54cm / Race Suit Size: XL - 11-12yrs / Glove Size: XXXS - 3-4yrs", "Helmet Size: XL - 54cm / Race Suit Size: XL - 11-12yrs / Glove Size: XXS - 5-7yrs", "Helmet Size: XL - 54cm / Race Suit Size: XL - 11-12yrs / Glove Size: XS - 8-12yrs"], "wulfsport-kids-air-x-helmet-blue": ["Small - 48cm", "Medium - 50cm", "Large - 52cm", "XL - 54cm"], "wulfsport-kids-air-x-helmet-green": ["Small - 48cm", "Medium - 50cm", "Large - 52cm", "XL - 54cm"], "wulfsport-adults-astral-helmet-black": ["XS - 54cm", "Small - 56cm", "Medium - 58cm", "Large - 60cm", "XL - 62cm", "XXL - 64cm"], "wulfsport-adults-attack-gloves-blue": ["Small", "Medium", "Large", "XL", "XXL"], "wulfsport-proban-racing-suit": ["Size: Small / Colour: Black / White", "Size: Small / Colour: Blue / Yellow", "Size: Small / Colour: Grey / Red", "Size: Small / Colour: Grey / Yellow", "Size: Small / Colour: Orange / Black", "Size: Medium / Colour: Black / White", "Size: Medium / Colour: Blue / Yellow", "Size: Medium / Colour: Grey / Red", "Size: Medium / Colour: Grey / Yellow", "Size: Medium / Colour: Orange / Black", "Size: Large / Colour: Black / White", "Size: Large / Colour: Blue / Yellow", "Size: Large / Colour: Grey / Red", "Size: Large / Colour: Grey / Yellow", "Size: Large / Colour: Orange / Black", "Size: XL / Colour: Black / White", "Size: XL / Colour: Blue / Yellow", "Size: XL / Colour: Grey / Red", "Size: XL / Colour: Grey / Yellow", "Size: XL / Colour: Orange / Black", "Size: XXL / Colour: Black / White", "Size: XXL / Colour: Blue / Yellow", "Size: XXL / Colour: Grey / Red", "Size: XXL / Colour: Grey / Yellow", "Size: XXL / Colour: Orange / Black", "Size: XXXL / Colour: Black / White", "Size: XXXL / Colour: Blue / Yellow", "Size: XXXL / Colour: Grey / Red", "Size: XXXL / Colour: Grey / Yellow", "Size: XXXL / Colour: Orange / Black"], "wulfsport-super-boot-la": ["Euro 39   UK 5.5 - White", "Euro 39   UK 5.5 - Black", "Euro 40   UK 6.5 - White", "Euro 40  UK 6.5 - Black", "Euro 41   UK 7 - White", "Euro 41   UK 7 - Black", "Euro 42   UK 8  - White", "Euro 42   UK  8 - Black", "Euro 43   UK 9 - White", "Euro 43    UK  9 - Black", "Euro 44   UK 9.5 - White", "Euro 44   UK 9.5 - Black", "Euro 45   UK 10.5 - White", "Euro 45   UK 10.5 - Black", "Euro 46  UK 11 - White", "Euro 46   UK 11- Black", "Euro 47  UK 12 - Black", "Euro 47   UK 12 - White", "Euro 48   UK 13 - Black", "Euro 48  UK 13 - White"], "wulfsport-trackstar-boots-black": ["UK 5.5 - EU39", "UK 6.5 - EU40", "UK 7 - EU41", "UK 8 - EU 42", "UK 9 - EU43", "UK 9.5 - EU44", "UK 10.5 - EU45", "UK 11 - EU46", "UK 12 - EU47", "UK 13 - EU48"], "wulfsport-trackstar-boots-white": ["UK 5.5 - EU39", "UK 6.5 - EU40", "UK 7 - EU41", "UK 8 - EU 42", "UK 9 - EU43", "UK 9.5 - EU44", "UK 10.5 - EU45", "UK 11 - EU46", "UK 12 - EU47", "UK 13 - EU48"], "wulfsport-cub-max-kids-off-road-boots": ["UK 9 - EU 27", "UK 10 - EU 28", "UK 11 - EU 29", "UK 12 - EU 30", "UK 12.5 - EU 31", "UK 13 - EU 32", "UK 1 - EU 33", "UK 2 - EU 34", "UK 2.5 - EU 35", "UK 3 - EU 36", "UK 4 - EU 37", "UK 5 - EU 38", "UK 6 - EU 39"], "wulfsport-cub-racing-camo-suit-blue": ["XS 3-4yrs", "S 5-6yrs", "M 7-8yrs", "L 9-10yrs", "XL 11-12yrs"], "2026-wulfsport-warhammer-kids-race-shirt-blue": ["3-4 Years", "5-7 Years", "8-10 Years", "11-13 Years"], "wulfsport-cub-youth-protective-jacket": ["128cm (approx 3-4 yrs)", "146cm (approx 5-7 yrs)", "164cm (approx 8-10 yrs)", "176cm (approx 11-13 yrs)"], "wulfsport-pro-series-adult-deflector": ["Colour: Black / Yellow", "Colour: Black / Silver"], "wulfsport-corsair-adults-race-shirt-blue": ["Small - 40\"", "Medium - 42\"", "Large - 44\"", "XL - 46\"", "XXL - 48\"", "XXXL - 50\""], "wulfsport-matrix-adults-race-jacket-blue": ["Small - 40\"", "Medium - 42\"", "Large - 44\"", "XL - 46\"", "XXL - 48\"", "XXXL - 50\""], "wulfsport-waterproof-jacket-over-trousers-set": ["Colour: Blue - XS", "Colour: Blue - Small", "Colour: Blue - Medium", "Colour: Blue - Large", "Colour: Blue - XL", "Colour: Blue - XXL", "Colour: Black - XS", "Colour: Black - Small", "Colour: Black - Medium", "Colour: Black - Large", "Colour: Black - XL", "Colour: Black - XXL", "Colour: Red - XS", "Colour: Red - Small", "Colour: Red - Medium", "Colour: Red - Large", "Colour: Red - XL", "Colour: Red - XXL"], "wulfsport-matrix-adults-race-jacket-orange": ["Small - 40\"", "Medium - 42\"", "Large - 44\"", "XL - 46\"", "XXL - 48\""], "wulfsport-corsair-adults-race-shirt-pink-blue": ["Small - 40\"", "Medium - 42\"", "Large - 44\"", "XL - 46\"", "XXL - 48\"", "XXXL - 50\""]});
   const basketItemKey = item => item.id + "|" + (item.size || "");
   const SHIPPING_CLASS_BY_ID = Object.freeze({"renegade-ranger-1100w-48v-kids-quad-pink":"bike","renegade-ranger-1200w-48v-kids-quad-red":"bike","kids-800w-36v-electric-dirt-bike-10-10-pink":"bike","kids-1200w-48v-electric-dirt-bike-12-10-pink":"bike","2000w-60v-electric-dirt-bike-14-12-pink":"bike","wulfsport-kids-air-x-helmet-pink":"medium","wulfsport-cub-racing-suit-pink":"medium","wulfsport-kids-attack-gloves-pink":"small","apollo-mikro-rfz70-kids-petrol-quad":"bike","panther-110cc-kids-petrol-quad-black":"bike","sniper-pro-120cc-junior-quad-blue":"bike","sniper-pro-120cc-junior-quad-yellow":"bike","sniper-pro-120cc-junior-quad-grey":"bike","sniper-pro-120cc-junior-quad-multiple-colours":"bike","rfn-thunder-70cc-kids-automatic-pit-bike":"bike","rfn-thunder-pro-110cc-kids-semi-auto-pit-bike":"bike","rfn-thunder-140cc-xl-dirt-bike-19-16":"bike","storm-3000w-48v-electric-dirt-bike-14-12":"bike","storm-5000w-72v-electric-dirt-bike-17-14":"bike","thunder-250cc-adults-dirt-bike-21-18-xl":"bike","2026-wulfsport-adults-astral-helmet-blue":"medium","wulfsport-cub-youth-armoured-jacket":"medium","wulfsport-trackstar-adult-boots-black":"medium","blue-wulfsport-kids-helmet-clothing-bundle":"medium","wulfsport-cub-tech-kids-mx-goggles-black":"small","talaria-sting-l35-electric-dirt-bike-black-blue":"bike","talaria-x3-pro-electric-dirt-bike":"bike","talaria-sting-pro-l1e-13kw-electric-dirt-bike":"bike","talaria-komodo-l3e-32kw-electric-dirt-bike":"bike","kids-800w-36v-electric-dirt-bike-10-10-red":"bike","kids-1200w-48v-electric-dirt-bike-12-10-blue":"bike","2000w-60v-electric-dirt-bike-14-12-green":"bike","rfn-thunder-pro-fh-110cc-pit-bike-red-blue":"bike","apollo-commander-200-adults-quad-black":"bike","kids-800w-36v-electric-dirt-bike-10-10-blue":"bike","revvi-24-1500w-48v-kids-electric-off-road-bike-black":"bike","apollo-commander-200-adult-quad-bike-black":"bike","storm-2000w-60v-electric-dirt-bike-14-12-red":"bike","revvi-twelve-100w-kids-electric-balance-bike-black":"bike","revvi-twelve-100w-kids-electric-balance-bike-blue":"bike","revvi-18-500w-36v-kids-electric-bike-black":"bike","renegade-pro-1500w-60v-electric-quad-black":"bike","48v-15ah-lithium-battery-1200w-electric-dirt-bike":"medium","48v-brushless-controller-1200w-electric-dirt-bike":"small","48v-charger-1200w-electric-dirt-bike":"small","3-speed-key-switch-1200w-electric-dirt-bike":"small","1000w-electric-quad-headlamp-with-light":"small","1000w-electric-quad-front-brake-lever-cable":"small","1000w-electric-quad-handlebar":"medium","mudhead-drive-belt-725":"small","1-4-fuel-tap":"small","air-filter":"small","air-filter-breather-pipe":"small","connecting-rod-assembly":"small","cooling-fan-flywheel":"small","engine-gasket-set":"small","engine-output-shaft":"small","engine-output-shaft-bearing-crank":"small","connector":"small","fuse-reset-button-unit":"small","gts-150-complete-plastic-set-black":"medium","gts-150-complete-plastic-set-red":"medium","gts-150-complete-plastic-set-orange":"medium","150-gts-lower-hood":"medium","150-gts-owner-s-manual":"small","gts-150-side-arm-brush-bar":"medium","bolt-m6-12":"small","110cc-120cc-quad-carburettor":"small","front-brake-lever-rfn-rxf-rfz":"small","38mm-air-filter-assembly-sniper-pro-120cc":"small","110cc-quad-bike-piston-ring-set":"small","apollo-quad-bike-choke-cable":"small","apollo-120cc-125cc-quad-clutch-assembly":"small","apollo-quad-bike-sports-exhaust-system":"medium","front-brake-disc-thunder-250cc":"small","throttle-cable-thunder-250cc":"small","right-middle-side-cover-thunder-250cc":"small","front-fork-plastics-thunder-250cc":"small","wulfsport-kids-air-x-helmet-blue":"medium","wulfsport-kids-air-x-helmet-green":"medium","wulfsport-adults-astral-helmet-black":"medium","wulfsport-adults-attack-gloves-blue":"small","wulfsport-proban-racing-suit":"medium","wulfsport-super-boot-la":"medium","wulfsport-trackstar-boots-black":"medium","wulfsport-trackstar-boots-white":"medium","wulfsport-cub-max-kids-off-road-boots":"medium","wulfsport-cub-racing-camo-suit-blue":"medium","2026-wulfsport-warhammer-kids-race-shirt-blue":"small","wulfsport-cub-youth-protective-jacket":"medium","wulfsport-pro-series-adult-deflector":"medium","wulfsport-cub-hinged-kids-knee-pads":"small","wulfsport-cub-kids-elbow-pads":"small","wulfsport-cub-tech-mx-goggles-blue":"small","wulfsport-corsair-adults-race-shirt-blue":"small","wulfsport-matrix-adults-race-jacket-blue":"medium","wulfsport-waterproof-jacket-over-trousers-set":"medium","wulfsport-matrix-adults-race-jacket-orange":"medium","wulfsport-corsair-adults-race-shirt-pink-blue":"small","kids-1200w-48v-electric-dirt-bike-12-10-green":"bike","kids-1200w-48v-electric-dirt-bike-12-10-grey":"bike","kids-1200w-48v-electric-dirt-bike-12-10-yellow":"bike","kids-800w-36v-electric-dirt-bike-10-10-grey":"bike","2000w-60v-electric-dirt-bike-14-12-grey":"bike","2000w-60v-electric-dirt-bike-14-12-yellow":"bike","2000w-60v-electric-dirt-bike-14-12-blue":"bike","revvi-20-800w-36v-kids-electric-bike-green":"bike","talaria-sting-r-8kw-electric-dirt-bike-black-blue":"bike"});
   const deliveryForBasket = () => {
@@ -226,7 +226,7 @@ if (yearElement) yearElement.textContent = new Date().getFullYear();
     }
     lines.innerHTML = basket.map(item => `
       <article class="basket-line" data-line-key="${escapeHtml(basketItemKey(item))}">
-        <div class="basket-line-copy"><strong>${escapeHtml(item.name)}</strong>${item.size ? '<span>Size: ' + escapeHtml(item.size) + '</span>' : ''}<span>${money(item.price)} each</span></div>
+        <div class="basket-line-copy"><strong>${escapeHtml(item.name)}</strong>${item.size ? '<span>Selection: ' + escapeHtml(item.size) + '</span>' : ''}<span>${money(item.price)} each</span></div>
         <div class="basket-line-actions">
           <button type="button" data-qty="-1" aria-label="Decrease quantity">−</button><span>${item.qty}</span><button type="button" data-qty="1" aria-label="Increase quantity">+</button>
           <button type="button" class="basket-remove" data-remove>Remove</button>
@@ -247,8 +247,8 @@ if (yearElement) yearElement.textContent = new Date().getFullYear();
   document.addEventListener('keydown', e => { if (e.key === 'Escape' && !panel.hidden) close(); });
 
   // Replace each enquiry-style Buy Now link with a real add-to-basket control.
-  document.querySelectorAll('.product-card .buy-now-button').forEach(link => {
-    const card = link.closest('.product-card');
+  document.querySelectorAll('article[data-item] a.buy-now-button').forEach(link => {
+    const card = link.closest('[data-item]');
     const title = card?.querySelector('h3')?.textContent?.trim() || link.dataset.enquiry || 'Essex Moto product';
     const priceText = card?.querySelector('.product-price')?.textContent || '';
     const match = priceText.replace(/,/g,'').match(/£\s*(\d+(?:\.\d{1,2})?)/);
@@ -256,21 +256,18 @@ if (yearElement) yearElement.textContent = new Date().getFullYear();
     const button = document.createElement('button');
     button.type = 'button';
     button.className = link.className;
-    const supplierStockStatus = {"panther-110cc-kids-petrol-quad-black":"Supplier listed: pre-order date passed — reconfirm before order","sniper-pro-120cc-junior-quad-blue":"Not confirmed","sniper-pro-120cc-junior-quad-yellow":"Not confirmed","sniper-pro-120cc-junior-quad-grey":"Not confirmed","sniper-pro-120cc-junior-quad-multiple-colours":"Not confirmed","storm-3000w-48v-electric-dirt-bike-14-12":"Supplier listed: pre-order date passed — reconfirm before order","storm-5000w-72v-electric-dirt-bike-17-14":"Supplier listed: pre-order date passed — reconfirm before order","blue-wulfsport-kids-helmet-clothing-bundle":"Supplier listed: in stock — reconfirm before order","kids-1200w-48v-electric-dirt-bike-12-10-blue":"Supplier listed: low on stock — reconfirm before order","revvi-18-500w-36v-kids-electric-bike-black":"Supplier listed: low on stock — reconfirm before order","air-filter-breather-pipe":"Supplier listed: low on stock — reconfirm before order","gts-150-side-arm-brush-bar":"Supplier listed: low on stock — reconfirm before order","wulfsport-waterproof-jacket-over-trousers-set":"Supplier listed: in stock — reconfirm before order","kids-1200w-48v-electric-dirt-bike-12-10-grey":"Supplier listed: low on stock — reconfirm before order","2000w-60v-electric-dirt-bike-14-12-grey":"Supplier listed: low on stock — reconfirm before order","2000w-60v-electric-dirt-bike-14-12-blue":"Supplier listed: low on stock — reconfirm before order","revvi-20-800w-36v-kids-electric-bike-green":"Supplier listed: low on stock — reconfirm before order","talaria-sting-r-8kw-electric-dirt-bike-black-blue":"Not confirmed"}
-    // Use only confirmed in-stock catalogue items for direct basket checkout.
-    // Supplier overrides cover low-stock, pre-order and unverified variants.
-    const id = title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+    const id = card.dataset.item;
     let sizeSelect = null;
     const allowedSizes = SIZE_OPTIONS_BY_ID[id];
     if (allowedSizes?.length) {
       const label = document.createElement('label');
-      label.textContent = 'Select size ';
+      label.textContent = 'Select your option ';
       label.className = 'item-size-picker';
       label.style.display = 'block';
       label.style.margin = '10px 0';
       label.style.fontSize = '14px';
       sizeSelect = document.createElement('select');
-      sizeSelect.setAttribute('aria-label', 'Choose size for ' + title);
+      sizeSelect.setAttribute('aria-label', 'Choose an option for ' + title);
       sizeSelect.required = true;
       sizeSelect.style.display = 'block';
       sizeSelect.style.padding = '9px 8px';
@@ -279,62 +276,51 @@ if (yearElement) yearElement.textContent = new Date().getFullYear();
       sizeSelect.style.background = '#fff';
       sizeSelect.style.color = '#111';
       sizeSelect.style.borderRadius = '6px';
-      sizeSelect.appendChild(new Option('Choose a size', ''));
+      sizeSelect.appendChild(new Option('Choose an option', ''));
       allowedSizes.forEach(option => sizeSelect.appendChild(new Option(option, option)));
       label.appendChild(sizeSelect);
       link.before(label);
     }
-    const stockLabel = card?.querySelector('.stock-label')?.textContent?.trim() || '';
-    const unavailable = Boolean(supplierStockStatus[id]) || !/^in stock$/i.test(stockLabel);
-    if (unavailable) {
-      const status = supplierStockStatus[id] || (/out\s*of\s*stock/i.test(stockLabel) ? 'Out of Stock' : 'Not confirmed');
-      const label = card?.querySelector('.stock-label');
-      if (label) {
-        label.textContent = status === 'Out of Stock' ? 'Out of stock' :
-          status.startsWith('Supplier listed:') ? 'Supplier stock needs reconfirmation — please enquire' :
-          'Availability not confirmed — please enquire';
+    button.textContent = 'Add to basket';
+    button.setAttribute('aria-label','Add ' + title + ' to basket');
+    const buy = document.createElement('button');
+    buy.type = 'button';
+    buy.className = link.className;
+    buy.textContent = 'Buy now';
+    buy.setAttribute('aria-label', 'Buy ' + title + ' now');
+    const addItem = (showBasket) => {
+      if (!Number.isFinite(price)) {
+        open();
+        return;
       }
-      button.textContent = status === 'Out of Stock' ? 'Enquire about restock' : 'Check availability';
-      button.disabled = false;
-      button.setAttribute('aria-label', 'Enquire about ' + title + ' availability');
-      // Keep enquiry possible while stock is unconfirmed; do not charge online.
-      button.addEventListener('click', () => {
-        window.location.assign('index.html?enquiry=' + encodeURIComponent(title) + '#contact');
-      });
-    } else {
-      button.textContent = 'Add to basket';
-      button.setAttribute('aria-label','Add ' + title + ' to basket');
-      button.addEventListener('click', () => {
-        if (!Number.isFinite(price)) {
-          open();
+      const chosenSize = sizeSelect?.value || '';
+      if (allowedSizes?.length && !allowedSizes.includes(chosenSize)) {
+        alert('Please choose an option for ' + title + ' before adding it to your basket.');
+        sizeSelect?.focus();
+        return;
+      }
+      const existing = basket.find(item => item.id === id && (item.size || '') === chosenSize);
+      if (existing) {
+        if (existing.qty >= 5) {
+          alert('You can order up to five of each item or size online. Contact Essex Moto for larger quantities.');
           return;
         }
-        const chosenSize = sizeSelect?.value || '';
-        if (allowedSizes?.length && !allowedSizes.includes(chosenSize)) {
-          alert('Please choose a size for ' + title + ' before adding it to your basket.');
-          sizeSelect?.focus();
+        existing.qty += 1;
+      } else {
+        if (basket.length >= 20) {
+          alert('The online basket can contain up to 20 different items. Please contact Essex Moto for a larger order.');
           return;
         }
-        const existing = basket.find(item => item.id === id && (item.size || '') === chosenSize);
-        if (existing) {
-          if (existing.qty >= 5) {
-            alert('You can order up to five of each item or size online. Contact Essex Moto for larger quantities.');
-            return;
-          }
-          existing.qty += 1;
-        } else {
-          if (basket.length >= 20) {
-            alert('The online basket can contain up to 20 different items. Please contact Essex Moto for a larger order.');
-            return;
-          }
-          basket.push({id,name:title,price,qty:1,size:chosenSize});
-        }
-        save();
-        button.textContent = 'Added ✓';
-        window.setTimeout(() => { button.textContent = 'Add to basket'; }, 1300);
-      });
-    }
-    link.replaceWith(button);
+        basket.push({id,name:title,price,qty:1,size:chosenSize});
+      }
+      save();
+      if (showBasket) open();
+      button.textContent = 'Added ✓';
+      window.setTimeout(() => { button.textContent = 'Add to basket'; }, 1300);
+    };
+    button.addEventListener('click', () => addItem(false));
+    buy.addEventListener('click', () => addItem(true));
+    link.replaceWith(buy, document.createTextNode(' '), button);
   });
 
   panel.querySelector('#basket-lines').addEventListener('click', e => {
